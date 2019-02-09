@@ -1,0 +1,23 @@
+---
+title: "Memo 1"
+author: "_Team AMIE_"
+date: "_February 11, 2019_"
+output: pdf_document
+---
+
+**Members**
+  * Ann-Marie Stringer (ams670) ams670@georgetown.edu 
+  * Ivy Deng (xd66) xd66@georgetown.edu
+  * Erich Denk (ed719) ed719@georgetown.edu
+
+**Github Repository:** https://github.com/ErichDenk/Team_AMIE_670_Project
+
+#**Problem Statement **
+
+
+
+#**Data**
+
+
+
+#**Potential Issues**

@@ -1,21 +1,19 @@
 ---
 title: "Memo 1"
-author: "_Team AMIE_"
-date: "_February 11, 2019_"
-output:
-  pdf_document: default
-  html_document:
-    df_print: paged
+author: "* Team AMIE *"
+date: "*February 11, 2019*"
+output: pdf_document
 ---
 
-**Members**
-  * Ann-Marie Stringer (ams670) ams670@georgetown.edu 
-  * Ivy Deng (xd66) xd66@georgetown.edu
-  * Erich Denk (ed719) ed719@georgetown.edu
+** Members: **
+* Ann-Marie Stringer (ams670) ams670@georgetown.edu 
+* Ivy Deng (xd66) xd66@georgetown.edu
+* Erich Denk (ed719) ed719@georgetown.edu
 
-**Github Repository:** https://github.com/ErichDenk/Team_AMIE_670_Project
 
-#**Problem Statement **
+** Github Repository: ** https://github.com/ErichDenk/Team_AMIE_670_Project
+
+#** Problem Statement **
 
 In 2015, there were an estimated 1.1 million people living with HIV in the United States. In 2016, there were almost 40,000 new cases of HIV. More than half of new HIV diagnoses in 2016 occurred in the Southern States, whose total population account for only 38% of the national population. 1 of 10 of new diagnoses in 2016 was attributable to injection drug use (HIV.gov 2017).  
 
@@ -27,15 +25,15 @@ A CDC report stated that “although the percentage of persons who inject drugs 
 
 In this study, we aim to explore the data related to HIV incidence (with a focus on transmission via injection drug use), legal barriers for SSPs by state, levels of stigma towards HIV/drug use by state/county, and prevalence of SSPs by state/county in order to gain a holistic understanding of the unmet need for SSPs in the United States, particularly in the rural south. These are important questions to consider and their answers may help better inform policymaking and program funding.  
 
-#**Data**
+#** Data **
 
-In our exploration of SSPs a number of data sources will be helpful. First, data regarding the incidence of HIV is available via AIDSVu (https://map.aidsvu.org/map). For example, their “All-State PrEP Data Sets” contains information regarding pre-exposure prophylaxis user rates may be of interest. The data is available across a number of different years, allowing an examination of trends of HIV incidence from time periods of interest, such as before or after a policy change. In regards to SSPs and NEPs, the North America Syringe Exchange Network in cooperation with amfAR provides an extensive, though not completely comprehensive listing of needle exchange programs throughout the country https://opioid.amfar.org/indicator/num_SSPs. Each dataset contains geographic identifiers to allow comparison across areas. We will be able to make urban-rural and regional comparisons in regards to both HIV incidence and prevention policies. These datasets provide the geographic and time dimensions that will be particularly helpful in examining our tentative research questions.
+In our exploration of SSPs a number of data sources will be helpful. First, data regarding the incidence of HIV is available via [AIDSVu](https://map.aidsvu.org/map). For example, their “All-State PrEP Data Sets” contains information regarding pre-exposure prophylaxis user rates may be of interest. The data is available across a number of different years, allowing an examination of trends of HIV incidence from time periods of interest, such as before or after a policy change. In regards to SSPs and NEPs, the North America Syringe Exchange Network in cooperation with [amfAR](https://opioid.amfar.org/indicator/num_SSPs) provides an extensive, though not completely comprehensive listing of needle exchange programs throughout the country. Each dataset contains geographic identifiers to allow comparison across areas. We will be able to make urban-rural and regional comparisons in regards to both HIV incidence and prevention policies. These datasets provide the geographic and time dimensions that will be particularly helpful in examining our tentative research questions.
 
-#**Potential Issues**
+#** Potential Issues **
 Several data limitations are likely to impede the present study. First, due to confidentiality reasons, the latest data on HIV diagnosis at the county-level may not be available for public use. Second, the prevalence of undiagnosed HIV results in under-estimated data on HIV prevalence. Persons with undiagnosed HIV contribute to nearly 30% of its transmission in the US. In 2011, 14% of the 1.2 million people living with HIV had infections that were undiagnosed. Lastly, the percentage of persons living with HIV who had received a diagnosis of HIV infection varied by jurisdiction. Persons who are infected with HIV may move from one jurisdiction to another. As estimates of HIV prevalence are based on the most recent known address, delays or errors in reporting residential addresses might result in measurement errors of the data. Inaccurate or incomplete data is likely to induce biases to our final estimates of the effect of SSPs on reducing HIV transmission.
 
 
-#*Works Cited*
+#** Works Cited **
 HIV.gov. 2018. “HIV U.S. Statistics.” HIV.Gov. July 11, 2018. https://www.hiv.gov/hiv-basics/overview/data-and-trends/statistics.
 
 Weinmeyer, Richard. 2016. “Needle Exchange Programs’ Status in US Politics.” AMA Journal of Ethics 18 (3): 252–57. https://doi.org/10.1001/journalofethics.2017.18.3.hlaw1-1603.

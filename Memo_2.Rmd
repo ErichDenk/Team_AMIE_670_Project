@@ -1,0 +1,45 @@
+---
+title: "Memo 2: Analysis Plan"
+author: "Team AMIE"
+date: "March 11, 2019"
+output: pdf_document
+---
+
+__Members:__  
+
+* Ann-Marie Stringer (ams670) ams670@georgetown.edu 
+* Ivy Deng (xd66) xd66@georgetown.edu
+* Erich Denk (ed719) ed719@georgetown.edu
+
+__Github Repository:__ https://github.com/ErichDenk/Team_AMIE_670_Project
+
+# __Problem Statement__
+In 2015, there were an estimated 1.1 million people living with HIV in the United States. A year later, that total increased with almost 40,000 new cases of HIV. of those new diagnoses, 1 of 10 was attributable to injection drug use.  
+
+Syringe services programs (SSPs), also referred to as needle exchange programs (NEPs) and syringe exchange programs (SEPs)  provide sterile needles and syringes to drug users and safely dispose of used needles and syringes as a preventative measure for HIV and other infections that are transmissible by blood. Many of these programs integrate other intervention strategies, such as testing, treatment, and counseling services. 
+
+As of 2014, 33 states had explicitly banned SSPs, and the federal funding of SSPs was prohibited.  In 2016, the law was changed to allow jurisdictions to use federal funding to support certain components of SSPs, excluding the purchase of the actual syringe and needles (Weinmeyer 2016). Despite this new legal opportunity, SSPs remain a controversial topic with strong opposition. Opponents to SSPs believe that federal funding of these programs indicates approval of illegal drug use, will lead to an increase in drug use and will lessen the moral and logistical barrier of access for children to become users. Despite the research and evidence that has been presented to oppose these viewpoints, adequate SSPs are still not available. 
+
+The greater New York City tri-state area (New York, Connecticut, New Jersey) has among the highest incidence of HIV due to injection drug use (IDU) in the country. Additionally, this area has a high concentration of SSPs. However, there is a high level of transmission due to injection drug use in the more rural parts of New York, Connecticut, and New Jersey, with very few SSPs. 
+
+There is a need to understand the effectiveness of SSPs in limiting transmission of HIV due to IDU in high-risk areas and understand the potential of uptake of SSPs to decrease transmission among injection drug users among rural areas. We plan to explore the relationship between the establishment of SSPs in the greater NYC area, the incidence of HIV due to IDU, and apply these findings to understand how an increase in SSPs may benefit rural areas of these states. These findings may help better inform policy making and program funding. 
+
+# __Hypothesis__
+In this study, we will define the “success” of an SSP to mean the decrease in HIV transmission due to IDU. We believe that by viewing the data available on AIDSVu from 2008-2017, we will be able to view a relative decrease in HIV transmission due to IDU over time in counties with a higher prevalence of SSPs within the New York, Connecticut, and New Jersey region. We also believe that by viewing the policy in these areas, we will find that the SSPs in areas with better funding and political support will be more successful. 
+
+We plan to combine, clean, and visualize the data available on AIDSVu and North America Syringe Exchange Network (NASEN) websites, in order to understand trends that occur over time and geographical location with respect to the presence of SSPs and transmission of HIV due to IDU. We also aspire to create a map to engage potential policymakers with our data and analysis. 
+
+# __Data Analysis Tools__
+Drawing from the AIDSVu and NASEN data, we plan to create a "tidy" data set with the unit of analysis at the county level. Using tools and packages in the `tidyverse` such as gather and functions in the `dplyr` and `lubridate` package, we can create a manageable dataset. Once we have tidy data we plan to use `ggplot2`, employing custom scales and settings to create a series of professional quality visualizations. As we progress in our learning this semester, we may explore the use of the `Shiny` package to share our findings with non-programmers. 
+
+# __Intended Products__
+In the process of cleaning and combining our data, we plan to write our code in an `Rmarkdown` with commentary as to be transparent in our process. This is a product that we would not likely share in our final report unless requested, but something that we would want to be able to pass along or refer back to at a later time. The more public and polished product is a data story about the impact of SSP sites within the greater New York City tri-state area. To tell this story a number of visualizations seem appropraite. A tile plot showing the prevalence of HIV induced IDU over the years by rural and urban areas, a plot showing changes in those rates after the appearance of SSPs, and  a map showing SSPs and  HIV due to IDU are just some of the possibilities.  Other useful visualizations may become apparent as we further explore the data. Finally, if time and capability permit, we would be interested in incorporating some of these aspects into a web application, particularly the map. All of these products together should allow us to evaluate the effectiveness of the policy and potentially comment on whether more counties, cities, and states should introduce SSPs as part of the fight against HIV.
+
+# __Sources:__ 
+AIDSVu, Rates of Persons Living with HIV (2015). https://map.aidsvu.org/map
+
+HIV.gov. 2018. “HIV U.S. Statistics.” HIV.Gov. July 11, 2018. https://www.hiv.gov/hiv-basics/overview/data-and-trends/statistics.
+
+North American Syringe Exchange Network (NASEN), Locations of SEPs. https://www.nasen.org/map/ 
+
+Weinmeyer, Richard. 2016. “Needle Exchange Programs’ Status in US Politics.” AMA Journal of Ethics 18 (3): 252–57. https://doi.org/10.1001/journalofethics.2017.18.3.hlaw1-1603.

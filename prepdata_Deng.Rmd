@@ -16,7 +16,7 @@ When you click the **Knit** button a document will be generated that includes bo
 ```{r}
 require(tidyverse)
 setwd("~/Desktop/data")
-files <- dir(path ="~/Desktop/data")
+files <- dir(path ="~/Desktop/data/Team_AMIE_670_Project")
 prepdata <- files %>%
   map(read_csv) %>%
   reduce(full_join) 

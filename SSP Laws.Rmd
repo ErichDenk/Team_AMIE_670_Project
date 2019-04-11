@@ -1,0 +1,46 @@
+---
+title: "SSP and Syringe Exchange Laws"
+author: "Erich Denk"
+date: "4/11/2019"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+We are interested in how differering state laws surrounding SSPs might have an impact on the prevalence of HIV transmitted through injection. The Center for Disease Control and Prevention has this infomration available in a table, which is conventiently located in a csv on their webpage  
+
+```{r}
+require(tidyverse)
+
+laws_raw <- read_csv("SyringeExchange.csv")
+```
+It's pretty messy data set. They have three categories, but we agreed that the three that they designate as "limited" can be categorized as allowing SSPs and therefore categorized as a "Yes".
+
+Additionally, I'm going to change some names and also create a column called years for when the law allowing the SSP went into effect. We couldn't come up with a clean data science way to do this, so I looked up the laws and when they went into effect. 
+
+
+```{r}
+laws_clean <- laws_raw%>%
+  rename("State" = LocationDesc,
+         "Allowed" = Assessment,
+         "Law Name" = Citation)
+
+laws_clean <- laws_clean%>%
+  mutate(Allowed = replace_na(Allowed, 0))%>%
+  mutate(Yes = replace_na(Yes, 0))%>%
+  mutate(No = replace_na(No, 0))%>%
+  mutate(Allowed = str_replace(Allowed, "Limited","Yes"))%>%
+  mutate(Yes = str_replace(Yes,"X","1"))%>%
+  mutate(No = str_replace(No,"X","1"))%>%
+  select(-Limited, -X7, -X8)
+
+```
+
+Now that it's all clean let's save it to a 
+```{r}
+write_csv(laws_clean, 
+          file.path("Data/syringe-exchange-laws-clean.csv"))
+```
+

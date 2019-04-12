@@ -22,6 +22,7 @@ table <- "https://www.nasen.org/map/" %>%
   html_node(., xpath = "//*[@id='sortabletable']") %>%
   html_table(.)
   
+write.csv(table, here("SSP-data-set/SSP-Location-Data"))
 
 ```
 

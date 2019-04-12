@@ -1,0 +1,58 @@
+---
+title: "Project Plan from April 1 Meeting"
+author: "Erich Denk"
+date: "4/11/2019"
+output: pdf_document
+---
+
+#Project Plan/Timeline:
+April 8 - Data cleaned/gathered (Tentative)
+AIDSvu data
+https://map.aidsvu.org/map
+NASEN data
+https://www.nasen.org/map/
+April 15 -  Extra time for cleaning/begin visualizations/shiny app
+April 22 -  (no class) Finish app/visualizations if necessary
+April 29 - Report and Presentation
+Report 6-10 double spaced pages 12 pt font
+A presentation is 6-15 slides (~12 minutes long)
+
+
+State Laws Allowing syringe exchange - 
+https://www.cdc.gov/hepatitis/policy/SyringeExchange.htm
+
+#Plan: 
+DATA SET CREATION
+Steps
+  1. Import all available data sets
+  2. Stack all years on top of
+  3. Make tidy 
+
+**Erich**
+Compile New Diagnoses Statewide Data into tidy panel - Erich
+State initiatives/laws that promote/allow SSPs… → CDC 
+
+**Ann Marie**
+Explore Prevalence county data - AMS
+Prevalence of SSPs/number of SSPs - AMS 
+I have scraped the table of locations, once I get the prev data set I plan to see about matching the city locations to the counties listed 
+
+**Ivy**
+PrEP data - Ivy (2012 - 2016)
+
+#POTENTIAL PRODUCT IDEAS
+##MAPS
+A map that plots the locations of the SSPs on top of a heat map of county specific IDU prevalence data -- something of this sort 
+Data sets used: Prevalence data set (county level) and SSP data set
+Time series map of IDU at a state level, accompanied by some sort of indicator of policy per state 
+Data sets used: incidence data set (State level) w/ CDC y/n added on
+Potentially, map Prep users against incidence data -- 
+Question im getting at → if prep should be marketed to high risk groups (MSM being disproportionately represented in incidence), is this happening?
+So maybe compare heat map of MSM/IDU transmission per state against PrEP users per state to see where PrEP is under-utilized  
+
+##MACHINE LEARNING
+prediction of state law?
+Allow syringe exchange? Yes or no?
+PrEP, what outcome could we model? 
+Risk factors/determinants -- but here we would need matching data for non-infected if the outcome we are modeling is infection. 
+

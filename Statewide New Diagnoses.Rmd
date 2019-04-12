@@ -1,0 +1,13 @@
+---
+title: "Statewide New Diagnoses"
+author: "Erich Denk"
+date: "4/11/2019"
+output: pdf_document
+---
+
+AidsVu provides state diagnoses data for the years 2008 to 2016. Let's upload that data so we can combine it to create a longitudinal dataset. We will need to add the relevant year before comibing as well.
+
+```{r}
+
+```
+

@@ -14,7 +14,7 @@ We are interested in how differering state laws surrounding SSPs might have an i
 ```{r}
 require(tidyverse)
 
-laws_raw <- read_csv("SyringeExchange.csv")
+laws_raw <- read_csv("Source-Data/SyringeExchange.csv")
 ```
 It's pretty messy data set. They have three categories, but we agreed that the three that they designate as "limited" can be categorized as allowing SSPs and therefore categorized as a "Yes".
 

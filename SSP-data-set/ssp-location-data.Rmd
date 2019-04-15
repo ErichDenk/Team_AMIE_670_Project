@@ -1,0 +1,28 @@
+---
+title: "SSP Data set"
+aunthor: Ann Marie Stringer
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+#Packages
+```{r}
+require(tidyverse)
+require(rvest)
+```
+
+# This script scrapes the table of SSP names and locations from the NASEN website 
+```{r}
+
+
+table <- "https://www.nasen.org/map/" %>%
+  read_html(.) %>%
+  html_node(., xpath = "//*[@id='sortabletable']") %>%
+  html_table(.)
+  
+write.csv(table, here("Active-data-sets/SSP-Location-Data"))
+
+```
+

@@ -44,11 +44,4 @@ mapData %>%
                        guide = guide_colorbar(title.position = "top"))+
   # re plot the black boarder lines
     geom_polygon(color = "black", fill = NA)
-    
-  
-
-  
-
-
-
 ```

@@ -16,7 +16,7 @@ require(here)
 ```
 
 ```{r}
-prevData <- read.xlsx(here("Source-Data/AIDSVu_County_Prev-Data-Sets_2015.xlsx"), sheetName = "Data", startRow = 3) 
+prevData <- read.xlsx(here("Source-Data/AIDSVu_County_Prev-Data-Sets_2015.xlsx"), sheetName = "Data", startRow = 3)
 ```
 
 Going to clean out some of the less-relevant data for our interests, initial data stored in prevData in case we want to go back to it. 
@@ -30,8 +30,12 @@ Want to keep the following columns
 tidyData <- prevData %>%
   select(GEOID = "GEO.ID", State = "State.Abbreviation", County = "County.Name", CountyPrevalence = "County.Cases", TotalIDU = "IDU.Total.Cases")  %>%
   mutate(TotalIDU = as.numeric(as.character(TotalIDU))) %>%
+  mutate (CountyPrevalence = ifelse(CountyPrevalence < 0, NA, CountyPrevalence)) %>%
   mutate(PercentIDU = ((TotalIDU/CountyPrevalence)*100))
+  
 
+#filter out SD data because they do not report, and lists -2 which messes up data
+#tidyData <- tidyData[-(2363:2428),]
 ```
 ```{r}
 write.csv(tidyData, here("Active-data-sets/2015-Prevalence-IDU-data.csv"))

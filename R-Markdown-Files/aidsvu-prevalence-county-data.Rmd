@@ -16,7 +16,7 @@ require(here)
 ```
 
 ```{r}
-prevData <- read.xlsx(here("SSP-data-set/AIDSVu_County_Prev-Data-Sets_2015.xlsx"), sheetName = "Data", startRow = 3) 
+prevData <- read.xlsx(here("Source-Data/AIDSVu_County_Prev-Data-Sets_2015.xlsx"), sheetName = "Data", startRow = 3) 
 ```
 
 Going to clean out some of the less-relevant data for our interests, initial data stored in prevData in case we want to go back to it. 
@@ -34,6 +34,6 @@ tidyData <- prevData %>%
 
 ```
 ```{r}
-write.csv(tidyData, here("SSP-data-set/2015-Prevalence-IDU-data.csv"))
+write.csv(tidyData, here("Active-data-sets/2015-Prevalence-IDU-data.csv"))
 ```
 

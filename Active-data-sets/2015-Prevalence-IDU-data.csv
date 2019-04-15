@@ -66,35 +66,35 @@
 "65",1129,"AL","Washington County",14,0,0
 "66",1131,"AL","Wilcox County",18,0,0
 "67",1133,"AL","Winston County",9,0,0
-"68",2013,"AK","Aleutians East Borough",-4,0,0
-"69",2016,"AK","Aleutians West Census Area",-4,0,0
-"70",2020,"AK","Anchorage Municipality",-4,0,0
-"71",2050,"AK","Bethel Census Area",-4,0,0
-"72",2060,"AK","Bristol Bay Borough",-4,0,0
-"73",2068,"AK","Denali Borough",-4,0,0
-"74",2070,"AK","Dillingham Census Area",-4,0,0
-"75",2090,"AK","Fairbanks North Star Borough",-4,0,0
-"76",2100,"AK","Haines Borough",-4,0,0
-"77",2105,"AK","Hoonah-Angoon Census Area",-4,0,0
-"78",2110,"AK","Juneau City and Borough",-4,0,0
-"79",2122,"AK","Kenai Peninsula Borough",-4,0,0
-"80",2130,"AK","Ketchikan Gateway Borough",-4,0,0
-"81",2150,"AK","Kodiak Island Borough",-4,0,0
-"82",2158,"AK","Kusilvak Census Area",-4,0,0
-"83",2164,"AK","Lake And Peninsula Borough",-4,0,0
-"84",2170,"AK","Matanuska-Susitna Borough",-4,0,0
-"85",2180,"AK","Nome Census Area",-4,0,0
-"86",2185,"AK","North Slope Borough",-4,0,0
-"87",2188,"AK","Northwest Arctic Borough",-4,0,0
-"88",2195,"AK","Petersburg Borough",-4,0,0
-"89",2198,"AK","Prince of Wales-Hyder Census Area",-4,0,0
-"90",2220,"AK","Sitka City And Borough",-4,0,0
-"91",2230,"AK","Skagway Municipality",-4,0,0
-"92",2240,"AK","Southeast Fairbanks Census Area",-4,0,0
-"93",2261,"AK","Valdez-Cordova Census Area",-4,0,0
-"94",2275,"AK","Wrangell City And Borough",-4,0,0
-"95",2282,"AK","Yakutat City And Borough",-4,0,0
-"96",2290,"AK","Yukon-Koyukuk Census Area",-4,0,0
+"68",2013,"AK","Aleutians East Borough",NA,0,NA
+"69",2016,"AK","Aleutians West Census Area",NA,0,NA
+"70",2020,"AK","Anchorage Municipality",NA,0,NA
+"71",2050,"AK","Bethel Census Area",NA,0,NA
+"72",2060,"AK","Bristol Bay Borough",NA,0,NA
+"73",2068,"AK","Denali Borough",NA,0,NA
+"74",2070,"AK","Dillingham Census Area",NA,0,NA
+"75",2090,"AK","Fairbanks North Star Borough",NA,0,NA
+"76",2100,"AK","Haines Borough",NA,0,NA
+"77",2105,"AK","Hoonah-Angoon Census Area",NA,0,NA
+"78",2110,"AK","Juneau City and Borough",NA,0,NA
+"79",2122,"AK","Kenai Peninsula Borough",NA,0,NA
+"80",2130,"AK","Ketchikan Gateway Borough",NA,0,NA
+"81",2150,"AK","Kodiak Island Borough",NA,0,NA
+"82",2158,"AK","Kusilvak Census Area",NA,0,NA
+"83",2164,"AK","Lake And Peninsula Borough",NA,0,NA
+"84",2170,"AK","Matanuska-Susitna Borough",NA,0,NA
+"85",2180,"AK","Nome Census Area",NA,0,NA
+"86",2185,"AK","North Slope Borough",NA,0,NA
+"87",2188,"AK","Northwest Arctic Borough",NA,0,NA
+"88",2195,"AK","Petersburg Borough",NA,0,NA
+"89",2198,"AK","Prince of Wales-Hyder Census Area",NA,0,NA
+"90",2220,"AK","Sitka City And Borough",NA,0,NA
+"91",2230,"AK","Skagway Municipality",NA,0,NA
+"92",2240,"AK","Southeast Fairbanks Census Area",NA,0,NA
+"93",2261,"AK","Valdez-Cordova Census Area",NA,0,NA
+"94",2275,"AK","Wrangell City And Borough",NA,0,NA
+"95",2282,"AK","Yakutat City And Borough",NA,0,NA
+"96",2290,"AK","Yukon-Koyukuk Census Area",NA,0,NA
 "97",4001,"AZ","Apache County",111,0,0
 "98",4003,"AZ","Cochise County",182,35,19.2307692307692
 "99",4005,"AZ","Coconino County",126,16,12.6984126984127
@@ -129,7 +129,7 @@
 "128",5033,"AR","Crawford County",46,0,0
 "129",5035,"AR","Crittenden County",205,95,46.3414634146341
 "130",5037,"AR","Cross County",26,0,0
-"131",5039,"AR","Dallas County",-1,0,0
+"131",5039,"AR","Dallas County",NA,0,NA
 "132",5041,"AR","Desha County",20,0,0
 "133",5043,"AR","Drew County",16,0,0
 "134",5045,"AR","Faulkner County",137,23,16.7883211678832
@@ -180,17 +180,17 @@
 "179",5135,"AR","Sharp County",11,0,0
 "180",5137,"AR","Stone County",10,0,0
 "181",5139,"AR","Union County",118,52,44.0677966101695
-"182",5141,"AR","Van Buren County",-1,0,0
+"182",5141,"AR","Van Buren County",NA,0,NA
 "183",5143,"AR","Washington County",297,46,15.4882154882155
 "184",5145,"AR","White County",69,0,0
 "185",5147,"AR","Woodruff County",6,0,0
 "186",5149,"AR","Yell County",21,0,0
 "187",6001,"CA","Alameda County",5354,1021,19.0698543145312
-"188",6003,"CA","Alpine County",-1,0,0
+"188",6003,"CA","Alpine County",NA,0,NA
 "189",6005,"CA","Amador County",47,0,0
 "190",6007,"CA","Butte County",166,30,18.0722891566265
 "191",6009,"CA","Calaveras County",36,0,0
-"192",6011,"CA","Colusa County",-1,0,0
+"192",6011,"CA","Colusa County",NA,0,NA
 "193",6013,"CA","Contra Costa County",2066,317,15.3436592449177
 "194",6015,"CA","Del Norte County",18,0,0
 "195",6017,"CA","El Dorado County",151,30,19.8675496688742
@@ -209,7 +209,7 @@
 "208",6043,"CA","Mariposa County",17,0,0
 "209",6045,"CA","Mendocino County",160,22,13.75
 "210",6047,"CA","Merced County",209,35,16.7464114832536
-"211",6049,"CA","Modoc County",-1,0,0
+"211",6049,"CA","Modoc County",NA,0,NA
 "212",6051,"CA","Mono County",5,0,0
 "213",6053,"CA","Monterey County",622,123,19.7749196141479
 "214",6055,"CA","Napa County",287,38,13.2404181184669
@@ -230,7 +230,7 @@
 "229",6085,"CA","Santa Clara County",2948,454,15.4002713704206
 "230",6087,"CA","Santa Cruz County",433,54,12.4711316397229
 "231",6089,"CA","Shasta County",175,26,14.8571428571429
-"232",6091,"CA","Sierra County",-1,0,0
+"232",6091,"CA","Sierra County",NA,0,NA
 "233",6093,"CA","Siskiyou County",37,0,0
 "234",6095,"CA","Solano County",1115,177,15.8744394618834
 "235",6097,"CA","Sonoma County",1209,140,11.5798180314309
@@ -247,20 +247,20 @@
 "246",8003,"CO","Alamosa County",12,0,0
 "247",8005,"CO","Arapahoe County",1270,291,22.9133858267717
 "248",8007,"CO","Archuleta County",10,0,0
-"249",8009,"CO","Baca County",-1,0,0
-"250",8011,"CO","Bent County",-1,0,0
+"249",8009,"CO","Baca County",NA,0,NA
+"250",8011,"CO","Bent County",NA,0,NA
 "251",8013,"CO","Boulder County",428,62,14.4859813084112
 "252",8014,"CO","Broomfield County",39,0,0
 "253",8015,"CO","Chaffee County",8,0,0
-"254",8017,"CO","Cheyenne County",-1,0,0
+"254",8017,"CO","Cheyenne County",NA,0,NA
 "255",8019,"CO","Clear Creek County",18,0,0
-"256",8021,"CO","Conejos County",-1,0,0
-"257",8023,"CO","Costilla County",-1,0,0
+"256",8021,"CO","Conejos County",NA,0,NA
+"257",8023,"CO","Costilla County",NA,0,NA
 "258",8025,"CO","Crowley County",13,0,0
-"259",8027,"CO","Custer County",-1,0,0
+"259",8027,"CO","Custer County",NA,0,NA
 "260",8029,"CO","Delta County",14,0,0
 "261",8031,"CO","Denver County",5738,495,8.62669919832694
-"262",8033,"CO","Dolores County",-1,0,0
+"262",8033,"CO","Dolores County",NA,0,NA
 "263",8035,"CO","Douglas County",184,7,3.80434782608696
 "264",8037,"CO","Eagle County",64,0,0
 "265",8039,"CO","Elbert County",17,0,0
@@ -270,28 +270,28 @@
 "269",8047,"CO","Gilpin County",6,0,0
 "270",8049,"CO","Grand County",11,0,0
 "271",8051,"CO","Gunnison County",9,0,0
-"272",8053,"CO","Hinsdale County",-1,0,0
+"272",8053,"CO","Hinsdale County",NA,0,NA
 "273",8055,"CO","Huerfano County",6,0,0
-"274",8057,"CO","Jackson County",-1,0,0
+"274",8057,"CO","Jackson County",NA,0,NA
 "275",8059,"CO","Jefferson County",614,73,11.8892508143322
-"276",8061,"CO","Kiowa County",-1,0,0
-"277",8063,"CO","Kit Carson County",-1,0,0
-"278",8065,"CO","Lake County",-1,0,0
+"276",8061,"CO","Kiowa County",NA,0,NA
+"277",8063,"CO","Kit Carson County",NA,0,NA
+"278",8065,"CO","Lake County",NA,0,NA
 "279",8067,"CO","La Plata County",37,0,0
 "280",8069,"CO","Larimer County",237,11,4.64135021097046
 "281",8071,"CO","Las Animas County",13,0,0
 "282",8073,"CO","Lincoln County",6,0,0
 "283",8075,"CO","Logan County",9,0,0
 "284",8077,"CO","Mesa County",114,5,4.3859649122807
-"285",8079,"CO","Mineral County",-1,0,0
+"285",8079,"CO","Mineral County",NA,0,NA
 "286",8081,"CO","Moffat County",8,0,0
 "287",8083,"CO","Montezuma County",17,0,0
 "288",8085,"CO","Montrose County",19,0,0
 "289",8087,"CO","Morgan County",19,0,0
 "290",8089,"CO","Otero County",10,0,0
-"291",8091,"CO","Ouray County",-1,0,0
+"291",8091,"CO","Ouray County",NA,0,NA
 "292",8093,"CO","Park County",18,0,0
-"293",8095,"CO","Phillips County",-1,0,0
+"293",8095,"CO","Phillips County",NA,0,NA
 "294",8097,"CO","Pitkin County",30,0,0
 "295",8099,"CO","Prowers County",6,0,0
 "296",8101,"CO","Pueblo County",167,35,20.9580838323353
@@ -299,12 +299,12 @@
 "298",8105,"CO","Rio Grande County",10,0,0
 "299",8107,"CO","Routt County",15,0,0
 "300",8109,"CO","Saguache County",7,0,0
-"301",8111,"CO","San Juan County",-1,0,0
+"301",8111,"CO","San Juan County",NA,0,NA
 "302",8113,"CO","San Miguel County",6,0,0
-"303",8115,"CO","Sedgwick County",-1,0,0
+"303",8115,"CO","Sedgwick County",NA,0,NA
 "304",8117,"CO","Summit County",43,0,0
 "305",8119,"CO","Teller County",15,0,0
-"306",8121,"CO","Washington County",-1,0,0
+"306",8121,"CO","Washington County",NA,0,NA
 "307",8123,"CO","Weld County",176,30,17.0454545454545
 "308",8125,"CO","Yuma County",11,0,0
 "309",9001,"CT","Fairfield County",2588,918,35.4714064914992
@@ -318,7 +318,7 @@
 "317",10001,"DE","Kent County",423,0,0
 "318",10003,"DE","New Castle County",2086,0,0
 "319",10005,"DE","Sussex County",633,0,0
-"320",11001,"DC","District of Columbia",-4,NA,NA
+"320",11001,"DC","District of Columbia",NA,NA,NA
 "321",12001,"FL","Alachua County",961,349,36.3163371488033
 "322",12003,"FL","Baker County",99,24,24.2424242424242
 "323",12005,"FL","Bay County",436,155,35.5504587155963
@@ -516,7 +516,7 @@
 "515",13259,"GA","Stewart County",43,5,11.6279069767442
 "516",13261,"GA","Sumter County",108,52,48.1481481481481
 "517",13263,"GA","Talbot County",18,0,0
-"518",13265,"GA","Taliaferro County",-1,0,0
+"518",13265,"GA","Taliaferro County",NA,0,NA
 "519",13267,"GA","Tattnall County",97,17,17.5257731958763
 "520",13269,"GA","Taylor County",26,6,23.0769230769231
 "521",13271,"GA","Telfair County",70,18,25.7142857142857
@@ -524,7 +524,7 @@
 "523",13275,"GA","Thomas County",139,63,45.3237410071942
 "524",13277,"GA","Tift County",141,84,59.5744680851064
 "525",13279,"GA","Toombs County",76,42,55.2631578947368
-"526",13281,"GA","Towns County",-1,0,0
+"526",13281,"GA","Towns County",NA,0,NA
 "527",13283,"GA","Treutlen County",23,0,0
 "528",13285,"GA","Troup County",107,34,31.7757009345794
 "529",13287,"GA","Turner County",29,0,0
@@ -537,7 +537,7 @@
 "536",13301,"GA","Warren County",18,0,0
 "537",13303,"GA","Washington County",50,5,10
 "538",13305,"GA","Wayne County",80,11,13.75
-"539",13307,"GA","Webster County",-1,0,0
+"539",13307,"GA","Webster County",NA,0,NA
 "540",13309,"GA","Wheeler County",37,8,21.6216216216216
 "541",13311,"GA","White County",20,0,0
 "542",13313,"GA","Whitfield County",118,30,25.4237288135593
@@ -547,62 +547,62 @@
 "546",13321,"GA","Worth County",55,0,0
 "547",15001,"HI","Hawaii County",419,50,11.9331742243437
 "548",15003,"HI","Honolulu County",1732,222,12.8175519630485
-"549",15005,"HI","Kalawao County",-1,0,0
-"550",15007,"HI","Kauai County",-1,0,0
+"549",15005,"HI","Kalawao County",NA,0,NA
+"550",15007,"HI","Kauai County",NA,0,NA
 "551",15009,"HI","Maui County",319,29,9.09090909090909
 "552",16001,"ID","Ada County",231,0,0
-"553",16003,"ID","Adams County",-1,0,0
+"553",16003,"ID","Adams County",NA,0,NA
 "554",16005,"ID","Bannock County",41,0,0
-"555",16007,"ID","Bear Lake County",-1,0,0
-"556",16009,"ID","Benewah County",-1,0,0
+"555",16007,"ID","Bear Lake County",NA,0,NA
+"556",16009,"ID","Benewah County",NA,0,NA
 "557",16011,"ID","Bingham County",27,0,0
 "558",16013,"ID","Blaine County",5,0,0
-"559",16015,"ID","Boise County",-1,0,0
+"559",16015,"ID","Boise County",NA,0,NA
 "560",16017,"ID","Bonner County",27,0,0
 "561",16019,"ID","Bonneville County",28,0,0
-"562",16021,"ID","Boundary County",-1,0,0
-"563",16023,"ID","Butte County",-1,0,0
-"564",16025,"ID","Camas County",-1,0,0
+"562",16021,"ID","Boundary County",NA,0,NA
+"563",16023,"ID","Butte County",NA,0,NA
+"564",16025,"ID","Camas County",NA,0,NA
 "565",16027,"ID","Canyon County",76,0,0
-"566",16029,"ID","Caribou County",-1,0,0
-"567",16031,"ID","Cassia County",-1,0,0
-"568",16033,"ID","Clark County",-1,0,0
+"566",16029,"ID","Caribou County",NA,0,NA
+"567",16031,"ID","Cassia County",NA,0,NA
+"568",16033,"ID","Clark County",NA,0,NA
 "569",16035,"ID","Clearwater County",6,0,0
-"570",16037,"ID","Custer County",-1,0,0
+"570",16037,"ID","Custer County",NA,0,NA
 "571",16039,"ID","Elmore County",11,0,0
-"572",16041,"ID","Franklin County",-1,0,0
-"573",16043,"ID","Fremont County",-1,0,0
+"572",16041,"ID","Franklin County",NA,0,NA
+"573",16043,"ID","Fremont County",NA,0,NA
 "574",16045,"ID","Gem County",6,0,0
 "575",16047,"ID","Gooding County",10,0,0
-"576",16049,"ID","Idaho County",-1,0,0
+"576",16049,"ID","Idaho County",NA,0,NA
 "577",16051,"ID","Jefferson County",5,0,0
 "578",16053,"ID","Jerome County",6,0,0
 "579",16055,"ID","Kootenai County",76,0,0
 "580",16057,"ID","Latah County",15,0,0
-"581",16059,"ID","Lemhi County",-1,0,0
-"582",16061,"ID","Lewis County",-1,0,0
-"583",16063,"ID","Lincoln County",-1,0,0
-"584",16065,"ID","Madison County",-1,0,0
-"585",16067,"ID","Minidoka County",-1,0,0
+"581",16059,"ID","Lemhi County",NA,0,NA
+"582",16061,"ID","Lewis County",NA,0,NA
+"583",16063,"ID","Lincoln County",NA,0,NA
+"584",16065,"ID","Madison County",NA,0,NA
+"585",16067,"ID","Minidoka County",NA,0,NA
 "586",16069,"ID","Nez Perce County",14,0,0
-"587",16071,"ID","Oneida County",-1,0,0
-"588",16073,"ID","Owyhee County",-1,0,0
+"587",16071,"ID","Oneida County",NA,0,NA
+"588",16073,"ID","Owyhee County",NA,0,NA
 "589",16075,"ID","Payette County",9,0,0
-"590",16077,"ID","Power County",-1,0,0
+"590",16077,"ID","Power County",NA,0,NA
 "591",16079,"ID","Shoshone County",6,0,0
-"592",16081,"ID","Teton County",-1,0,0
+"592",16081,"ID","Teton County",NA,0,NA
 "593",16083,"ID","Twin Falls County",23,0,0
-"594",16085,"ID","Valley County",-1,0,0
-"595",16087,"ID","Washington County",-1,0,0
+"594",16085,"ID","Valley County",NA,0,NA
+"595",16087,"ID","Washington County",NA,0,NA
 "596",17001,"IL","Adams County",44,0,0
 "597",17003,"IL","Alexander County",19,0,0
 "598",17005,"IL","Bond County",12,0,0
 "599",17007,"IL","Boone County",40,0,0
 "600",17009,"IL","Brown County",15,0,0
 "601",17011,"IL","Bureau County",19,0,0
-"602",17013,"IL","Calhoun County",-1,0,0
-"603",17015,"IL","Carroll County",-1,0,0
-"604",17017,"IL","Cass County",-1,0,0
+"602",17013,"IL","Calhoun County",NA,0,NA
+"603",17015,"IL","Carroll County",NA,0,NA
+"604",17017,"IL","Cass County",NA,0,NA
 "605",17019,"IL","Champaign County",368,0,0
 "606",17021,"IL","Christian County",32,0,0
 "607",17023,"IL","Clark County",19,0,0
@@ -614,10 +614,10 @@
 "613",17035,"IL","Cumberland County",7,0,0
 "614",17037,"IL","DeKalb County",61,0,0
 "615",17039,"IL","De Witt County",7,0,0
-"616",17041,"IL","Douglas County",-1,0,0
+"616",17041,"IL","Douglas County",NA,0,NA
 "617",17043,"IL","DuPage County",606,134,22.1122112211221
-"618",17045,"IL","Edgar County",-1,0,0
-"619",17047,"IL","Edwards County",-1,0,0
+"618",17045,"IL","Edgar County",NA,0,NA
+"619",17047,"IL","Edwards County",NA,0,NA
 "620",17049,"IL","Effingham County",9,0,0
 "621",17051,"IL","Fayette County",42,0,0
 "622",17053,"IL","Ford County",7,0,0
@@ -626,14 +626,14 @@
 "625",17059,"IL","Gallatin County",6,0,0
 "626",17061,"IL","Greene County",6,0,0
 "627",17063,"IL","Grundy County",11,0,0
-"628",17065,"IL","Hamilton County",-1,0,0
+"628",17065,"IL","Hamilton County",NA,0,NA
 "629",17067,"IL","Hancock County",6,0,0
-"630",17069,"IL","Hardin County",-1,0,0
-"631",17071,"IL","Henderson County",-1,0,0
+"630",17069,"IL","Hardin County",NA,0,NA
+"631",17071,"IL","Henderson County",NA,0,NA
 "632",17073,"IL","Henry County",19,0,0
 "633",17075,"IL","Iroquois County",15,0,0
 "634",17077,"IL","Jackson County",50,0,0
-"635",17079,"IL","Jasper County",-1,0,0
+"635",17079,"IL","Jasper County",NA,0,NA
 "636",17081,"IL","Jefferson County",41,0,0
 "637",17083,"IL","Jersey County",9,0,0
 "638",17085,"IL","Jo Daviess County",14,0,0
@@ -656,39 +656,39 @@
 "655",17119,"IL","Madison County",204,0,0
 "656",17121,"IL","Marion County",18,0,0
 "657",17123,"IL","Marshall County",8,0,0
-"658",17125,"IL","Mason County",-1,0,0
-"659",17127,"IL","Massac County",-1,0,0
+"658",17125,"IL","Mason County",NA,0,NA
+"659",17127,"IL","Massac County",NA,0,NA
 "660",17129,"IL","Menard County",10,0,0
 "661",17131,"IL","Mercer County",11,0,0
-"662",17133,"IL","Monroe County",-1,0,0
+"662",17133,"IL","Monroe County",NA,0,NA
 "663",17135,"IL","Montgomery County",42,0,0
 "664",17137,"IL","Morgan County",25,0,0
-"665",17139,"IL","Moultrie County",-1,0,0
+"665",17139,"IL","Moultrie County",NA,0,NA
 "666",17141,"IL","Ogle County",33,0,0
 "667",17143,"IL","Peoria County",337,0,0
 "668",17145,"IL","Perry County",27,0,0
-"669",17147,"IL","Piatt County",-1,0,0
-"670",17149,"IL","Pike County",-1,0,0
-"671",17151,"IL","Pope County",-1,0,0
+"669",17147,"IL","Piatt County",NA,0,NA
+"670",17149,"IL","Pike County",NA,0,NA
+"671",17151,"IL","Pope County",NA,0,NA
 "672",17153,"IL","Pulaski County",11,0,0
-"673",17155,"IL","Putnam County",-1,0,0
+"673",17155,"IL","Putnam County",NA,0,NA
 "674",17157,"IL","Randolph County",37,0,0
 "675",17159,"IL","Richland County",6,0,0
 "676",17161,"IL","Rock Island County",268,0,0
 "677",17163,"IL","St. Clair County",691,0,0
-"678",17165,"IL","Saline County",-1,0,0
+"678",17165,"IL","Saline County",NA,0,NA
 "679",17167,"IL","Sangamon County",292,0,0
-"680",17169,"IL","Schuyler County",-1,0,0
-"681",17171,"IL","Scott County",-1,0,0
+"680",17169,"IL","Schuyler County",NA,0,NA
+"681",17171,"IL","Scott County",NA,0,NA
 "682",17173,"IL","Shelby County",7,0,0
-"683",17175,"IL","Stark County",-1,0,0
+"683",17175,"IL","Stark County",NA,0,NA
 "684",17177,"IL","Stephenson County",41,0,0
 "685",17179,"IL","Tazewell County",48,0,0
 "686",17181,"IL","Union County",9,0,0
 "687",17183,"IL","Vermilion County",123,0,0
 "688",17185,"IL","Wabash County",6,0,0
-"689",17187,"IL","Warren County",-1,0,0
-"690",17189,"IL","Washington County",-1,0,0
+"689",17187,"IL","Warren County",NA,0,NA
+"690",17189,"IL","Washington County",NA,0,NA
 "691",17191,"IL","Wayne County",6,0,0
 "692",17193,"IL","White County",8,0,0
 "693",17195,"IL","Whiteside County",5,0,0
@@ -696,19 +696,19 @@
 "695",17199,"IL","Williamson County",56,0,0
 "696",17201,"IL","Winnebago County",369,0,0
 "697",17203,"IL","Woodford County",20,0,0
-"698",18001,"IN","Adams County",-1,0,0
+"698",18001,"IN","Adams County",NA,0,NA
 "699",18003,"IN","Allen County",516,0,0
 "700",18005,"IN","Bartholomew County",53,0,0
-"701",18007,"IN","Benton County",-1,0,0
+"701",18007,"IN","Benton County",NA,0,NA
 "702",18009,"IN","Blackford County",8,0,0
 "703",18011,"IN","Boone County",42,0,0
 "704",18013,"IN","Brown County",13,0,0
-"705",18015,"IN","Carroll County",-1,0,0
+"705",18015,"IN","Carroll County",NA,0,NA
 "706",18017,"IN","Cass County",24,0,0
 "707",18019,"IN","Clark County",204,0,0
 "708",18021,"IN","Clay County",23,0,0
 "709",18023,"IN","Clinton County",20,0,0
-"710",18025,"IN","Crawford County",-1,0,0
+"710",18025,"IN","Crawford County",NA,0,NA
 "711",18027,"IN","Daviess County",20,0,0
 "712",18029,"IN","Dearborn County",16,0,0
 "713",18031,"IN","Decatur County",19,0,0
@@ -718,7 +718,7 @@
 "717",18039,"IN","Elkhart County",159,0,0
 "718",18041,"IN","Fayette County",11,0,0
 "719",18043,"IN","Floyd County",108,0,0
-"720",18045,"IN","Fountain County",-1,0,0
+"720",18045,"IN","Fountain County",NA,0,NA
 "721",18047,"IN","Franklin County",5,0,0
 "722",18049,"IN","Fulton County",10,0,0
 "723",18051,"IN","Gibson County",20,0,0
@@ -753,12 +753,12 @@
 "752",18109,"IN","Morgan County",45,0,0
 "753",18111,"IN","Newton County",12,0,0
 "754",18113,"IN","Noble County",25,0,0
-"755",18115,"IN","Ohio County",-1,0,0
+"755",18115,"IN","Ohio County",NA,0,NA
 "756",18117,"IN","Orange County",17,0,0
 "757",18119,"IN","Owen County",17,0,0
 "758",18121,"IN","Parke County",22,0,0
 "759",18123,"IN","Perry County",15,0,0
-"760",18125,"IN","Pike County",-1,0,0
+"760",18125,"IN","Pike County",NA,0,NA
 "761",18127,"IN","Porter County",140,0,0
 "762",18129,"IN","Posey County",15,0,0
 "763",18131,"IN","Pulaski County",7,0,0
@@ -775,227 +775,227 @@
 "774",18153,"IN","Sullivan County",13,0,0
 "775",18155,"IN","Switzerland County",12,0,0
 "776",18157,"IN","Tippecanoe County",148,0,0
-"777",18159,"IN","Tipton County",-1,0,0
-"778",18161,"IN","Union County",-1,0,0
+"777",18159,"IN","Tipton County",NA,0,NA
+"778",18161,"IN","Union County",NA,0,NA
 "779",18163,"IN","Vanderburgh County",278,0,0
-"780",18165,"IN","Vermillion County",-1,0,0
+"780",18165,"IN","Vermillion County",NA,0,NA
 "781",18167,"IN","Vigo County",215,0,0
 "782",18169,"IN","Wabash County",11,0,0
-"783",18171,"IN","Warren County",-1,0,0
+"783",18171,"IN","Warren County",NA,0,NA
 "784",18173,"IN","Warrick County",28,0,0
 "785",18175,"IN","Washington County",13,0,0
 "786",18177,"IN","Wayne County",76,0,0
 "787",18179,"IN","Wells County",7,0,0
 "788",18181,"IN","White County",19,0,0
 "789",18183,"IN","Whitley County",14,0,0
-"790",19001,"IA","Adair County",-1,0,0
-"791",19003,"IA","Adams County",-1,0,0
+"790",19001,"IA","Adair County",NA,0,NA
+"791",19003,"IA","Adams County",NA,0,NA
 "792",19005,"IA","Allamakee County",5,0,0
 "793",19007,"IA","Appanoose County",5,0,0
-"794",19009,"IA","Audubon County",-1,0,0
+"794",19009,"IA","Audubon County",NA,0,NA
 "795",19011,"IA","Benton County",16,0,0
 "796",19013,"IA","Black Hawk County",102,29,28.4313725490196
 "797",19015,"IA","Boone County",19,0,0
 "798",19017,"IA","Bremer County",7,0,0
 "799",19019,"IA","Buchanan County",9,0,0
 "800",19021,"IA","Buena Vista County",22,0,0
-"801",19023,"IA","Butler County",-1,0,0
-"802",19025,"IA","Calhoun County",-1,0,0
+"801",19023,"IA","Butler County",NA,0,NA
+"802",19025,"IA","Calhoun County",NA,0,NA
 "803",19027,"IA","Carroll County",13,0,0
-"804",19029,"IA","Cass County",-1,0,0
+"804",19029,"IA","Cass County",NA,0,NA
 "805",19031,"IA","Cedar County",9,0,0
 "806",19033,"IA","Cerro Gordo County",22,0,0
-"807",19035,"IA","Cherokee County",-1,0,0
+"807",19035,"IA","Cherokee County",NA,0,NA
 "808",19037,"IA","Chickasaw County",7,0,0
-"809",19039,"IA","Clarke County",-1,0,0
+"809",19039,"IA","Clarke County",NA,0,NA
 "810",19041,"IA","Clay County",8,0,0
 "811",19043,"IA","Clayton County",8,0,0
 "812",19045,"IA","Clinton County",35,0,0
 "813",19047,"IA","Crawford County",10,0,0
 "814",19049,"IA","Dallas County",42,0,0
-"815",19051,"IA","Davis County",-1,0,0
-"816",19053,"IA","Decatur County",-1,0,0
-"817",19055,"IA","Delaware County",-1,0,0
+"815",19051,"IA","Davis County",NA,0,NA
+"816",19053,"IA","Decatur County",NA,0,NA
+"817",19055,"IA","Delaware County",NA,0,NA
 "818",19057,"IA","Des Moines County",28,0,0
 "819",19059,"IA","Dickinson County",6,0,0
 "820",19061,"IA","Dubuque County",62,0,0
-"821",19063,"IA","Emmet County",-1,0,0
+"821",19063,"IA","Emmet County",NA,0,NA
 "822",19065,"IA","Fayette County",5,0,0
-"823",19067,"IA","Floyd County",-1,0,0
-"824",19069,"IA","Franklin County",-1,0,0
-"825",19071,"IA","Fremont County",-1,0,0
+"823",19067,"IA","Floyd County",NA,0,NA
+"824",19069,"IA","Franklin County",NA,0,NA
+"825",19071,"IA","Fremont County",NA,0,NA
 "826",19073,"IA","Greene County",5,0,0
-"827",19075,"IA","Grundy County",-1,0,0
-"828",19077,"IA","Guthrie County",-1,0,0
+"827",19075,"IA","Grundy County",NA,0,NA
+"828",19077,"IA","Guthrie County",NA,0,NA
 "829",19079,"IA","Hamilton County",9,0,0
-"830",19081,"IA","Hancock County",-1,0,0
+"830",19081,"IA","Hancock County",NA,0,NA
 "831",19083,"IA","Hardin County",9,0,0
 "832",19085,"IA","Harrison County",5,0,0
 "833",19087,"IA","Henry County",10,0,0
-"834",19089,"IA","Howard County",-1,0,0
-"835",19091,"IA","Humboldt County",-1,0,0
-"836",19093,"IA","Ida County",-1,0,0
+"834",19089,"IA","Howard County",NA,0,NA
+"835",19091,"IA","Humboldt County",NA,0,NA
+"836",19093,"IA","Ida County",NA,0,NA
 "837",19095,"IA","Iowa County",8,0,0
 "838",19097,"IA","Jackson County",5,0,0
 "839",19099,"IA","Jasper County",30,0,0
-"840",19101,"IA","Jefferson County",-1,0,0
+"840",19101,"IA","Jefferson County",NA,0,NA
 "841",19103,"IA","Johnson County",153,7,4.57516339869281
 "842",19105,"IA","Jones County",16,0,0
-"843",19107,"IA","Keokuk County",-1,0,0
-"844",19109,"IA","Kossuth County",-1,0,0
+"843",19107,"IA","Keokuk County",NA,0,NA
+"844",19109,"IA","Kossuth County",NA,0,NA
 "845",19111,"IA","Lee County",10,0,0
 "846",19113,"IA","Linn County",223,58,26.0089686098655
 "847",19115,"IA","Louisa County",7,0,0
 "848",19117,"IA","Lucas County",5,0,0
-"849",19119,"IA","Lyon County",-1,0,0
+"849",19119,"IA","Lyon County",NA,0,NA
 "850",19121,"IA","Madison County",11,0,0
 "851",19123,"IA","Mahaska County",7,0,0
 "852",19125,"IA","Marion County",12,0,0
 "853",19127,"IA","Marshall County",26,0,0
 "854",19129,"IA","Mills County",10,0,0
-"855",19131,"IA","Mitchell County",-1,0,0
-"856",19133,"IA","Monona County",-1,0,0
+"855",19131,"IA","Mitchell County",NA,0,NA
+"856",19133,"IA","Monona County",NA,0,NA
 "857",19135,"IA","Monroe County",6,0,0
 "858",19137,"IA","Montgomery County",8,0,0
 "859",19139,"IA","Muscatine County",18,0,0
-"860",19141,"IA","O'brien County",-1,0,0
-"861",19143,"IA","Osceola County",-1,0,0
+"860",19141,"IA","O'brien County",NA,0,NA
+"861",19143,"IA","Osceola County",NA,0,NA
 "862",19145,"IA","Page County",11,0,0
-"863",19147,"IA","Palo Alto County",-1,0,0
+"863",19147,"IA","Palo Alto County",NA,0,NA
 "864",19149,"IA","Plymouth County",6,0,0
-"865",19151,"IA","Pocahontas County",-1,0,0
+"865",19151,"IA","Pocahontas County",NA,0,NA
 "866",19153,"IA","Polk County",699,173,24.7496423462089
 "867",19155,"IA","Pottawattamie County",116,18,15.5172413793103
 "868",19157,"IA","Poweshiek County",6,0,0
-"869",19159,"IA","Ringgold County",-1,0,0
-"870",19161,"IA","Sac County",-1,0,0
+"869",19159,"IA","Ringgold County",NA,0,NA
+"870",19161,"IA","Sac County",NA,0,NA
 "871",19163,"IA","Scott County",191,13,6.80628272251309
-"872",19165,"IA","Shelby County",-1,0,0
+"872",19165,"IA","Shelby County",NA,0,NA
 "873",19167,"IA","Sioux County",8,0,0
 "874",19169,"IA","Story County",49,0,0
 "875",19171,"IA","Tama County",9,0,0
-"876",19173,"IA","Taylor County",-1,0,0
+"876",19173,"IA","Taylor County",NA,0,NA
 "877",19175,"IA","Union County",5,0,0
-"878",19177,"IA","Van Buren County",-1,0,0
+"878",19177,"IA","Van Buren County",NA,0,NA
 "879",19179,"IA","Wapello County",23,0,0
 "880",19181,"IA","Warren County",14,0,0
 "881",19183,"IA","Washington County",12,0,0
-"882",19185,"IA","Wayne County",-1,0,0
+"882",19185,"IA","Wayne County",NA,0,NA
 "883",19187,"IA","Webster County",17,0,0
-"884",19189,"IA","Winnebago County",-1,0,0
-"885",19191,"IA","Winneshiek County",-1,0,0
+"884",19189,"IA","Winnebago County",NA,0,NA
+"885",19191,"IA","Winneshiek County",NA,0,NA
 "886",19193,"IA","Woodbury County",94,7,7.4468085106383
-"887",19195,"IA","Worth County",-1,0,0
+"887",19195,"IA","Worth County",NA,0,NA
 "888",19197,"IA","Wright County",6,0,0
 "889",20001,"KS","Allen County",8,0,0
 "890",20003,"KS","Anderson County",5,0,0
 "891",20005,"KS","Atchison County",14,0,0
-"892",20007,"KS","Barber County",-1,0,0
+"892",20007,"KS","Barber County",NA,0,NA
 "893",20009,"KS","Barton County",13,0,0
 "894",20011,"KS","Bourbon County",7,0,0
-"895",20013,"KS","Brown County",-1,0,0
+"895",20013,"KS","Brown County",NA,0,NA
 "896",20015,"KS","Butler County",89,0,0
 "897",20017,"KS","Chase County",15,0,0
-"898",20019,"KS","Chautauqua County",-1,0,0
+"898",20019,"KS","Chautauqua County",NA,0,NA
 "899",20021,"KS","Cherokee County",29,0,0
-"900",20023,"KS","Cheyenne County",-1,0,0
-"901",20025,"KS","Clark County",-1,0,0
+"900",20023,"KS","Cheyenne County",NA,0,NA
+"901",20025,"KS","Clark County",NA,0,NA
 "902",20027,"KS","Clay County",5,0,0
-"903",20029,"KS","Cloud County",-1,0,0
-"904",20031,"KS","Coffey County",-1,0,0
-"905",20033,"KS","Comanche County",-1,0,0
+"903",20029,"KS","Cloud County",NA,0,NA
+"904",20031,"KS","Coffey County",NA,0,NA
+"905",20033,"KS","Comanche County",NA,0,NA
 "906",20035,"KS","Cowley County",24,0,0
-"907",20037,"KS","Crawford County",-1,0,0
-"908",20039,"KS","Decatur County",-1,0,0
+"907",20037,"KS","Crawford County",NA,0,NA
+"908",20039,"KS","Decatur County",NA,0,NA
 "909",20041,"KS","Dickinson County",29,0,0
-"910",20043,"KS","Doniphan County",-1,0,0
+"910",20043,"KS","Doniphan County",NA,0,NA
 "911",20045,"KS","Douglas County",80,0,0
-"912",20047,"KS","Edwards County",-1,0,0
-"913",20049,"KS","Elk County",-1,0,0
+"912",20047,"KS","Edwards County",NA,0,NA
+"913",20049,"KS","Elk County",NA,0,NA
 "914",20051,"KS","Ellis County",7,0,0
 "915",20053,"KS","Ellsworth County",11,0,0
 "916",20055,"KS","Finney County",19,0,0
 "917",20057,"KS","Ford County",14,0,0
 "918",20059,"KS","Franklin County",19,0,0
 "919",20061,"KS","Geary County",28,0,0
-"920",20063,"KS","Gove County",-1,0,0
-"921",20065,"KS","Graham County",-1,0,0
-"922",20067,"KS","Grant County",-1,0,0
-"923",20069,"KS","Gray County",-1,0,0
-"924",20071,"KS","Greeley County",-1,0,0
-"925",20073,"KS","Greenwood County",-1,0,0
-"926",20075,"KS","Hamilton County",-1,0,0
-"927",20077,"KS","Harper County",-1,0,0
+"920",20063,"KS","Gove County",NA,0,NA
+"921",20065,"KS","Graham County",NA,0,NA
+"922",20067,"KS","Grant County",NA,0,NA
+"923",20069,"KS","Gray County",NA,0,NA
+"924",20071,"KS","Greeley County",NA,0,NA
+"925",20073,"KS","Greenwood County",NA,0,NA
+"926",20075,"KS","Hamilton County",NA,0,NA
+"927",20077,"KS","Harper County",NA,0,NA
 "928",20079,"KS","Harvey County",9,0,0
-"929",20081,"KS","Haskell County",-1,0,0
-"930",20083,"KS","Hodgeman County",-1,0,0
+"929",20081,"KS","Haskell County",NA,0,NA
+"930",20083,"KS","Hodgeman County",NA,0,NA
 "931",20085,"KS","Jackson County",5,0,0
-"932",20087,"KS","Jefferson County",-1,0,0
-"933",20089,"KS","Jewell County",-1,0,0
+"932",20087,"KS","Jefferson County",NA,0,NA
+"933",20089,"KS","Jewell County",NA,0,NA
 "934",20091,"KS","Johnson County",595,131,22.0168067226891
-"935",20093,"KS","Kearny County",-1,0,0
-"936",20095,"KS","Kingman County",-1,0,0
-"937",20097,"KS","Kiowa County",-1,0,0
+"935",20093,"KS","Kearny County",NA,0,NA
+"936",20095,"KS","Kingman County",NA,0,NA
+"937",20097,"KS","Kiowa County",NA,0,NA
 "938",20099,"KS","Labette County",22,0,0
-"939",20101,"KS","Lane County",-1,0,0
+"939",20101,"KS","Lane County",NA,0,NA
 "940",20103,"KS","Leavenworth County",157,10,6.36942675159236
-"941",20105,"KS","Lincoln County",-1,0,0
-"942",20107,"KS","Linn County",-1,0,0
-"943",20109,"KS","Logan County",-1,0,0
-"944",20111,"KS","Lyon County",-1,0,0
+"941",20105,"KS","Lincoln County",NA,0,NA
+"942",20107,"KS","Linn County",NA,0,NA
+"943",20109,"KS","Logan County",NA,0,NA
+"944",20111,"KS","Lyon County",NA,0,NA
 "945",20113,"KS","McPherson County",5,0,0
-"946",20115,"KS","Marion County",-1,0,0
-"947",20117,"KS","Marshall County",-1,0,0
-"948",20119,"KS","Meade County",-1,0,0
+"946",20115,"KS","Marion County",NA,0,NA
+"947",20117,"KS","Marshall County",NA,0,NA
+"948",20119,"KS","Meade County",NA,0,NA
 "949",20121,"KS","Miami County",12,0,0
-"950",20123,"KS","Mitchell County",-1,0,0
+"950",20123,"KS","Mitchell County",NA,0,NA
 "951",20125,"KS","Montgomery County",10,0,0
-"952",20127,"KS","Morris County",-1,0,0
-"953",20129,"KS","Morton County",-1,0,0
-"954",20131,"KS","Nemaha County",-1,0,0
-"955",20133,"KS","Neosho County",-1,0,0
-"956",20135,"KS","Ness County",-1,0,0
-"957",20137,"KS","Norton County",-1,0,0
+"952",20127,"KS","Morris County",NA,0,NA
+"953",20129,"KS","Morton County",NA,0,NA
+"954",20131,"KS","Nemaha County",NA,0,NA
+"955",20133,"KS","Neosho County",NA,0,NA
+"956",20135,"KS","Ness County",NA,0,NA
+"957",20137,"KS","Norton County",NA,0,NA
 "958",20139,"KS","Osage County",5,0,0
-"959",20141,"KS","Osborne County",-1,0,0
+"959",20141,"KS","Osborne County",NA,0,NA
 "960",20143,"KS","Ottawa County",40,0,0
 "961",20145,"KS","Pawnee County",7,0,0
-"962",20147,"KS","Phillips County",-1,0,0
+"962",20147,"KS","Phillips County",NA,0,NA
 "963",20149,"KS","Pottawatomie County",15,0,0
-"964",20151,"KS","Pratt County",-1,0,0
-"965",20153,"KS","Rawlins County",-1,0,0
+"964",20151,"KS","Pratt County",NA,0,NA
+"965",20153,"KS","Rawlins County",NA,0,NA
 "966",20155,"KS","Reno County",30,0,0
-"967",20157,"KS","Republic County",-1,0,0
-"968",20159,"KS","Rice County",-1,0,0
+"967",20157,"KS","Republic County",NA,0,NA
+"968",20159,"KS","Rice County",NA,0,NA
 "969",20161,"KS","Riley County",15,0,0
-"970",20163,"KS","Rooks County",-1,0,0
-"971",20165,"KS","Rush County",-1,0,0
-"972",20167,"KS","Russell County",-1,0,0
+"970",20163,"KS","Rooks County",NA,0,NA
+"971",20165,"KS","Rush County",NA,0,NA
+"972",20167,"KS","Russell County",NA,0,NA
 "973",20169,"KS","Saline County",9,0,0
-"974",20171,"KS","Scott County",-1,0,0
+"974",20171,"KS","Scott County",NA,0,NA
 "975",20173,"KS","Sedgwick County",752,143,19.0159574468085
 "976",20175,"KS","Seward County",22,0,0
 "977",20177,"KS","Shawnee County",222,42,18.9189189189189
-"978",20179,"KS","Sheridan County",-1,0,0
-"979",20181,"KS","Sherman County",-1,0,0
-"980",20183,"KS","Smith County",-1,0,0
-"981",20185,"KS","Stafford County",-1,0,0
-"982",20187,"KS","Stanton County",-1,0,0
-"983",20189,"KS","Stevens County",-1,0,0
+"978",20179,"KS","Sheridan County",NA,0,NA
+"979",20181,"KS","Sherman County",NA,0,NA
+"980",20183,"KS","Smith County",NA,0,NA
+"981",20185,"KS","Stafford County",NA,0,NA
+"982",20187,"KS","Stanton County",NA,0,NA
+"983",20189,"KS","Stevens County",NA,0,NA
 "984",20191,"KS","Sumner County",11,0,0
-"985",20193,"KS","Thomas County",-1,0,0
-"986",20195,"KS","Trego County",-1,0,0
-"987",20197,"KS","Wabaunsee County",-1,0,0
-"988",20199,"KS","Wallace County",-1,0,0
-"989",20201,"KS","Washington County",-1,0,0
-"990",20203,"KS","Wichita County",-1,0,0
-"991",20205,"KS","Wilson County",-1,0,0
-"992",20207,"KS","Woodson County",-1,0,0
+"985",20193,"KS","Thomas County",NA,0,NA
+"986",20195,"KS","Trego County",NA,0,NA
+"987",20197,"KS","Wabaunsee County",NA,0,NA
+"988",20199,"KS","Wallace County",NA,0,NA
+"989",20201,"KS","Washington County",NA,0,NA
+"990",20203,"KS","Wichita County",NA,0,NA
+"991",20205,"KS","Wilson County",NA,0,NA
+"992",20207,"KS","Woodson County",NA,0,NA
 "993",20209,"KS","Wyandotte County",356,84,23.5955056179775
 "994",21001,"KY","Adair County",9,0,0
 "995",21003,"KY","Allen County",14,0,0
 "996",21005,"KY","Anderson County",16,0,0
-"997",21007,"KY","Ballard County",-1,0,0
+"997",21007,"KY","Ballard County",NA,0,NA
 "998",21009,"KY","Barren County",18,0,0
 "999",21011,"KY","Bath County",13,0,0
 "1000",21013,"KY","Bell County",10,0,0
@@ -1004,14 +1004,14 @@
 "1003",21019,"KY","Boyd County",53,0,0
 "1004",21021,"KY","Boyle County",23,0,0
 "1005",21023,"KY","Bracken County",5,0,0
-"1006",21025,"KY","Breathitt County",-1,0,0
+"1006",21025,"KY","Breathitt County",NA,0,NA
 "1007",21027,"KY","Breckinridge County",12,0,0
 "1008",21029,"KY","Bullitt County",27,0,0
 "1009",21031,"KY","Butler County",9,0,0
 "1010",21033,"KY","Caldwell County",14,0,0
 "1011",21035,"KY","Calloway County",22,0,0
 "1012",21037,"KY","Campbell County",113,0,0
-"1013",21039,"KY","Carlisle County",-1,0,0
+"1013",21039,"KY","Carlisle County",NA,0,NA
 "1014",21041,"KY","Carroll County",8,0,0
 "1015",21043,"KY","Carter County",13,0,0
 "1016",21045,"KY","Casey County",8,0,0
@@ -1022,42 +1022,42 @@
 "1021",21055,"KY","Crittenden County",6,0,0
 "1022",21057,"KY","Cumberland County",9,0,0
 "1023",21059,"KY","Daviess County",88,0,0
-"1024",21061,"KY","Edmonson County",-1,0,0
+"1024",21061,"KY","Edmonson County",NA,0,NA
 "1025",21063,"KY","Elliott County",8,0,0
 "1026",21065,"KY","Estill County",7,0,0
 "1027",21067,"KY","Fayette County",869,0,0
 "1028",21069,"KY","Fleming County",6,0,0
 "1029",21071,"KY","Floyd County",15,0,0
 "1030",21073,"KY","Franklin County",55,0,0
-"1031",21075,"KY","Fulton County",-1,0,0
-"1032",21077,"KY","Gallatin County",-1,0,0
+"1031",21075,"KY","Fulton County",NA,0,NA
+"1032",21077,"KY","Gallatin County",NA,0,NA
 "1033",21079,"KY","Garrard County",8,0,0
 "1034",21081,"KY","Grant County",20,0,0
 "1035",21083,"KY","Graves County",47,0,0
 "1036",21085,"KY","Grayson County",9,0,0
-"1037",21087,"KY","Green County",-1,0,0
+"1037",21087,"KY","Green County",NA,0,NA
 "1038",21089,"KY","Greenup County",19,0,0
-"1039",21091,"KY","Hancock County",-1,0,0
+"1039",21091,"KY","Hancock County",NA,0,NA
 "1040",21093,"KY","Hardin County",94,0,0
 "1041",21095,"KY","Harlan County",14,0,0
 "1042",21097,"KY","Harrison County",8,0,0
 "1043",21099,"KY","Hart County",9,0,0
 "1044",21101,"KY","Henderson County",50,0,0
 "1045",21103,"KY","Henry County",9,0,0
-"1046",21105,"KY","Hickman County",-1,0,0
+"1046",21105,"KY","Hickman County",NA,0,NA
 "1047",21107,"KY","Hopkins County",18,0,0
 "1048",21109,"KY","Jackson County",6,0,0
 "1049",21111,"KY","Jefferson County",1747,329,18.8322839152833
 "1050",21113,"KY","Jessamine County",51,0,0
-"1051",21115,"KY","Johnson County",-1,0,0
+"1051",21115,"KY","Johnson County",NA,0,NA
 "1052",21117,"KY","Kenton County",247,0,0
 "1053",21119,"KY","Knott County",8,0,0
 "1054",21121,"KY","Knox County",9,0,0
-"1055",21123,"KY","Larue County",-1,0,0
+"1055",21123,"KY","Larue County",NA,0,NA
 "1056",21125,"KY","Laurel County",36,0,0
-"1057",21127,"KY","Lawrence County",-1,0,0
-"1058",21129,"KY","Lee County",-1,0,0
-"1059",21131,"KY","Leslie County",-1,0,0
+"1057",21127,"KY","Lawrence County",NA,0,NA
+"1058",21129,"KY","Lee County",NA,0,NA
+"1059",21131,"KY","Leslie County",NA,0,NA
 "1060",21133,"KY","Letcher County",17,0,0
 "1061",21135,"KY","Lewis County",8,0,0
 "1062",21137,"KY","Lincoln County",14,0,0
@@ -1068,7 +1068,7 @@
 "1067",21147,"KY","Mccreary County",36,0,0
 "1068",21149,"KY","McLean County",7,0,0
 "1069",21151,"KY","Madison County",66,0,0
-"1070",21153,"KY","Magoffin County",-1,0,0
+"1070",21153,"KY","Magoffin County",NA,0,NA
 "1071",21155,"KY","Marion County",8,0,0
 "1072",21157,"KY","Marshall County",13,0,0
 "1073",21159,"KY","Martin County",5,0,0
@@ -1076,39 +1076,39 @@
 "1075",21163,"KY","Meade County",14,0,0
 "1076",21165,"KY","Menifee County",6,0,0
 "1077",21167,"KY","Mercer County",15,0,0
-"1078",21169,"KY","Metcalfe County",-1,0,0
+"1078",21169,"KY","Metcalfe County",NA,0,NA
 "1079",21171,"KY","Monroe County",5,0,0
 "1080",21173,"KY","Montgomery County",18,0,0
 "1081",21175,"KY","Morgan County",17,0,0
 "1082",21177,"KY","Muhlenberg County",16,0,0
 "1083",21179,"KY","Nelson County",17,0,0
-"1084",21181,"KY","Nicholas County",-1,0,0
+"1084",21181,"KY","Nicholas County",NA,0,NA
 "1085",21183,"KY","Ohio County",12,0,0
 "1086",21185,"KY","Oldham County",108,0,0
-"1087",21187,"KY","Owen County",-1,0,0
-"1088",21189,"KY","Owsley County",-1,0,0
+"1087",21187,"KY","Owen County",NA,0,NA
+"1088",21189,"KY","Owsley County",NA,0,NA
 "1089",21191,"KY","Pendleton County",7,0,0
 "1090",21193,"KY","Perry County",20,0,0
 "1091",21195,"KY","Pike County",17,0,0
 "1092",21197,"KY","Powell County",8,0,0
 "1093",21199,"KY","Pulaski County",32,0,0
-"1094",21201,"KY","Robertson County",-1,0,0
+"1094",21201,"KY","Robertson County",NA,0,NA
 "1095",21203,"KY","Rockcastle County",6,0,0
 "1096",21205,"KY","Rowan County",12,0,0
 "1097",21207,"KY","Russell County",6,0,0
 "1098",21209,"KY","Scott County",39,0,0
 "1099",21211,"KY","Shelby County",36,0,0
 "1100",21213,"KY","Simpson County",11,0,0
-"1101",21215,"KY","Spencer County",-1,0,0
+"1101",21215,"KY","Spencer County",NA,0,NA
 "1102",21217,"KY","Taylor County",9,0,0
 "1103",21219,"KY","Todd County",9,0,0
 "1104",21221,"KY","Trigg County",11,0,0
-"1105",21223,"KY","Trimble County",-1,0,0
+"1105",21223,"KY","Trimble County",NA,0,NA
 "1106",21225,"KY","Union County",25,0,0
 "1107",21227,"KY","Warren County",120,0,0
 "1108",21229,"KY","Washington County",6,0,0
 "1109",21231,"KY","Wayne County",6,0,0
-"1110",21233,"KY","Webster County",-1,0,0
+"1110",21233,"KY","Webster County",NA,0,NA
 "1111",21235,"KY","Whitley County",14,0,0
 "1112",21237,"KY","Wolfe County",6,0,0
 "1113",21239,"KY","Woodford County",19,0,0
@@ -1123,7 +1123,7 @@
 "1122",22017,"LA","Caddo Parish",1088,335,30.7904411764706
 "1123",22019,"LA","Calcasieu Parish",633,197,31.1216429699842
 "1124",22021,"LA","Caldwell Parish",22,0,0
-"1125",22023,"LA","Cameron Parish",-1,0,0
+"1125",22023,"LA","Cameron Parish",NA,0,NA
 "1126",22025,"LA","Catahoula Parish",28,0,0
 "1127",22027,"LA","Claiborne Parish",72,12,16.6666666666667
 "1128",22029,"LA","Concordia Parish",47,7,14.8936170212766
@@ -1165,7 +1165,7 @@
 "1164",22101,"LA","St. Mary Parish",84,29,34.5238095238095
 "1165",22103,"LA","St. Tammany Parish",421,76,18.0522565320665
 "1166",22105,"LA","Tangipahoa Parish",370,130,35.1351351351351
-"1167",22107,"LA","Tensas Parish",-1,0,0
+"1167",22107,"LA","Tensas Parish",NA,0,NA
 "1168",22109,"LA","Terrebonne Parish",199,55,27.6381909547739
 "1169",22111,"LA","Union Parish",28,0,0
 "1170",22113,"LA","Vermilion Parish",85,16,18.8235294117647
@@ -1179,14 +1179,14 @@
 "1178",23001,"ME","Androscoggin County",136,0,0
 "1179",23003,"ME","Aroostook County",34,0,0
 "1180",23005,"ME","Cumberland County",538,0,0
-"1181",23007,"ME","Franklin County",-1,0,0
+"1181",23007,"ME","Franklin County",NA,0,NA
 "1182",23009,"ME","Hancock County",58,0,0
 "1183",23011,"ME","Kennebec County",106,0,0
 "1184",23013,"ME","Knox County",28,0,0
 "1185",23015,"ME","Lincoln County",21,0,0
 "1186",23017,"ME","Oxford County",33,0,0
 "1187",23019,"ME","Penobscot County",109,0,0
-"1188",23021,"ME","Piscataquis County",-1,0,0
+"1188",23021,"ME","Piscataquis County",NA,0,NA
 "1189",23023,"ME","Sagadahoc County",25,0,0
 "1190",23025,"ME","Somerset County",28,0,0
 "1191",23027,"ME","Waldo County",34,0,0
@@ -1230,13 +1230,13 @@
 "1229",25023,"MA","Plymouth County",936,327,34.9358974358974
 "1230",25025,"MA","Suffolk County",5737,1313,22.8865260589158
 "1231",25027,"MA","Worcester County",1744,526,30.1605504587156
-"1232",26001,"MI","Alcona County",-1,0,0
-"1233",26003,"MI","Alger County",-1,0,0
+"1232",26001,"MI","Alcona County",NA,0,NA
+"1233",26003,"MI","Alger County",NA,0,NA
 "1234",26005,"MI","Allegan County",79,0,0
 "1235",26007,"MI","Alpena County",13,0,0
 "1236",26009,"MI","Antrim County",13,0,0
 "1237",26011,"MI","Arenac County",5,0,0
-"1238",26013,"MI","Baraga County",-1,0,0
+"1238",26013,"MI","Baraga County",NA,0,NA
 "1239",26015,"MI","Barry County",20,0,0
 "1240",26017,"MI","Bay County",69,5,7.2463768115942
 "1241",26019,"MI","Benzie County",7,0,0
@@ -1249,14 +1249,14 @@
 "1248",26033,"MI","Chippewa County",13,0,0
 "1249",26035,"MI","Clare County",25,0,0
 "1250",26037,"MI","Clinton County",29,0,0
-"1251",26039,"MI","Crawford County",-1,0,0
+"1251",26039,"MI","Crawford County",NA,0,NA
 "1252",26041,"MI","Delta County",20,0,0
-"1253",26043,"MI","Dickinson County",-1,0,0
+"1253",26043,"MI","Dickinson County",NA,0,NA
 "1254",26045,"MI","Eaton County",76,0,0
 "1255",26047,"MI","Emmet County",17,0,0
 "1256",26049,"MI","Genesee County",475,105,22.1052631578947
 "1257",26051,"MI","Gladwin County",10,0,0
-"1258",26053,"MI","Gogebic County",-1,0,0
+"1258",26053,"MI","Gogebic County",NA,0,NA
 "1259",26055,"MI","Grand Traverse County",61,0,0
 "1260",26057,"MI","Gratiot County",18,0,0
 "1261",26059,"MI","Hillsdale County",15,0,0
@@ -1265,19 +1265,19 @@
 "1264",26065,"MI","Ingham County",415,84,20.2409638554217
 "1265",26067,"MI","Ionia County",29,0,0
 "1266",26069,"MI","Iosco County",8,0,0
-"1267",26071,"MI","Iron County",-1,0,0
+"1267",26071,"MI","Iron County",NA,0,NA
 "1268",26073,"MI","Isabella County",48,0,0
 "1269",26075,"MI","Jackson County",173,42,24.2774566473988
 "1270",26077,"MI","Kalamazoo County",321,69,21.4953271028037
 "1271",26079,"MI","Kalkaska County",9,0,0
 "1272",26081,"MI","Kent County",911,236,25.9055982436883
-"1273",26083,"MI","Keweenaw County",-1,0,0
+"1273",26083,"MI","Keweenaw County",NA,0,NA
 "1274",26085,"MI","Lake County",8,0,0
 "1275",26087,"MI","Lapeer County",31,0,0
 "1276",26089,"MI","Leelanau County",6,0,0
 "1277",26091,"MI","Lenawee County",50,0,0
 "1278",26093,"MI","Livingston County",65,0,0
-"1279",26095,"MI","Luce County",-1,0,0
+"1279",26095,"MI","Luce County",NA,0,NA
 "1280",26097,"MI","Mackinac County",5,0,0
 "1281",26099,"MI","Macomb County",975,191,19.5897435897436
 "1282",26101,"MI","Manistee County",7,0,0
@@ -1286,7 +1286,7 @@
 "1285",26107,"MI","Mecosta County",21,0,0
 "1286",26109,"MI","Menominee County",6,0,0
 "1287",26111,"MI","Midland County",28,0,0
-"1288",26113,"MI","Missaukee County",-1,0,0
+"1288",26113,"MI","Missaukee County",NA,0,NA
 "1289",26115,"MI","Monroe County",77,0,0
 "1290",26117,"MI","Montcalm County",31,0,0
 "1291",26119,"MI","Montmorency County",5,0,0
@@ -1295,111 +1295,111 @@
 "1294",26125,"MI","Oakland County",1881,337,17.9160021265284
 "1295",26127,"MI","Oceana County",8,0,0
 "1296",26129,"MI","Ogemaw County",6,0,0
-"1297",26131,"MI","Ontonagon County",-1,0,0
+"1297",26131,"MI","Ontonagon County",NA,0,NA
 "1298",26133,"MI","Osceola County",13,0,0
-"1299",26135,"MI","Oscoda County",-1,0,0
+"1299",26135,"MI","Oscoda County",NA,0,NA
 "1300",26137,"MI","Otsego County",12,0,0
 "1301",26139,"MI","Ottawa County",112,5,4.46428571428571
-"1302",26141,"MI","Presque Isle County",-1,0,0
+"1302",26141,"MI","Presque Isle County",NA,0,NA
 "1303",26143,"MI","Roscommon County",17,0,0
 "1304",26145,"MI","Saginaw County",232,60,25.8620689655172
-"1305",26147,"MI","St. Clair County",-1,0,0
-"1306",26149,"MI","St. Joseph County",-1,0,0
+"1305",26147,"MI","St. Clair County",NA,0,NA
+"1306",26149,"MI","St. Joseph County",NA,0,NA
 "1307",26151,"MI","Sanilac County",17,0,0
-"1308",26153,"MI","Schoolcraft County",-1,0,0
+"1308",26153,"MI","Schoolcraft County",NA,0,NA
 "1309",26155,"MI","Shiawassee County",36,0,0
 "1310",26157,"MI","Tuscola County",13,0,0
 "1311",26159,"MI","Van Buren County",44,0,0
 "1312",26161,"MI","Washtenaw County",503,105,20.8747514910537
 "1313",26163,"MI","Wayne County",6595,1566,23.7452615617892
 "1314",26165,"MI","Wexford County",18,0,0
-"1315",27001,"MN","Aitkin County",-1,0,0
+"1315",27001,"MN","Aitkin County",NA,0,NA
 "1316",27003,"MN","Anoka County",360,124,34.4444444444444
 "1317",27005,"MN","Becker County",13,0,0
 "1318",27007,"MN","Beltrami County",14,0,0
 "1319",27009,"MN","Benton County",20,0,0
-"1320",27011,"MN","Big Stone County",-1,0,0
+"1320",27011,"MN","Big Stone County",NA,0,NA
 "1321",27013,"MN","Blue Earth County",24,0,0
-"1322",27015,"MN","Brown County",-1,0,0
+"1322",27015,"MN","Brown County",NA,0,NA
 "1323",27017,"MN","Carlton County",12,0,0
 "1324",27019,"MN","Carver County",59,0,0
 "1325",27021,"MN","Cass County",21,0,0
 "1326",27023,"MN","Chippewa County",8,0,0
 "1327",27025,"MN","Chisago County",13,0,0
 "1328",27027,"MN","Clay County",23,0,0
-"1329",27029,"MN","Clearwater County",-1,0,0
-"1330",27031,"MN","Cook County",-1,0,0
-"1331",27033,"MN","Cottonwood County",-1,0,0
+"1329",27029,"MN","Clearwater County",NA,0,NA
+"1330",27031,"MN","Cook County",NA,0,NA
+"1331",27033,"MN","Cottonwood County",NA,0,NA
 "1332",27035,"MN","Crow Wing County",9,0,0
 "1333",27037,"MN","Dakota County",366,116,31.6939890710383
-"1334",27039,"MN","Dodge County",-1,0,0
+"1334",27039,"MN","Dodge County",NA,0,NA
 "1335",27041,"MN","Douglas County",11,0,0
-"1336",27043,"MN","Faribault County",-1,0,0
-"1337",27045,"MN","Fillmore County",-1,0,0
+"1336",27043,"MN","Faribault County",NA,0,NA
+"1337",27045,"MN","Fillmore County",NA,0,NA
 "1338",27047,"MN","Freeborn County",8,0,0
 "1339",27049,"MN","Goodhue County",17,0,0
 "1340",27051,"MN","Grant County",6,0,0
 "1341",27053,"MN","Hennepin County",4082,857,20.9946104850563
-"1342",27055,"MN","Houston County",-1,0,0
+"1342",27055,"MN","Houston County",NA,0,NA
 "1343",27057,"MN","Hubbard County",5,0,0
 "1344",27059,"MN","Isanti County",20,0,0
 "1345",27061,"MN","Itasca County",13,0,0
 "1346",27063,"MN","Jackson County",6,0,0
-"1347",27065,"MN","Kanabec County",-1,0,0
+"1347",27065,"MN","Kanabec County",NA,0,NA
 "1348",27067,"MN","Kandiyohi County",23,0,0
-"1349",27069,"MN","Kittson County",-1,0,0
-"1350",27071,"MN","Koochiching County",-1,0,0
-"1351",27073,"MN","Lac Qui Parle County",-1,0,0
-"1352",27075,"MN","Lake County",-1,0,0
-"1353",27077,"MN","Lake Of The Woods County",-1,0,0
+"1349",27069,"MN","Kittson County",NA,0,NA
+"1350",27071,"MN","Koochiching County",NA,0,NA
+"1351",27073,"MN","Lac Qui Parle County",NA,0,NA
+"1352",27075,"MN","Lake County",NA,0,NA
+"1353",27077,"MN","Lake Of The Woods County",NA,0,NA
 "1354",27079,"MN","Le Sueur County",8,0,0
-"1355",27081,"MN","Lincoln County",-1,0,0
+"1355",27081,"MN","Lincoln County",NA,0,NA
 "1356",27083,"MN","Lyon County",12,0,0
 "1357",27085,"MN","McLeod County",18,0,0
-"1358",27087,"MN","Mahnomen County",-1,0,0
-"1359",27089,"MN","Marshall County",-1,0,0
+"1358",27087,"MN","Mahnomen County",NA,0,NA
+"1359",27089,"MN","Marshall County",NA,0,NA
 "1360",27091,"MN","Martin County",14,0,0
 "1361",27093,"MN","Meeker County",9,0,0
 "1362",27095,"MN","Mille Lacs County",7,0,0
 "1363",27097,"MN","Morrison County",10,0,0
 "1364",27099,"MN","Mower County",19,0,0
-"1365",27101,"MN","Murray County",-1,0,0
+"1365",27101,"MN","Murray County",NA,0,NA
 "1366",27103,"MN","Nicollet County",10,0,0
 "1367",27105,"MN","Nobles County",18,0,0
-"1368",27107,"MN","Norman County",-1,0,0
+"1368",27107,"MN","Norman County",NA,0,NA
 "1369",27109,"MN","Olmsted County",193,46,23.8341968911917
 "1370",27111,"MN","Otter Tail County",7,0,0
-"1371",27113,"MN","Pennington County",-1,0,0
+"1371",27113,"MN","Pennington County",NA,0,NA
 "1372",27115,"MN","Pine County",17,0,0
-"1373",27117,"MN","Pipestone County",-1,0,0
+"1373",27117,"MN","Pipestone County",NA,0,NA
 "1374",27119,"MN","Polk County",14,0,0
-"1375",27121,"MN","Pope County",-1,0,0
+"1375",27121,"MN","Pope County",NA,0,NA
 "1376",27123,"MN","Ramsey County",1220,371,30.4098360655738
-"1377",27125,"MN","Red Lake County",-1,0,0
-"1378",27127,"MN","Redwood County",-1,0,0
-"1379",27129,"MN","Renville County",-1,0,0
+"1377",27125,"MN","Red Lake County",NA,0,NA
+"1378",27127,"MN","Redwood County",NA,0,NA
+"1379",27129,"MN","Renville County",NA,0,NA
 "1380",27131,"MN","Rice County",50,0,0
-"1381",27133,"MN","Rock County",-1,0,0
-"1382",27135,"MN","Roseau County",-1,0,0
+"1381",27133,"MN","Rock County",NA,0,NA
+"1382",27135,"MN","Roseau County",NA,0,NA
 "1383",27137,"MN","St. Louis County",133,33,24.812030075188
 "1384",27139,"MN","Scott County",94,26,27.6595744680851
 "1385",27141,"MN","Sherburne County",36,0,0
-"1386",27143,"MN","Sibley County",-1,0,0
+"1386",27143,"MN","Sibley County",NA,0,NA
 "1387",27145,"MN","Stearns County",53,6,11.3207547169811
 "1388",27147,"MN","Steele County",6,0,0
-"1389",27149,"MN","Stevens County",-1,0,0
-"1390",27151,"MN","Swift County",-1,0,0
-"1391",27153,"MN","Todd County",-1,0,0
-"1392",27155,"MN","Traverse County",-1,0,0
-"1393",27157,"MN","Wabasha County",-1,0,0
-"1394",27159,"MN","Wadena County",-1,0,0
+"1389",27149,"MN","Stevens County",NA,0,NA
+"1390",27151,"MN","Swift County",NA,0,NA
+"1391",27153,"MN","Todd County",NA,0,NA
+"1392",27155,"MN","Traverse County",NA,0,NA
+"1393",27157,"MN","Wabasha County",NA,0,NA
+"1394",27159,"MN","Wadena County",NA,0,NA
 "1395",27161,"MN","Waseca County",5,0,0
 "1396",27163,"MN","Washington County",165,50,30.3030303030303
-"1397",27165,"MN","Watonwan County",-1,0,0
-"1398",27167,"MN","Wilkin County",-1,0,0
+"1397",27165,"MN","Watonwan County",NA,0,NA
+"1398",27167,"MN","Wilkin County",NA,0,NA
 "1399",27169,"MN","Winona County",14,0,0
 "1400",27171,"MN","Wright County",38,0,0
-"1401",27173,"MN","Yellow Medicine County",-1,0,0
+"1401",27173,"MN","Yellow Medicine County",NA,0,NA
 "1402",28001,"MS","Adams County",102,0,0
 "1403",28003,"MS","Alcorn County",39,0,0
 "1404",28005,"MS","Amite County",20,0,0
@@ -1427,7 +1427,7 @@
 "1426",28049,"MS","Hinds County",2349,0,0
 "1427",28051,"MS","Holmes County",70,0,0
 "1428",28053,"MS","Humphreys County",29,0,0
-"1429",28055,"MS","Issaquena County",-1,0,0
+"1429",28055,"MS","Issaquena County",NA,0,NA
 "1430",28057,"MS","Itawamba County",25,0,0
 "1431",28059,"MS","Jackson County",243,0,0
 "1432",28061,"MS","Jasper County",37,0,0
@@ -1462,7 +1462,7 @@
 "1461",28119,"MS","Quitman County",29,0,0
 "1462",28121,"MS","Rankin County",449,0,0
 "1463",28123,"MS","Scott County",69,0,0
-"1464",28125,"MS","Sharkey County",-1,0,0
+"1464",28125,"MS","Sharkey County",NA,0,NA
 "1465",28127,"MS","Simpson County",55,0,0
 "1466",28129,"MS","Smith County",14,0,0
 "1467",28131,"MS","Stone County",39,0,0
@@ -1484,7 +1484,7 @@
 "1483",28163,"MS","Yazoo County",117,0,0
 "1484",29001,"MO","Adair County",34,0,0
 "1485",29003,"MO","Andrew County",13,0,0
-"1486",29005,"MO","Atchison County",-1,0,0
+"1486",29005,"MO","Atchison County",NA,0,NA
 "1487",29007,"MO","Audrain County",29,7,24.1379310344828
 "1488",29009,"MO","Barry County",37,0,0
 "1489",29011,"MO","Barton County",5,0,0
@@ -1499,18 +1499,18 @@
 "1498",29029,"MO","Camden County",36,0,0
 "1499",29031,"MO","Cape Girardeau County",66,0,0
 "1500",29033,"MO","Carroll County",7,0,0
-"1501",29035,"MO","Carter County",-1,0,0
+"1501",29035,"MO","Carter County",NA,0,NA
 "1502",29037,"MO","Cass County",85,0,0
-"1503",29039,"MO","Cedar County",-1,0,0
+"1503",29039,"MO","Cedar County",NA,0,NA
 "1504",29041,"MO","Chariton County",5,0,0
 "1505",29043,"MO","Christian County",58,0,0
-"1506",29045,"MO","Clark County",-1,0,0
+"1506",29045,"MO","Clark County",NA,0,NA
 "1507",29047,"MO","Clay County",355,7,1.97183098591549
 "1508",29049,"MO","Clinton County",13,0,0
 "1509",29051,"MO","Cole County",120,26,21.6666666666667
 "1510",29053,"MO","Cooper County",42,0,0
 "1511",29055,"MO","Crawford County",15,0,0
-"1512",29057,"MO","Dade County",-1,0,0
+"1512",29057,"MO","Dade County",NA,0,NA
 "1513",29059,"MO","Dallas County",7,0,0
 "1514",29061,"MO","Daviess County",12,0,0
 "1515",29063,"MO","DeKalb County",14,0,0
@@ -1519,74 +1519,74 @@
 "1518",29069,"MO","Dunklin County",19,0,0
 "1519",29071,"MO","Franklin County",67,0,0
 "1520",29073,"MO","Gasconade County",5,0,0
-"1521",29075,"MO","Gentry County",-1,0,0
+"1521",29075,"MO","Gentry County",NA,0,NA
 "1522",29077,"MO","Greene County",542,67,12.3616236162362
 "1523",29079,"MO","Grundy County",5,0,0
-"1524",29081,"MO","Harrison County",-1,0,0
+"1524",29081,"MO","Harrison County",NA,0,NA
 "1525",29083,"MO","Henry County",19,0,0
-"1526",29085,"MO","Hickory County",-1,0,0
-"1527",29087,"MO","Holt County",-1,0,0
-"1528",29089,"MO","Howard County",-1,0,0
+"1526",29085,"MO","Hickory County",NA,0,NA
+"1527",29087,"MO","Holt County",NA,0,NA
+"1528",29089,"MO","Howard County",NA,0,NA
 "1529",29091,"MO","Howell County",19,0,0
 "1530",29093,"MO","Iron County",7,0,0
 "1531",29095,"MO","Jackson County",2677,373,13.9335076578259
 "1532",29097,"MO","Jasper County",169,32,18.9349112426036
 "1533",29099,"MO","Jefferson County",170,29,17.0588235294118
 "1534",29101,"MO","Johnson County",38,5,13.1578947368421
-"1535",29103,"MO","Knox County",-1,0,0
+"1535",29103,"MO","Knox County",NA,0,NA
 "1536",29105,"MO","Laclede County",13,0,0
 "1537",29107,"MO","Lafayette County",13,0,0
 "1538",29109,"MO","Lawrence County",22,0,0
-"1539",29111,"MO","Lewis County",-1,0,0
+"1539",29111,"MO","Lewis County",NA,0,NA
 "1540",29113,"MO","Lincoln County",44,5,11.3636363636364
-"1541",29115,"MO","Linn County",-1,0,0
+"1541",29115,"MO","Linn County",NA,0,NA
 "1542",29117,"MO","Livingston County",5,0,0
 "1543",29119,"MO","McDonald County",24,0,0
 "1544",29121,"MO","Macon County",9,0,0
 "1545",29123,"MO","Madison County",8,0,0
 "1546",29125,"MO","Maries County",7,0,0
 "1547",29127,"MO","Marion County",19,0,0
-"1548",29129,"MO","Mercer County",-1,0,0
+"1548",29129,"MO","Mercer County",NA,0,NA
 "1549",29131,"MO","Miller County",6,0,0
 "1550",29133,"MO","Mississippi County",55,7,12.7272727272727
 "1551",29135,"MO","Moniteau County",19,0,0
 "1552",29137,"MO","Monroe County",17,0,0
 "1553",29139,"MO","Montgomery County",6,0,0
-"1554",29141,"MO","Morgan County",-1,0,0
+"1554",29141,"MO","Morgan County",NA,0,NA
 "1555",29143,"MO","New Madrid County",18,0,0
 "1556",29145,"MO","Newton County",17,0,0
 "1557",29147,"MO","Nodaway County",11,0,0
 "1558",29149,"MO","Oregon County",5,0,0
-"1559",29151,"MO","Osage County",-1,0,0
+"1559",29151,"MO","Osage County",NA,0,NA
 "1560",29153,"MO","Ozark County",6,0,0
 "1561",29155,"MO","Pemiscot County",24,0,0
-"1562",29157,"MO","Perry County",-1,0,0
+"1562",29157,"MO","Perry County",NA,0,NA
 "1563",29159,"MO","Pettis County",18,0,0
 "1564",29161,"MO","Phelps County",15,0,0
 "1565",29163,"MO","Pike County",11,0,0
 "1566",29165,"MO","Platte County",102,0,0
 "1567",29167,"MO","Polk County",24,0,0
 "1568",29169,"MO","Pulaski County",39,5,12.8205128205128
-"1569",29171,"MO","Putnam County",-1,0,0
-"1570",29173,"MO","Ralls County",-1,0,0
+"1569",29171,"MO","Putnam County",NA,0,NA
+"1570",29173,"MO","Ralls County",NA,0,NA
 "1571",29175,"MO","Randolph County",20,0,0
 "1572",29177,"MO","Ray County",8,0,0
-"1573",29179,"MO","Reynolds County",-1,0,0
+"1573",29179,"MO","Reynolds County",NA,0,NA
 "1574",29181,"MO","Ripley County",5,0,0
 "1575",29183,"MO","St. Charles County",290,55,18.9655172413793
-"1576",29185,"MO","St. Clair County",-1,0,0
+"1576",29185,"MO","St. Clair County",NA,0,NA
 "1577",29186,"MO","Ste. Genevieve County",38,0,0
 "1578",29187,"MO","St. Francois County",78,0,0
 "1579",29189,"MO","St. Louis County",2254,546,24.223602484472
 "1580",29195,"MO","Saline County",12,0,0
-"1581",29197,"MO","Schuyler County",-1,0,0
-"1582",29199,"MO","Scotland County",-1,0,0
+"1581",29197,"MO","Schuyler County",NA,0,NA
+"1582",29199,"MO","Scotland County",NA,0,NA
 "1583",29201,"MO","Scott County",28,0,0
 "1584",29203,"MO","Shannon County",5,0,0
-"1585",29205,"MO","Shelby County",-1,0,0
+"1585",29205,"MO","Shelby County",NA,0,NA
 "1586",29207,"MO","Stoddard County",7,0,0
 "1587",29209,"MO","Stone County",16,0,0
-"1588",29211,"MO","Sullivan County",-1,0,0
+"1588",29211,"MO","Sullivan County",NA,0,NA
 "1589",29213,"MO","Taney County",44,0,0
 "1590",29215,"MO","Texas County",16,0,0
 "1591",29217,"MO","Vernon County",12,0,0
@@ -1594,169 +1594,169 @@
 "1593",29221,"MO","Washington County",21,0,0
 "1594",29223,"MO","Wayne County",7,0,0
 "1595",29225,"MO","Webster County",32,0,0
-"1596",29227,"MO","Worth County",-1,0,0
+"1596",29227,"MO","Worth County",NA,0,NA
 "1597",29229,"MO","Wright County",9,0,0
 "1598",29510,"MO","St. Louis city",2964,528,17.8137651821862
-"1599",30001,"MT","Beaverhead County",-1,0,0
+"1599",30001,"MT","Beaverhead County",NA,0,NA
 "1600",30003,"MT","Big Horn County",10,0,0
-"1601",30005,"MT","Blaine County",-1,0,0
-"1602",30007,"MT","Broadwater County",-1,0,0
+"1601",30005,"MT","Blaine County",NA,0,NA
+"1602",30007,"MT","Broadwater County",NA,0,NA
 "1603",30009,"MT","Carbon County",8,0,0
-"1604",30011,"MT","Carter County",-1,0,0
+"1604",30011,"MT","Carter County",NA,0,NA
 "1605",30013,"MT","Cascade County",30,0,0
-"1606",30015,"MT","Chouteau County",-1,0,0
-"1607",30017,"MT","Custer County",-1,0,0
-"1608",30019,"MT","Daniels County",-1,0,0
-"1609",30021,"MT","Dawson County",-1,0,0
-"1610",30023,"MT","Deer Lodge County",-1,0,0
-"1611",30025,"MT","Fallon County",-1,0,0
-"1612",30027,"MT","Fergus County",-1,0,0
+"1606",30015,"MT","Chouteau County",NA,0,NA
+"1607",30017,"MT","Custer County",NA,0,NA
+"1608",30019,"MT","Daniels County",NA,0,NA
+"1609",30021,"MT","Dawson County",NA,0,NA
+"1610",30023,"MT","Deer Lodge County",NA,0,NA
+"1611",30025,"MT","Fallon County",NA,0,NA
+"1612",30027,"MT","Fergus County",NA,0,NA
 "1613",30029,"MT","Flathead County",36,0,0
 "1614",30031,"MT","Gallatin County",46,0,0
-"1615",30033,"MT","Garfield County",-1,0,0
-"1616",30035,"MT","Glacier County",-1,0,0
-"1617",30037,"MT","Golden Valley County",-1,0,0
-"1618",30039,"MT","Granite County",-1,0,0
-"1619",30041,"MT","Hill County",-1,0,0
+"1615",30033,"MT","Garfield County",NA,0,NA
+"1616",30035,"MT","Glacier County",NA,0,NA
+"1617",30037,"MT","Golden Valley County",NA,0,NA
+"1618",30039,"MT","Granite County",NA,0,NA
+"1619",30041,"MT","Hill County",NA,0,NA
 "1620",30043,"MT","Jefferson County",6,0,0
-"1621",30045,"MT","Judith Basin County",-1,0,0
+"1621",30045,"MT","Judith Basin County",NA,0,NA
 "1622",30047,"MT","Lake County",18,0,0
 "1623",30049,"MT","Lewis and Clark County",27,0,0
-"1624",30051,"MT","Liberty County",-1,0,0
+"1624",30051,"MT","Liberty County",NA,0,NA
 "1625",30053,"MT","Lincoln County",9,0,0
-"1626",30055,"MT","Mccone County",-1,0,0
+"1626",30055,"MT","Mccone County",NA,0,NA
 "1627",30057,"MT","Madison County",6,0,0
-"1628",30059,"MT","Meagher County",-1,0,0
-"1629",30061,"MT","Mineral County",-1,0,0
+"1628",30059,"MT","Meagher County",NA,0,NA
+"1629",30061,"MT","Mineral County",NA,0,NA
 "1630",30063,"MT","Missoula County",120,7,5.83333333333333
-"1631",30065,"MT","Musselshell County",-1,0,0
+"1631",30065,"MT","Musselshell County",NA,0,NA
 "1632",30067,"MT","Park County",5,0,0
-"1633",30069,"MT","Petroleum County",-1,0,0
-"1634",30071,"MT","Phillips County",-1,0,0
-"1635",30073,"MT","Pondera County",-1,0,0
-"1636",30075,"MT","Powder River County",-1,0,0
+"1633",30069,"MT","Petroleum County",NA,0,NA
+"1634",30071,"MT","Phillips County",NA,0,NA
+"1635",30073,"MT","Pondera County",NA,0,NA
+"1636",30075,"MT","Powder River County",NA,0,NA
 "1637",30077,"MT","Powell County",10,0,0
-"1638",30079,"MT","Prairie County",-1,0,0
+"1638",30079,"MT","Prairie County",NA,0,NA
 "1639",30081,"MT","Ravalli County",14,0,0
-"1640",30083,"MT","Richland County",-1,0,0
-"1641",30085,"MT","Roosevelt County",-1,0,0
-"1642",30087,"MT","Rosebud County",-1,0,0
-"1643",30089,"MT","Sanders County",-1,0,0
-"1644",30091,"MT","Sheridan County",-1,0,0
+"1640",30083,"MT","Richland County",NA,0,NA
+"1641",30085,"MT","Roosevelt County",NA,0,NA
+"1642",30087,"MT","Rosebud County",NA,0,NA
+"1643",30089,"MT","Sanders County",NA,0,NA
+"1644",30091,"MT","Sheridan County",NA,0,NA
 "1645",30093,"MT","Silver Bow County",19,0,0
-"1646",30095,"MT","Stillwater County",-1,0,0
-"1647",30097,"MT","Sweet Grass County",-1,0,0
-"1648",30099,"MT","Teton County",-1,0,0
-"1649",30101,"MT","Toole County",-1,0,0
-"1650",30103,"MT","Treasure County",-1,0,0
-"1651",30105,"MT","Valley County",-1,0,0
-"1652",30107,"MT","Wheatland County",-1,0,0
-"1653",30109,"MT","Wibaux County",-1,0,0
+"1646",30095,"MT","Stillwater County",NA,0,NA
+"1647",30097,"MT","Sweet Grass County",NA,0,NA
+"1648",30099,"MT","Teton County",NA,0,NA
+"1649",30101,"MT","Toole County",NA,0,NA
+"1650",30103,"MT","Treasure County",NA,0,NA
+"1651",30105,"MT","Valley County",NA,0,NA
+"1652",30107,"MT","Wheatland County",NA,0,NA
+"1653",30109,"MT","Wibaux County",NA,0,NA
 "1654",30111,"MT","Yellowstone County",134,20,14.9253731343284
 "1655",31001,"NE","Adams County",5,0,0
-"1656",31003,"NE","Antelope County",-1,0,0
-"1657",31005,"NE","Arthur County",-1,0,0
-"1658",31007,"NE","Banner County",-1,0,0
-"1659",31009,"NE","Blaine County",-1,0,0
-"1660",31011,"NE","Boone County",-1,0,0
-"1661",31013,"NE","Box Butte County",-1,0,0
-"1662",31015,"NE","Boyd County",-1,0,0
-"1663",31017,"NE","Brown County",-1,0,0
+"1656",31003,"NE","Antelope County",NA,0,NA
+"1657",31005,"NE","Arthur County",NA,0,NA
+"1658",31007,"NE","Banner County",NA,0,NA
+"1659",31009,"NE","Blaine County",NA,0,NA
+"1660",31011,"NE","Boone County",NA,0,NA
+"1661",31013,"NE","Box Butte County",NA,0,NA
+"1662",31015,"NE","Boyd County",NA,0,NA
+"1663",31017,"NE","Brown County",NA,0,NA
 "1664",31019,"NE","Buffalo County",13,0,0
-"1665",31021,"NE","Burt County",-1,0,0
-"1666",31023,"NE","Butler County",-1,0,0
-"1667",31025,"NE","Cass County",-1,0,0
-"1668",31027,"NE","Cedar County",-1,0,0
-"1669",31029,"NE","Chase County",-1,0,0
-"1670",31031,"NE","Cherry County",-1,0,0
-"1671",31033,"NE","Cheyenne County",-1,0,0
-"1672",31035,"NE","Clay County",-1,0,0
-"1673",31037,"NE","Colfax County",-1,0,0
-"1674",31039,"NE","Cuming County",-1,0,0
+"1665",31021,"NE","Burt County",NA,0,NA
+"1666",31023,"NE","Butler County",NA,0,NA
+"1667",31025,"NE","Cass County",NA,0,NA
+"1668",31027,"NE","Cedar County",NA,0,NA
+"1669",31029,"NE","Chase County",NA,0,NA
+"1670",31031,"NE","Cherry County",NA,0,NA
+"1671",31033,"NE","Cheyenne County",NA,0,NA
+"1672",31035,"NE","Clay County",NA,0,NA
+"1673",31037,"NE","Colfax County",NA,0,NA
+"1674",31039,"NE","Cuming County",NA,0,NA
 "1675",31041,"NE","Custer County",8,0,0
 "1676",31043,"NE","Dakota County",14,0,0
-"1677",31045,"NE","Dawes County",-1,0,0
-"1678",31047,"NE","Dawson County",-1,0,0
-"1679",31049,"NE","Deuel County",-1,0,0
-"1680",31051,"NE","Dixon County",-1,0,0
+"1677",31045,"NE","Dawes County",NA,0,NA
+"1678",31047,"NE","Dawson County",NA,0,NA
+"1679",31049,"NE","Deuel County",NA,0,NA
+"1680",31051,"NE","Dixon County",NA,0,NA
 "1681",31053,"NE","Dodge County",6,0,0
 "1682",31055,"NE","Douglas County",419,0,0
-"1683",31057,"NE","Dundy County",-1,0,0
-"1684",31059,"NE","Fillmore County",-1,0,0
-"1685",31061,"NE","Franklin County",-1,0,0
-"1686",31063,"NE","Frontier County",-1,0,0
-"1687",31065,"NE","Furnas County",-1,0,0
-"1688",31067,"NE","Gage County",-1,0,0
-"1689",31069,"NE","Garden County",-1,0,0
-"1690",31071,"NE","Garfield County",-1,0,0
-"1691",31073,"NE","Gosper County",-1,0,0
-"1692",31075,"NE","Grant County",-1,0,0
-"1693",31077,"NE","Greeley County",-1,0,0
+"1683",31057,"NE","Dundy County",NA,0,NA
+"1684",31059,"NE","Fillmore County",NA,0,NA
+"1685",31061,"NE","Franklin County",NA,0,NA
+"1686",31063,"NE","Frontier County",NA,0,NA
+"1687",31065,"NE","Furnas County",NA,0,NA
+"1688",31067,"NE","Gage County",NA,0,NA
+"1689",31069,"NE","Garden County",NA,0,NA
+"1690",31071,"NE","Garfield County",NA,0,NA
+"1691",31073,"NE","Gosper County",NA,0,NA
+"1692",31075,"NE","Grant County",NA,0,NA
+"1693",31077,"NE","Greeley County",NA,0,NA
 "1694",31079,"NE","Hall County",24,0,0
-"1695",31081,"NE","Hamilton County",-1,0,0
-"1696",31083,"NE","Harlan County",-1,0,0
-"1697",31085,"NE","Hayes County",-1,0,0
-"1698",31087,"NE","Hitchcock County",-1,0,0
-"1699",31089,"NE","Holt County",-1,0,0
-"1700",31091,"NE","Hooker County",-1,0,0
-"1701",31093,"NE","Howard County",-1,0,0
-"1702",31095,"NE","Jefferson County",-1,0,0
-"1703",31097,"NE","Johnson County",-1,0,0
-"1704",31099,"NE","Kearney County",-1,0,0
-"1705",31101,"NE","Keith County",-1,0,0
-"1706",31103,"NE","Keya Paha County",-1,0,0
-"1707",31105,"NE","Kimball County",-1,0,0
-"1708",31107,"NE","Knox County",-1,0,0
+"1695",31081,"NE","Hamilton County",NA,0,NA
+"1696",31083,"NE","Harlan County",NA,0,NA
+"1697",31085,"NE","Hayes County",NA,0,NA
+"1698",31087,"NE","Hitchcock County",NA,0,NA
+"1699",31089,"NE","Holt County",NA,0,NA
+"1700",31091,"NE","Hooker County",NA,0,NA
+"1701",31093,"NE","Howard County",NA,0,NA
+"1702",31095,"NE","Jefferson County",NA,0,NA
+"1703",31097,"NE","Johnson County",NA,0,NA
+"1704",31099,"NE","Kearney County",NA,0,NA
+"1705",31101,"NE","Keith County",NA,0,NA
+"1706",31103,"NE","Keya Paha County",NA,0,NA
+"1707",31105,"NE","Kimball County",NA,0,NA
+"1708",31107,"NE","Knox County",NA,0,NA
 "1709",31109,"NE","Lancaster County",111,0,0
-"1710",31111,"NE","Lincoln County",-1,0,0
-"1711",31113,"NE","Logan County",-1,0,0
-"1712",31115,"NE","Loup County",-1,0,0
-"1713",31117,"NE","McPherson County",-1,0,0
+"1710",31111,"NE","Lincoln County",NA,0,NA
+"1711",31113,"NE","Logan County",NA,0,NA
+"1712",31115,"NE","Loup County",NA,0,NA
+"1713",31117,"NE","McPherson County",NA,0,NA
 "1714",31119,"NE","Madison County",11,0,0
-"1715",31121,"NE","Merrick County",-1,0,0
-"1716",31123,"NE","Morrill County",-1,0,0
-"1717",31125,"NE","Nance County",-1,0,0
-"1718",31127,"NE","Nemaha County",-1,0,0
-"1719",31129,"NE","Nuckolls County",-1,0,0
-"1720",31131,"NE","Otoe County",-1,0,0
-"1721",31133,"NE","Pawnee County",-1,0,0
-"1722",31135,"NE","Perkins County",-1,0,0
-"1723",31137,"NE","Phelps County",-1,0,0
-"1724",31139,"NE","Pierce County",-1,0,0
-"1725",31141,"NE","Platte County",-1,0,0
-"1726",31143,"NE","Polk County",-1,0,0
-"1727",31145,"NE","Red Willow County",-1,0,0
-"1728",31147,"NE","Richardson County",-1,0,0
-"1729",31149,"NE","Rock County",-1,0,0
-"1730",31151,"NE","Saline County",-1,0,0
+"1715",31121,"NE","Merrick County",NA,0,NA
+"1716",31123,"NE","Morrill County",NA,0,NA
+"1717",31125,"NE","Nance County",NA,0,NA
+"1718",31127,"NE","Nemaha County",NA,0,NA
+"1719",31129,"NE","Nuckolls County",NA,0,NA
+"1720",31131,"NE","Otoe County",NA,0,NA
+"1721",31133,"NE","Pawnee County",NA,0,NA
+"1722",31135,"NE","Perkins County",NA,0,NA
+"1723",31137,"NE","Phelps County",NA,0,NA
+"1724",31139,"NE","Pierce County",NA,0,NA
+"1725",31141,"NE","Platte County",NA,0,NA
+"1726",31143,"NE","Polk County",NA,0,NA
+"1727",31145,"NE","Red Willow County",NA,0,NA
+"1728",31147,"NE","Richardson County",NA,0,NA
+"1729",31149,"NE","Rock County",NA,0,NA
+"1730",31151,"NE","Saline County",NA,0,NA
 "1731",31153,"NE","Sarpy County",35,0,0
-"1732",31155,"NE","Saunders County",-1,0,0
+"1732",31155,"NE","Saunders County",NA,0,NA
 "1733",31157,"NE","Scotts Bluff County",8,0,0
-"1734",31159,"NE","Seward County",-1,0,0
-"1735",31161,"NE","Sheridan County",-1,0,0
-"1736",31163,"NE","Sherman County",-1,0,0
-"1737",31165,"NE","Sioux County",-1,0,0
-"1738",31167,"NE","Stanton County",-1,0,0
-"1739",31169,"NE","Thayer County",-1,0,0
-"1740",31171,"NE","Thomas County",-1,0,0
-"1741",31173,"NE","Thurston County",-1,0,0
-"1742",31175,"NE","Valley County",-1,0,0
-"1743",31177,"NE","Washington County",-1,0,0
-"1744",31179,"NE","Wayne County",-1,0,0
-"1745",31181,"NE","Webster County",-1,0,0
-"1746",31183,"NE","Wheeler County",-1,0,0
+"1734",31159,"NE","Seward County",NA,0,NA
+"1735",31161,"NE","Sheridan County",NA,0,NA
+"1736",31163,"NE","Sherman County",NA,0,NA
+"1737",31165,"NE","Sioux County",NA,0,NA
+"1738",31167,"NE","Stanton County",NA,0,NA
+"1739",31169,"NE","Thayer County",NA,0,NA
+"1740",31171,"NE","Thomas County",NA,0,NA
+"1741",31173,"NE","Thurston County",NA,0,NA
+"1742",31175,"NE","Valley County",NA,0,NA
+"1743",31177,"NE","Washington County",NA,0,NA
+"1744",31179,"NE","Wayne County",NA,0,NA
+"1745",31181,"NE","Webster County",NA,0,NA
+"1746",31183,"NE","Wheeler County",NA,0,NA
 "1747",31185,"NE","York County",9,0,0
 "1748",32001,"NV","Churchill County",31,0,0
 "1749",32003,"NV","Clark County",7422,1214,16.3567771490164
 "1750",32005,"NV","Douglas County",41,0,0
 "1751",32007,"NV","Elko County",24,0,0
-"1752",32009,"NV","Esmeralda County",-1,0,0
-"1753",32011,"NV","Eureka County",-1,0,0
-"1754",32013,"NV","Humboldt County",-1,0,0
-"1755",32015,"NV","Lander County",-1,0,0
-"1756",32017,"NV","Lincoln County",-1,0,0
+"1752",32009,"NV","Esmeralda County",NA,0,NA
+"1753",32011,"NV","Eureka County",NA,0,NA
+"1754",32013,"NV","Humboldt County",NA,0,NA
+"1755",32015,"NV","Lander County",NA,0,NA
+"1756",32017,"NV","Lincoln County",NA,0,NA
 "1757",32019,"NV","Lyon County",45,6,13.3333333333333
-"1758",32021,"NV","Mineral County",-1,0,0
+"1758",32021,"NV","Mineral County",NA,0,NA
 "1759",32023,"NV","Nye County",67,13,19.4029850746269
 "1760",32027,"NV","Pershing County",10,0,0
 "1761",32029,"NV","Storey County",6,0,0
@@ -1795,26 +1795,26 @@
 "1794",34039,"NJ","Union County",2528,864,34.1772151898734
 "1795",34041,"NJ","Warren County",112,31,27.6785714285714
 "1796",35001,"NM","Bernalillo County",1361,143,10.5069801616458
-"1797",35003,"NM","Catron County",-1,0,0
+"1797",35003,"NM","Catron County",NA,0,NA
 "1798",35005,"NM","Chaves County",47,0,0
 "1799",35006,"NM","Cibola County",90,0,0
 "1800",35007,"NM","Colfax County",7,0,0
 "1801",35009,"NM","Curry County",27,0,0
-"1802",35011,"NM","De Baca County",-1,0,0
+"1802",35011,"NM","De Baca County",NA,0,NA
 "1803",35013,"NM","Doña Ana County",372,0,0
 "1804",35015,"NM","Eddy County",25,0,0
 "1805",35017,"NM","Grant County",26,0,0
-"1806",35019,"NM","Guadalupe County",-1,0,0
-"1807",35021,"NM","Harding County",-1,0,0
-"1808",35023,"NM","Hidalgo County",-1,0,0
+"1806",35019,"NM","Guadalupe County",NA,0,NA
+"1807",35021,"NM","Harding County",NA,0,NA
+"1808",35023,"NM","Hidalgo County",NA,0,NA
 "1809",35025,"NM","Lea County",44,0,0
 "1810",35027,"NM","Lincoln County",16,0,0
-"1811",35028,"NM","Los Alamos County",-1,0,0
+"1811",35028,"NM","Los Alamos County",NA,0,NA
 "1812",35029,"NM","Luna County",17,0,0
 "1813",35031,"NM","McKinley County",103,0,0
-"1814",35033,"NM","Mora County",-1,0,0
+"1814",35033,"NM","Mora County",NA,0,NA
 "1815",35035,"NM","Otero County",57,0,0
-"1816",35037,"NM","Quay County",-1,0,0
+"1816",35037,"NM","Quay County",NA,0,NA
 "1817",35039,"NM","Rio Arriba County",57,0,0
 "1818",35041,"NM","Roosevelt County",9,0,0
 "1819",35043,"NM","Sandoval County",132,0,0
@@ -1847,7 +1847,7 @@
 "1846",36035,"NY","Fulton County",62,12,19.3548387096774
 "1847",36037,"NY","Genesee County",79,8,10.126582278481
 "1848",36039,"NY","Greene County",196,45,22.9591836734694
-"1849",36041,"NY","Hamilton County",-1,0,0
+"1849",36041,"NY","Hamilton County",NA,0,NA
 "1850",36043,"NY","Herkimer County",62,6,9.67741935483871
 "1851",36045,"NY","Jefferson County",259,26,10.03861003861
 "1852",36047,"NY","Kings County",26522,8458,31.890505995023
@@ -1875,7 +1875,7 @@
 "1874",36091,"NY","Saratoga County",228,32,14.0350877192982
 "1875",36093,"NY","Schenectady County",312,111,35.5769230769231
 "1876",36095,"NY","Schoharie County",33,0,0
-"1877",36097,"NY","Schuyler County",-1,0,0
+"1877",36097,"NY","Schuyler County",NA,0,NA
 "1878",36099,"NY","Seneca County",99,14,14.1414141414141
 "1879",36101,"NY","Steuben County",90,27,30
 "1880",36103,"NY","Suffolk County",2956,756,25.575101488498
@@ -1891,7 +1891,7 @@
 "1890",36123,"NY","Yates County",7,0,0
 "1891",37001,"NC","Alamance County",384,124,32.2916666666667
 "1892",37003,"NC","Alexander County",51,5,9.80392156862745
-"1893",37005,"NC","Alleghany County",-1,0,0
+"1893",37005,"NC","Alleghany County",NA,0,NA
 "1894",37007,"NC","Anson County",90,18,20
 "1895",37009,"NC","Ashe County",13,0,0
 "1896",37011,"NC","Avery County",31,0,0
@@ -1926,7 +1926,7 @@
 "1925",37069,"NC","Franklin County",116,41,35.3448275862069
 "1926",37071,"NC","Gaston County",574,196,34.1463414634146
 "1927",37073,"NC","Gates County",14,0,0
-"1928",37075,"NC","Graham County",-1,0,0
+"1928",37075,"NC","Graham County",NA,0,NA
 "1929",37077,"NC","Granville County",285,93,32.6315789473684
 "1930",37079,"NC","Greene County",87,17,19.5402298850575
 "1931",37081,"NC","Guilford County",2186,728,33.3028362305581
@@ -1989,58 +1989,58 @@
 "1988",37195,"NC","Wilson County",306,127,41.5032679738562
 "1989",37197,"NC","Yadkin County",34,0,0
 "1990",37199,"NC","Yancey County",11,0,0
-"1991",38001,"ND","Adams County",-1,0,0
-"1992",38003,"ND","Barnes County",-1,0,0
-"1993",38005,"ND","Benson County",-1,0,0
-"1994",38007,"ND","Billings County",-1,0,0
-"1995",38009,"ND","Bottineau County",-1,0,0
-"1996",38011,"ND","Bowman County",-1,0,0
-"1997",38013,"ND","Burke County",-1,0,0
+"1991",38001,"ND","Adams County",NA,0,NA
+"1992",38003,"ND","Barnes County",NA,0,NA
+"1993",38005,"ND","Benson County",NA,0,NA
+"1994",38007,"ND","Billings County",NA,0,NA
+"1995",38009,"ND","Bottineau County",NA,0,NA
+"1996",38011,"ND","Bowman County",NA,0,NA
+"1997",38013,"ND","Burke County",NA,0,NA
 "1998",38015,"ND","Burleigh County",49,0,0
 "1999",38017,"ND","Cass County",117,0,0
-"2000",38019,"ND","Cavalier County",-1,0,0
-"2001",38021,"ND","Dickey County",-1,0,0
-"2002",38023,"ND","Divide County",-1,0,0
+"2000",38019,"ND","Cavalier County",NA,0,NA
+"2001",38021,"ND","Dickey County",NA,0,NA
+"2002",38023,"ND","Divide County",NA,0,NA
 "2003",38025,"ND","Dunn County",7,0,0
-"2004",38027,"ND","Eddy County",-1,0,0
-"2005",38029,"ND","Emmons County",-1,0,0
-"2006",38031,"ND","Foster County",-1,0,0
-"2007",38033,"ND","Golden Valley County",-1,0,0
+"2004",38027,"ND","Eddy County",NA,0,NA
+"2005",38029,"ND","Emmons County",NA,0,NA
+"2006",38031,"ND","Foster County",NA,0,NA
+"2007",38033,"ND","Golden Valley County",NA,0,NA
 "2008",38035,"ND","Grand Forks County",31,0,0
-"2009",38037,"ND","Grant County",-1,0,0
-"2010",38039,"ND","Griggs County",-1,0,0
-"2011",38041,"ND","Hettinger County",-1,0,0
-"2012",38043,"ND","Kidder County",-1,0,0
-"2013",38045,"ND","Lamoure County",-1,0,0
-"2014",38047,"ND","Logan County",-1,0,0
-"2015",38049,"ND","McHenry County",-1,0,0
-"2016",38051,"ND","Mcintosh County",-1,0,0
+"2009",38037,"ND","Grant County",NA,0,NA
+"2010",38039,"ND","Griggs County",NA,0,NA
+"2011",38041,"ND","Hettinger County",NA,0,NA
+"2012",38043,"ND","Kidder County",NA,0,NA
+"2013",38045,"ND","Lamoure County",NA,0,NA
+"2014",38047,"ND","Logan County",NA,0,NA
+"2015",38049,"ND","McHenry County",NA,0,NA
+"2016",38051,"ND","Mcintosh County",NA,0,NA
 "2017",38053,"ND","Mckenzie County",6,0,0
-"2018",38055,"ND","Mclean County",-1,0,0
-"2019",38057,"ND","Mercer County",-1,0,0
+"2018",38055,"ND","Mclean County",NA,0,NA
+"2019",38057,"ND","Mercer County",NA,0,NA
 "2020",38059,"ND","Morton County",10,0,0
-"2021",38061,"ND","Mountrail County",-1,0,0
+"2021",38061,"ND","Mountrail County",NA,0,NA
 "2022",38063,"ND","Nelson County",5,0,0
-"2023",38065,"ND","Oliver County",-1,0,0
-"2024",38067,"ND","Pembina County",-1,0,0
-"2025",38069,"ND","Pierce County",-1,0,0
-"2026",38071,"ND","Ramsey County",-1,0,0
-"2027",38073,"ND","Ransom County",-1,0,0
-"2028",38075,"ND","Renville County",-1,0,0
+"2023",38065,"ND","Oliver County",NA,0,NA
+"2024",38067,"ND","Pembina County",NA,0,NA
+"2025",38069,"ND","Pierce County",NA,0,NA
+"2026",38071,"ND","Ramsey County",NA,0,NA
+"2027",38073,"ND","Ransom County",NA,0,NA
+"2028",38075,"ND","Renville County",NA,0,NA
 "2029",38077,"ND","Richland County",5,0,0
-"2030",38079,"ND","Rolette County",-1,0,0
-"2031",38081,"ND","Sargent County",-1,0,0
-"2032",38083,"ND","Sheridan County",-1,0,0
-"2033",38085,"ND","Sioux County",-1,0,0
-"2034",38087,"ND","Slope County",-1,0,0
+"2030",38079,"ND","Rolette County",NA,0,NA
+"2031",38081,"ND","Sargent County",NA,0,NA
+"2032",38083,"ND","Sheridan County",NA,0,NA
+"2033",38085,"ND","Sioux County",NA,0,NA
+"2034",38087,"ND","Slope County",NA,0,NA
 "2035",38089,"ND","Stark County",10,0,0
-"2036",38091,"ND","Steele County",-1,0,0
+"2036",38091,"ND","Steele County",NA,0,NA
 "2037",38093,"ND","Stutsman County",10,0,0
-"2038",38095,"ND","Towner County",-1,0,0
-"2039",38097,"ND","Traill County",-1,0,0
-"2040",38099,"ND","Walsh County",-1,0,0
+"2038",38095,"ND","Towner County",NA,0,NA
+"2039",38097,"ND","Traill County",NA,0,NA
+"2040",38099,"ND","Walsh County",NA,0,NA
 "2041",38101,"ND","Ward County",24,0,0
-"2042",38103,"ND","Wells County",-1,0,0
+"2042",38103,"ND","Wells County",NA,0,NA
 "2043",38105,"ND","Williams County",15,0,0
 "2044",39001,"OH","Adams County",21,0,0
 "2045",39003,"OH","Allen County",170,52,30.5882352941176
@@ -2079,7 +2079,7 @@
 "2078",39069,"OH","Henry County",11,0,0
 "2079",39071,"OH","Highland County",18,0,0
 "2080",39073,"OH","Hocking County",24,0,0
-"2081",39075,"OH","Holmes County",-1,0,0
+"2081",39075,"OH","Holmes County",NA,0,NA
 "2082",39077,"OH","Huron County",28,0,0
 "2083",39079,"OH","Jackson County",24,0,0
 "2084",39081,"OH","Jefferson County",65,11,16.9230769230769
@@ -2123,7 +2123,7 @@
 "2122",39157,"OH","Tuscarawas County",24,0,0
 "2123",39159,"OH","Union County",74,31,41.8918918918919
 "2124",39161,"OH","Van Wert County",10,0,0
-"2125",39163,"OH","Vinton County",-1,0,0
+"2125",39163,"OH","Vinton County",NA,0,NA
 "2126",39165,"OH","Warren County",167,15,8.98203592814371
 "2127",39167,"OH","Washington County",34,0,0
 "2128",39169,"OH","Wayne County",67,0,0
@@ -2133,7 +2133,7 @@
 "2132",40001,"OK","Adair County",10,0,0
 "2133",40003,"OK","Alfalfa County",9,0,0
 "2134",40005,"OK","Atoka County",7,0,0
-"2135",40007,"OK","Beaver County",-1,0,0
+"2135",40007,"OK","Beaver County",NA,0,NA
 "2136",40009,"OK","Beckham County",14,0,0
 "2137",40011,"OK","Blaine County",8,0,0
 "2138",40013,"OK","Bryan County",43,0,0
@@ -2142,24 +2142,24 @@
 "2141",40019,"OK","Carter County",36,0,0
 "2142",40021,"OK","Cherokee County",26,0,0
 "2143",40023,"OK","Choctaw County",20,0,0
-"2144",40025,"OK","Cimarron County",-1,0,0
+"2144",40025,"OK","Cimarron County",NA,0,NA
 "2145",40027,"OK","Cleveland County",294,50,17.0068027210884
-"2146",40029,"OK","Coal County",-1,0,0
+"2146",40029,"OK","Coal County",NA,0,NA
 "2147",40031,"OK","Comanche County",165,42,25.4545454545455
-"2148",40033,"OK","Cotton County",-1,0,0
+"2148",40033,"OK","Cotton County",NA,0,NA
 "2149",40035,"OK","Craig County",25,0,0
 "2150",40037,"OK","Creek County",70,0,0
 "2151",40039,"OK","Custer County",20,0,0
 "2152",40041,"OK","Delaware County",25,0,0
-"2153",40043,"OK","Dewey County",-1,0,0
-"2154",40045,"OK","Ellis County",-1,0,0
+"2153",40043,"OK","Dewey County",NA,0,NA
+"2154",40045,"OK","Ellis County",NA,0,NA
 "2155",40047,"OK","Garfield County",44,0,0
 "2156",40049,"OK","Garvin County",10,0,0
 "2157",40051,"OK","Grady County",26,0,0
-"2158",40053,"OK","Grant County",-1,0,0
+"2158",40053,"OK","Grant County",NA,0,NA
 "2159",40055,"OK","Greer County",21,0,0
-"2160",40057,"OK","Harmon County",-1,0,0
-"2161",40059,"OK","Harper County",-1,0,0
+"2160",40057,"OK","Harmon County",NA,0,NA
+"2161",40059,"OK","Harper County",NA,0,NA
 "2162",40061,"OK","Haskell County",8,0,0
 "2163",40063,"OK","Hughes County",19,0,0
 "2164",40065,"OK","Jackson County",11,0,0
@@ -2167,8 +2167,8 @@
 "2166",40069,"OK","Johnston County",6,0,0
 "2167",40071,"OK","Kay County",33,0,0
 "2168",40073,"OK","Kingfisher County",14,0,0
-"2169",40075,"OK","Kiowa County",-1,0,0
-"2170",40077,"OK","Latimer County",-1,0,0
+"2169",40075,"OK","Kiowa County",NA,0,NA
+"2170",40077,"OK","Latimer County",NA,0,NA
 "2171",40079,"OK","Le Flore County",43,5,11.6279069767442
 "2172",40081,"OK","Lincoln County",32,0,0
 "2173",40083,"OK","Logan County",36,0,0
@@ -2176,10 +2176,10 @@
 "2175",40087,"OK","McClain County",31,0,0
 "2176",40089,"OK","Mccurtain County",18,0,0
 "2177",40091,"OK","Mcintosh County",16,0,0
-"2178",40093,"OK","Major County",-1,0,0
+"2178",40093,"OK","Major County",NA,0,NA
 "2179",40095,"OK","Marshall County",7,0,0
 "2180",40097,"OK","Mayes County",14,0,0
-"2181",40099,"OK","Murray County",-1,0,0
+"2181",40099,"OK","Murray County",NA,0,NA
 "2182",40101,"OK","Muskogee County",88,17,19.3181818181818
 "2183",40103,"OK","Noble County",11,0,0
 "2184",40105,"OK","Nowata County",9,0,0
@@ -2193,18 +2193,18 @@
 "2192",40121,"OK","Pittsburg County",49,5,10.2040816326531
 "2193",40123,"OK","Pontotoc County",26,0,0
 "2194",40125,"OK","Pottawatomie County",64,12,18.75
-"2195",40127,"OK","Pushmataha County",-1,0,0
-"2196",40129,"OK","Roger Mills County",-1,0,0
+"2195",40127,"OK","Pushmataha County",NA,0,NA
+"2196",40129,"OK","Roger Mills County",NA,0,NA
 "2197",40131,"OK","Rogers County",60,5,8.33333333333333
 "2198",40133,"OK","Seminole County",15,0,0
 "2199",40135,"OK","Sequoyah County",43,0,0
 "2200",40137,"OK","Stephens County",18,0,0
 "2201",40139,"OK","Texas County",13,0,0
-"2202",40141,"OK","Tillman County",-1,0,0
+"2202",40141,"OK","Tillman County",NA,0,NA
 "2203",40143,"OK","Tulsa County",1520,259,17.0394736842105
 "2204",40145,"OK","Wagoner County",35,0,0
 "2205",40147,"OK","Washington County",37,0,0
-"2206",40149,"OK","Washita County",-1,0,0
+"2206",40149,"OK","Washita County",NA,0,NA
 "2207",40151,"OK","Woods County",6,0,0
 "2208",40153,"OK","Woodward County",22,0,0
 "2209",41001,"OR","Baker County",9,0,0
@@ -2217,15 +2217,15 @@
 "2216",41015,"OR","Curry County",13,0,0
 "2217",41017,"OR","Deschutes County",117,18,15.3846153846154
 "2218",41019,"OR","Douglas County",77,14,18.1818181818182
-"2219",41021,"OR","Gilliam County",-1,0,0
-"2220",41023,"OR","Grant County",-1,0,0
-"2221",41025,"OR","Harney County",-1,0,0
+"2219",41021,"OR","Gilliam County",NA,0,NA
+"2220",41023,"OR","Grant County",NA,0,NA
+"2221",41025,"OR","Harney County",NA,0,NA
 "2222",41027,"OR","Hood River County",18,0,0
 "2223",41029,"OR","Jackson County",240,37,15.4166666666667
 "2224",41031,"OR","Jefferson County",25,0,0
 "2225",41033,"OR","Josephine County",71,9,12.6760563380282
 "2226",41035,"OR","Klamath County",28,0,0
-"2227",41037,"OR","Lake County",-1,0,0
+"2227",41037,"OR","Lake County",NA,0,NA
 "2228",41039,"OR","Lane County",368,61,16.5760869565217
 "2229",41041,"OR","Lincoln County",43,0,0
 "2230",41043,"OR","Linn County",88,10,11.3636363636364
@@ -2234,14 +2234,14 @@
 "2233",41049,"OR","Morrow County",14,0,0
 "2234",41051,"OR","Multnomah County",3142,256,8.14767663908339
 "2235",41053,"OR","Polk County",61,0,0
-"2236",41055,"OR","Sherman County",-1,0,0
+"2236",41055,"OR","Sherman County",NA,0,NA
 "2237",41057,"OR","Tillamook County",24,0,0
 "2238",41059,"OR","Umatilla County",57,6,10.5263157894737
 "2239",41061,"OR","Union County",15,0,0
-"2240",41063,"OR","Wallowa County",-1,0,0
+"2240",41063,"OR","Wallowa County",NA,0,NA
 "2241",41065,"OR","Wasco County",32,0,0
 "2242",41067,"OR","Washington County",806,115,14.2679900744417
-"2243",41069,"OR","Wheeler County",-1,0,0
+"2243",41069,"OR","Wheeler County",NA,0,NA
 "2244",41071,"OR","Yamhill County",82,0,0
 "2245",42001,"PA","Adams County",105,36,34.2857142857143
 "2246",42003,"PA","Allegheny County",2660,657,24.6992481203008
@@ -2254,7 +2254,7 @@
 "2253",42017,"PA","Bucks County",503,149,29.6222664015905
 "2254",42019,"PA","Butler County",79,7,8.86075949367089
 "2255",42021,"PA","Cambria County",123,31,25.2032520325203
-"2256",42023,"PA","Cameron County",-1,0,0
+"2256",42023,"PA","Cameron County",NA,0,NA
 "2257",42025,"PA","Carbon County",90,20,22.2222222222222
 "2258",42027,"PA","Centre County",151,34,22.5165562913907
 "2259",42029,"PA","Chester County",392,141,35.969387755102
@@ -2295,7 +2295,7 @@
 "2294",42099,"PA","Perry County",30,0,0
 "2295",42101,"PA","Philadelphia County",16993,6198,36.4738421703054
 "2296",42103,"PA","Pike County",100,0,0
-"2297",42105,"PA","Potter County",-1,0,0
+"2297",42105,"PA","Potter County",NA,0,NA
 "2298",42107,"PA","Schuylkill County",133,24,18.0451127819549
 "2299",42109,"PA","Snyder County",17,0,0
 "2300",42111,"PA","Somerset County",58,6,10.3448275862069
@@ -2361,72 +2361,72 @@
 "2360",45087,"SC","Union County",50,0,0
 "2361",45089,"SC","Williamsburg County",234,109,46.5811965811966
 "2362",45091,"SC","York County",481,159,33.0561330561331
-"2363",46003,"SD","Aurora County",-2,-2,100
-"2364",46005,"SD","Beadle County",-2,-2,100
-"2365",46007,"SD","Bennett County",-2,-2,100
-"2366",46009,"SD","Bon Homme County",-2,-2,100
-"2367",46011,"SD","Brookings County",-2,-2,100
-"2368",46013,"SD","Brown County",-2,-2,100
-"2369",46015,"SD","Brule County",-2,-2,100
-"2370",46017,"SD","Buffalo County",-2,-2,100
-"2371",46019,"SD","Butte County",-2,-2,100
-"2372",46021,"SD","Campbell County",-2,-2,100
-"2373",46023,"SD","Charles Mix County",-2,-2,100
-"2374",46025,"SD","Clark County",-2,-2,100
-"2375",46027,"SD","Clay County",-2,-2,100
-"2376",46029,"SD","Codington County",-2,-2,100
-"2377",46031,"SD","Corson County",-2,-2,100
-"2378",46033,"SD","Custer County",-2,-2,100
-"2379",46035,"SD","Davison County",-2,-2,100
-"2380",46037,"SD","Day County",-2,-2,100
-"2381",46039,"SD","Deuel County",-2,-2,100
-"2382",46041,"SD","Dewey County",-2,-2,100
-"2383",46043,"SD","Douglas County",-2,-2,100
-"2384",46045,"SD","Edmunds County",-2,-2,100
-"2385",46047,"SD","Fall River County",-2,-2,100
-"2386",46049,"SD","Faulk County",-2,-2,100
-"2387",46051,"SD","Grant County",-2,-2,100
-"2388",46053,"SD","Gregory County",-2,-2,100
-"2389",46055,"SD","Haakon County",-2,-2,100
-"2390",46057,"SD","Hamlin County",-2,-2,100
-"2391",46059,"SD","Hand County",-2,-2,100
-"2392",46061,"SD","Hanson County",-2,-2,100
-"2393",46063,"SD","Harding County",-2,-2,100
-"2394",46065,"SD","Hughes County",-2,-2,100
-"2395",46067,"SD","Hutchinson County",-2,-2,100
-"2396",46069,"SD","Hyde County",-2,-2,100
-"2397",46071,"SD","Jackson County",-2,-2,100
-"2398",46073,"SD","Jerauld County",-2,-2,100
-"2399",46075,"SD","Jones County",-2,-2,100
-"2400",46077,"SD","Kingsbury County",-2,-2,100
-"2401",46079,"SD","Lake County",-2,-2,100
-"2402",46081,"SD","Lawrence County",-2,-2,100
-"2403",46083,"SD","Lincoln County",-2,-2,100
-"2404",46085,"SD","Lyman County",-2,-2,100
-"2405",46087,"SD","McCook County",-2,-2,100
-"2406",46089,"SD","Mcpherson County",-2,-2,100
-"2407",46091,"SD","Marshall County",-2,-2,100
-"2408",46093,"SD","Meade County",-2,-2,100
-"2409",46095,"SD","Mellette County",-2,-2,100
-"2410",46097,"SD","Miner County",-2,-2,100
-"2411",46099,"SD","Minnehaha County",-2,-2,100
-"2412",46101,"SD","Moody County",-2,-2,100
-"2413",46102,"SD","Oglala Lakota County",-2,-2,100
-"2414",46103,"SD","Pennington County",-2,-2,100
-"2415",46105,"SD","Perkins County",-2,-2,100
-"2416",46107,"SD","Potter County",-2,-2,100
-"2417",46109,"SD","Roberts County",-2,-2,100
-"2418",46111,"SD","Sanborn County",-2,-2,100
-"2419",46115,"SD","Spink County",-2,-2,100
-"2420",46117,"SD","Stanley County",-2,-2,100
-"2421",46119,"SD","Sully County",-2,-2,100
-"2422",46121,"SD","Todd County",-2,-2,100
-"2423",46123,"SD","Tripp County",-2,-2,100
-"2424",46125,"SD","Turner County",-2,-2,100
-"2425",46127,"SD","Union County",-2,-2,100
-"2426",46129,"SD","Walworth County",-2,-2,100
-"2427",46135,"SD","Yankton County",-2,-2,100
-"2428",46137,"SD","Ziebach County",-2,-2,100
+"2363",46003,"SD","Aurora County",NA,-2,NA
+"2364",46005,"SD","Beadle County",NA,-2,NA
+"2365",46007,"SD","Bennett County",NA,-2,NA
+"2366",46009,"SD","Bon Homme County",NA,-2,NA
+"2367",46011,"SD","Brookings County",NA,-2,NA
+"2368",46013,"SD","Brown County",NA,-2,NA
+"2369",46015,"SD","Brule County",NA,-2,NA
+"2370",46017,"SD","Buffalo County",NA,-2,NA
+"2371",46019,"SD","Butte County",NA,-2,NA
+"2372",46021,"SD","Campbell County",NA,-2,NA
+"2373",46023,"SD","Charles Mix County",NA,-2,NA
+"2374",46025,"SD","Clark County",NA,-2,NA
+"2375",46027,"SD","Clay County",NA,-2,NA
+"2376",46029,"SD","Codington County",NA,-2,NA
+"2377",46031,"SD","Corson County",NA,-2,NA
+"2378",46033,"SD","Custer County",NA,-2,NA
+"2379",46035,"SD","Davison County",NA,-2,NA
+"2380",46037,"SD","Day County",NA,-2,NA
+"2381",46039,"SD","Deuel County",NA,-2,NA
+"2382",46041,"SD","Dewey County",NA,-2,NA
+"2383",46043,"SD","Douglas County",NA,-2,NA
+"2384",46045,"SD","Edmunds County",NA,-2,NA
+"2385",46047,"SD","Fall River County",NA,-2,NA
+"2386",46049,"SD","Faulk County",NA,-2,NA
+"2387",46051,"SD","Grant County",NA,-2,NA
+"2388",46053,"SD","Gregory County",NA,-2,NA
+"2389",46055,"SD","Haakon County",NA,-2,NA
+"2390",46057,"SD","Hamlin County",NA,-2,NA
+"2391",46059,"SD","Hand County",NA,-2,NA
+"2392",46061,"SD","Hanson County",NA,-2,NA
+"2393",46063,"SD","Harding County",NA,-2,NA
+"2394",46065,"SD","Hughes County",NA,-2,NA
+"2395",46067,"SD","Hutchinson County",NA,-2,NA
+"2396",46069,"SD","Hyde County",NA,-2,NA
+"2397",46071,"SD","Jackson County",NA,-2,NA
+"2398",46073,"SD","Jerauld County",NA,-2,NA
+"2399",46075,"SD","Jones County",NA,-2,NA
+"2400",46077,"SD","Kingsbury County",NA,-2,NA
+"2401",46079,"SD","Lake County",NA,-2,NA
+"2402",46081,"SD","Lawrence County",NA,-2,NA
+"2403",46083,"SD","Lincoln County",NA,-2,NA
+"2404",46085,"SD","Lyman County",NA,-2,NA
+"2405",46087,"SD","McCook County",NA,-2,NA
+"2406",46089,"SD","Mcpherson County",NA,-2,NA
+"2407",46091,"SD","Marshall County",NA,-2,NA
+"2408",46093,"SD","Meade County",NA,-2,NA
+"2409",46095,"SD","Mellette County",NA,-2,NA
+"2410",46097,"SD","Miner County",NA,-2,NA
+"2411",46099,"SD","Minnehaha County",NA,-2,NA
+"2412",46101,"SD","Moody County",NA,-2,NA
+"2413",46102,"SD","Oglala Lakota County",NA,-2,NA
+"2414",46103,"SD","Pennington County",NA,-2,NA
+"2415",46105,"SD","Perkins County",NA,-2,NA
+"2416",46107,"SD","Potter County",NA,-2,NA
+"2417",46109,"SD","Roberts County",NA,-2,NA
+"2418",46111,"SD","Sanborn County",NA,-2,NA
+"2419",46115,"SD","Spink County",NA,-2,NA
+"2420",46117,"SD","Stanley County",NA,-2,NA
+"2421",46119,"SD","Sully County",NA,-2,NA
+"2422",46121,"SD","Todd County",NA,-2,NA
+"2423",46123,"SD","Tripp County",NA,-2,NA
+"2424",46125,"SD","Turner County",NA,-2,NA
+"2425",46127,"SD","Union County",NA,-2,NA
+"2426",46129,"SD","Walworth County",NA,-2,NA
+"2427",46135,"SD","Yankton County",NA,-2,NA
+"2428",46137,"SD","Ziebach County",NA,-2,NA
 "2429",47001,"TN","Anderson County",91,0,0
 "2430",47003,"TN","Bedford County",46,5,10.8695652173913
 "2431",47005,"TN","Benton County",13,0,0
@@ -2460,7 +2460,7 @@
 "2459",47061,"TN","Grundy County",8,0,0
 "2460",47063,"TN","Hamblen County",51,0,0
 "2461",47065,"TN","Hamilton County",888,235,26.463963963964
-"2462",47067,"TN","Hancock County",-1,0,0
+"2462",47067,"TN","Hancock County",NA,0,NA
 "2463",47069,"TN","Hardeman County",39,0,0
 "2464",47071,"TN","Hardin County",29,5,17.2413793103448
 "2465",47073,"TN","Hawkins County",36,0,0
@@ -2468,7 +2468,7 @@
 "2467",47077,"TN","Henderson County",22,0,0
 "2468",47079,"TN","Henry County",31,0,0
 "2469",47081,"TN","Hickman County",20,0,0
-"2470",47083,"TN","Houston County",-1,0,0
+"2470",47083,"TN","Houston County",NA,0,NA
 "2471",47085,"TN","Humphreys County",12,0,0
 "2472",47087,"TN","Jackson County",13,0,0
 "2473",47089,"TN","Jefferson County",47,0,0
@@ -2490,12 +2490,12 @@
 "2489",47121,"TN","Meigs County",10,0,0
 "2490",47123,"TN","Monroe County",29,0,0
 "2491",47125,"TN","Montgomery County",265,62,23.3962264150943
-"2492",47127,"TN","Moore County",-1,0,0
+"2492",47127,"TN","Moore County",NA,0,NA
 "2493",47129,"TN","Morgan County",21,0,0
 "2494",47131,"TN","Obion County",26,0,0
 "2495",47133,"TN","Overton County",15,0,0
 "2496",47135,"TN","Perry County",8,0,0
-"2497",47137,"TN","Pickett County",-1,0,0
+"2497",47137,"TN","Pickett County",NA,0,NA
 "2498",47139,"TN","Polk County",11,0,0
 "2499",47141,"TN","Putnam County",89,11,12.3595505617978
 "2500",47143,"TN","Rhea County",12,0,0
@@ -2513,8 +2513,8 @@
 "2512",47167,"TN","Tipton County",81,10,12.3456790123457
 "2513",47169,"TN","Trousdale County",15,0,0
 "2514",47171,"TN","Unicoi County",15,0,0
-"2515",47173,"TN","Union County",-1,0,0
-"2516",47175,"TN","Van Buren County",-1,0,0
+"2515",47173,"TN","Union County",NA,0,NA
+"2516",47175,"TN","Van Buren County",NA,0,NA
 "2517",47177,"TN","Warren County",31,0,0
 "2518",47179,"TN","Washington County",186,42,22.5806451612903
 "2519",47181,"TN","Wayne County",14,0,0
@@ -2526,14 +2526,14 @@
 "2525",48003,"TX","Andrews County",11,0,0
 "2526",48005,"TX","Angelina County",140,61,43.5714285714286
 "2527",48007,"TX","Aransas County",31,5,16.1290322580645
-"2528",48009,"TX","Archer County",-1,0,0
-"2529",48011,"TX","Armstrong County",-1,0,0
+"2528",48009,"TX","Archer County",NA,0,NA
+"2529",48011,"TX","Armstrong County",NA,0,NA
 "2530",48013,"TX","Atascosa County",50,0,0
 "2531",48015,"TX","Austin County",55,10,18.1818181818182
-"2532",48017,"TX","Bailey County",-1,0,0
+"2532",48017,"TX","Bailey County",NA,0,NA
 "2533",48019,"TX","Bandera County",19,0,0
 "2534",48021,"TX","Bastrop County",144,31,21.5277777777778
-"2535",48023,"TX","Baylor County",-1,0,0
+"2535",48023,"TX","Baylor County",NA,0,NA
 "2536",48025,"TX","Bee County",160,18,11.25
 "2537",48027,"TX","Bell County",623,163,26.1637239165329
 "2538",48029,"TX","Bexar County",5710,892,15.6217162872154
@@ -2543,8 +2543,8 @@
 "2542",48037,"TX","Bowie County",273,56,20.5128205128205
 "2543",48039,"TX","Brazoria County",708,183,25.8474576271186
 "2544",48041,"TX","Brazos County",352,117,33.2386363636364
-"2545",48043,"TX","Brewster County",-1,0,0
-"2546",48045,"TX","Briscoe County",-1,0,0
+"2545",48043,"TX","Brewster County",NA,0,NA
+"2546",48045,"TX","Briscoe County",NA,0,NA
 "2547",48047,"TX","Brooks County",11,0,0
 "2548",48049,"TX","Brown County",46,9,19.5652173913043
 "2549",48051,"TX","Burleson County",25,0,0
@@ -2554,52 +2554,52 @@
 "2553",48059,"TX","Callahan County",9,0,0
 "2554",48061,"TX","Cameron County",795,208,26.1635220125786
 "2555",48063,"TX","Camp County",18,0,0
-"2556",48065,"TX","Carson County",-1,0,0
+"2556",48065,"TX","Carson County",NA,0,NA
 "2557",48067,"TX","Cass County",41,0,0
 "2558",48069,"TX","Castro County",5,0,0
 "2559",48071,"TX","Chambers County",39,8,20.5128205128205
 "2560",48073,"TX","Cherokee County",117,32,27.3504273504274
 "2561",48075,"TX","Childress County",14,0,0
 "2562",48077,"TX","Clay County",6,0,0
-"2563",48079,"TX","Cochran County",-1,0,0
-"2564",48081,"TX","Coke County",-1,0,0
+"2563",48079,"TX","Cochran County",NA,0,NA
+"2564",48081,"TX","Coke County",NA,0,NA
 "2565",48083,"TX","Coleman County",6,0,0
 "2566",48085,"TX","Collin County",1570,411,26.1783439490446
-"2567",48087,"TX","Collingsworth County",-1,0,0
+"2567",48087,"TX","Collingsworth County",NA,0,NA
 "2568",48089,"TX","Colorado County",24,0,0
 "2569",48091,"TX","Comal County",146,23,15.7534246575342
 "2570",48093,"TX","Comanche County",8,0,0
 "2571",48095,"TX","Concho County",24,0,0
 "2572",48097,"TX","Cooke County",26,0,0
 "2573",48099,"TX","Coryell County",252,63,25
-"2574",48101,"TX","Cottle County",-1,0,0
-"2575",48103,"TX","Crane County",-1,0,0
-"2576",48105,"TX","Crockett County",-1,0,0
+"2574",48101,"TX","Cottle County",NA,0,NA
+"2575",48103,"TX","Crane County",NA,0,NA
+"2576",48105,"TX","Crockett County",NA,0,NA
 "2577",48107,"TX","Crosby County",6,0,0
-"2578",48109,"TX","Culberson County",-1,0,0
+"2578",48109,"TX","Culberson County",NA,0,NA
 "2579",48111,"TX","Dallam County",8,0,0
 "2580",48113,"TX","Dallas County",16317,3172,19.4398480112766
 "2581",48115,"TX","Dawson County",12,0,0
 "2582",48117,"TX","Deaf Smith County",12,0,0
-"2583",48119,"TX","Delta County",-1,0,0
+"2583",48119,"TX","Delta County",NA,0,NA
 "2584",48121,"TX","Denton County",1151,240,20.8514335360556
 "2585",48123,"TX","Dewitt County",12,0,0
-"2586",48125,"TX","Dickens County",-1,0,0
+"2586",48125,"TX","Dickens County",NA,0,NA
 "2587",48127,"TX","Dimmit County",5,0,0
-"2588",48129,"TX","Donley County",-1,0,0
+"2588",48129,"TX","Donley County",NA,0,NA
 "2589",48131,"TX","Duval County",17,0,0
 "2590",48133,"TX","Eastland County",10,0,0
 "2591",48135,"TX","Ector County",196,44,22.4489795918367
-"2592",48137,"TX","Edwards County",-1,0,0
+"2592",48137,"TX","Edwards County",NA,0,NA
 "2593",48139,"TX","Ellis County",232,57,24.5689655172414
 "2594",48141,"TX","El Paso County",2020,349,17.2772277227723
 "2595",48143,"TX","Erath County",13,0,0
 "2596",48145,"TX","Falls County",54,28,51.8518518518518
 "2597",48147,"TX","Fannin County",66,6,9.09090909090909
 "2598",48149,"TX","Fayette County",22,0,0
-"2599",48151,"TX","Fisher County",-1,0,0
+"2599",48151,"TX","Fisher County",NA,0,NA
 "2600",48153,"TX","Floyd County",5,0,0
-"2601",48155,"TX","Foard County",-1,0,0
+"2601",48155,"TX","Foard County",NA,0,NA
 "2602",48157,"TX","Fort Bend County",1345,492,36.5799256505576
 "2603",48159,"TX","Franklin County",15,0,0
 "2604",48161,"TX","Freestone County",61,5,8.19672131147541
@@ -2608,7 +2608,7 @@
 "2607",48167,"TX","Galveston County",902,226,25.0554323725055
 "2608",48169,"TX","Garza County",39,7,17.9487179487179
 "2609",48171,"TX","Gillespie County",16,0,0
-"2610",48173,"TX","Glasscock County",-1,0,0
+"2610",48173,"TX","Glasscock County",NA,0,NA
 "2611",48175,"TX","Goliad County",7,0,0
 "2612",48177,"TX","Gonzales County",17,0,0
 "2613",48179,"TX","Gray County",22,0,0
@@ -2617,17 +2617,17 @@
 "2616",48185,"TX","Grimes County",92,8,8.69565217391304
 "2617",48187,"TX","Guadalupe County",144,22,15.2777777777778
 "2618",48189,"TX","Hale County",21,0,0
-"2619",48191,"TX","Hall County",-1,0,0
+"2619",48191,"TX","Hall County",NA,0,NA
 "2620",48193,"TX","Hamilton County",10,0,0
-"2621",48195,"TX","Hansford County",-1,0,0
-"2622",48197,"TX","Hardeman County",-1,0,0
+"2621",48195,"TX","Hansford County",NA,0,NA
+"2622",48197,"TX","Hardeman County",NA,0,NA
 "2623",48199,"TX","Hardin County",60,0,0
 "2624",48201,"TX","Harris County",23445,6819,29.0850927703135
 "2625",48203,"TX","Harrison County",96,25,26.0416666666667
-"2626",48205,"TX","Hartley County",-1,0,0
+"2626",48205,"TX","Hartley County",NA,0,NA
 "2627",48207,"TX","Haskell County",16,0,0
 "2628",48209,"TX","Hays County",280,11,3.92857142857143
-"2629",48211,"TX","Hemphill County",-1,0,0
+"2629",48211,"TX","Hemphill County",NA,0,NA
 "2630",48213,"TX","Henderson County",108,17,15.7407407407407
 "2631",48215,"TX","Hidalgo County",1125,305,27.1111111111111
 "2632",48217,"TX","Hill County",37,0,0
@@ -2636,14 +2636,14 @@
 "2635",48223,"TX","Hopkins County",41,0,0
 "2636",48225,"TX","Houston County",142,51,35.9154929577465
 "2637",48227,"TX","Howard County",117,18,15.3846153846154
-"2638",48229,"TX","Hudspeth County",-1,0,0
+"2638",48229,"TX","Hudspeth County",NA,0,NA
 "2639",48231,"TX","Hunt County",97,16,16.4948453608247
 "2640",48233,"TX","Hutchinson County",18,0,0
 "2641",48235,"TX","Irion County",5,0,0
 "2642",48237,"TX","Jack County",10,0,0
 "2643",48239,"TX","Jackson County",15,0,0
 "2644",48241,"TX","Jasper County",46,10,21.7391304347826
-"2645",48243,"TX","Jeff Davis County",-1,0,0
+"2645",48243,"TX","Jeff Davis County",NA,0,NA
 "2646",48245,"TX","Jefferson County",1189,357,30.0252312867956
 "2647",48247,"TX","Jim Hogg County",5,0,0
 "2648",48249,"TX","Jim Wells County",25,0,0
@@ -2652,14 +2652,14 @@
 "2651",48255,"TX","Karnes County",32,0,0
 "2652",48257,"TX","Kaufman County",177,54,30.5084745762712
 "2653",48259,"TX","Kendall County",37,0,0
-"2654",48261,"TX","Kenedy County",-1,0,0
-"2655",48263,"TX","Kent County",-1,0,0
+"2654",48261,"TX","Kenedy County",NA,0,NA
+"2655",48263,"TX","Kent County",NA,0,NA
 "2656",48265,"TX","Kerr County",52,0,0
-"2657",48267,"TX","Kimble County",-1,0,0
-"2658",48269,"TX","King County",-1,0,0
+"2657",48267,"TX","Kimble County",NA,0,NA
+"2658",48269,"TX","King County",NA,0,NA
 "2659",48271,"TX","Kinney County",8,0,0
 "2660",48273,"TX","Kleberg County",27,0,0
-"2661",48275,"TX","Knox County",-1,0,0
+"2661",48275,"TX","Knox County",NA,0,NA
 "2662",48277,"TX","Lamar County",58,10,17.2413793103448
 "2663",48279,"TX","Lamb County",15,0,0
 "2664",48281,"TX","Lampasas County",15,0,0
@@ -2669,39 +2669,39 @@
 "2668",48289,"TX","Leon County",23,0,0
 "2669",48291,"TX","Liberty County",275,108,39.2727272727273
 "2670",48293,"TX","Limestone County",26,0,0
-"2671",48295,"TX","Lipscomb County",-1,0,0
+"2671",48295,"TX","Lipscomb County",NA,0,NA
 "2672",48297,"TX","Live Oak County",14,0,0
 "2673",48299,"TX","Llano County",23,0,0
-"2674",48301,"TX","Loving County",-1,0,0
+"2674",48301,"TX","Loving County",NA,0,NA
 "2675",48303,"TX","Lubbock County",446,67,15.0224215246637
-"2676",48305,"TX","Lynn County",-1,0,0
+"2676",48305,"TX","Lynn County",NA,0,NA
 "2677",48307,"TX","Mcculloch County",6,0,0
 "2678",48309,"TX","McLennan County",406,131,32.2660098522167
-"2679",48311,"TX","Mcmullen County",-1,0,0
+"2679",48311,"TX","Mcmullen County",NA,0,NA
 "2680",48313,"TX","Madison County",34,5,14.7058823529412
 "2681",48315,"TX","Marion County",18,0,0
-"2682",48317,"TX","Martin County",-1,0,0
-"2683",48319,"TX","Mason County",-1,0,0
+"2682",48317,"TX","Martin County",NA,0,NA
+"2683",48319,"TX","Mason County",NA,0,NA
 "2684",48321,"TX","Matagorda County",66,6,9.09090909090909
 "2685",48323,"TX","Maverick County",71,9,12.6760563380282
 "2686",48325,"TX","Medina County",64,8,12.5
-"2687",48327,"TX","Menard County",-1,0,0
+"2687",48327,"TX","Menard County",NA,0,NA
 "2688",48329,"TX","Midland County",175,35,20
 "2689",48331,"TX","Milam County",42,12,28.5714285714286
-"2690",48333,"TX","Mills County",-1,0,0
-"2691",48335,"TX","Mitchell County",-1,0,0
+"2690",48333,"TX","Mills County",NA,0,NA
+"2691",48335,"TX","Mitchell County",NA,0,NA
 "2692",48337,"TX","Montague County",14,0,0
 "2693",48339,"TX","Montgomery County",725,175,24.1379310344828
 "2694",48341,"TX","Moore County",17,0,0
 "2695",48343,"TX","Morris County",15,0,0
-"2696",48345,"TX","Motley County",-1,0,0
+"2696",48345,"TX","Motley County",NA,0,NA
 "2697",48347,"TX","Nacogdoches County",101,34,33.6633663366337
 "2698",48349,"TX","Navarro County",86,7,8.13953488372093
 "2699",48351,"TX","Newton County",8,0,0
 "2700",48353,"TX","Nolan County",18,0,0
 "2701",48355,"TX","Nueces County",588,133,22.6190476190476
-"2702",48357,"TX","Ochiltree County",-1,0,0
-"2703",48359,"TX","Oldham County",-1,0,0
+"2702",48357,"TX","Ochiltree County",NA,0,NA
+"2703",48359,"TX","Oldham County",NA,0,NA
 "2704",48361,"TX","Orange County",120,30,25
 "2705",48363,"TX","Palo Pinto County",31,0,0
 "2706",48365,"TX","Panola County",25,0,0
@@ -2713,12 +2713,12 @@
 "2712",48377,"TX","Presidio County",6,0,0
 "2713",48379,"TX","Rains County",10,0,0
 "2714",48381,"TX","Randall County",121,24,19.8347107438017
-"2715",48383,"TX","Reagan County",-1,0,0
-"2716",48385,"TX","Real County",-1,0,0
+"2715",48383,"TX","Reagan County",NA,0,NA
+"2716",48385,"TX","Real County",NA,0,NA
 "2717",48387,"TX","Red River County",17,0,0
 "2718",48389,"TX","Reeves County",93,20,21.505376344086
-"2719",48391,"TX","Refugio County",-1,0,0
-"2720",48393,"TX","Roberts County",-1,0,0
+"2719",48391,"TX","Refugio County",NA,0,NA
+"2720",48393,"TX","Roberts County",NA,0,NA
 "2721",48395,"TX","Robertson County",24,0,0
 "2722",48397,"TX","Rockwall County",81,0,0
 "2723",48399,"TX","Runnels County",8,0,0
@@ -2727,32 +2727,32 @@
 "2726",48405,"TX","San Augustine County",10,0,0
 "2727",48407,"TX","San Jacinto County",39,0,0
 "2728",48409,"TX","San Patricio County",58,8,13.7931034482759
-"2729",48411,"TX","San Saba County",-1,0,0
-"2730",48413,"TX","Schleicher County",-1,0,0
+"2729",48411,"TX","San Saba County",NA,0,NA
+"2730",48413,"TX","Schleicher County",NA,0,NA
 "2731",48415,"TX","Scurry County",10,0,0
-"2732",48417,"TX","Shackelford County",-1,0,0
+"2732",48417,"TX","Shackelford County",NA,0,NA
 "2733",48419,"TX","Shelby County",39,0,0
-"2734",48421,"TX","Sherman County",-1,0,0
+"2734",48421,"TX","Sherman County",NA,0,NA
 "2735",48423,"TX","Smith County",396,113,28.5353535353535
-"2736",48425,"TX","Somervell County",-1,0,0
+"2736",48425,"TX","Somervell County",NA,0,NA
 "2737",48427,"TX","Starr County",32,0,0
 "2738",48429,"TX","Stephens County",13,0,0
-"2739",48431,"TX","Sterling County",-1,0,0
-"2740",48433,"TX","Stonewall County",-1,0,0
-"2741",48435,"TX","Sutton County",-1,0,0
+"2739",48431,"TX","Sterling County",NA,0,NA
+"2740",48433,"TX","Stonewall County",NA,0,NA
+"2741",48435,"TX","Sutton County",NA,0,NA
 "2742",48437,"TX","Swisher County",5,0,0
 "2743",48439,"TX","Tarrant County",4953,1259,25.4189380173632
 "2744",48441,"TX","Taylor County",224,48,21.4285714285714
-"2745",48443,"TX","Terrell County",-1,0,0
+"2745",48443,"TX","Terrell County",NA,0,NA
 "2746",48445,"TX","Terry County",10,0,0
-"2747",48447,"TX","Throckmorton County",-1,0,0
+"2747",48447,"TX","Throckmorton County",NA,0,NA
 "2748",48449,"TX","Titus County",30,0,0
 "2749",48451,"TX","Tom Green County",93,12,12.9032258064516
 "2750",48453,"TX","Travis County",4468,640,14.3240823634736
 "2751",48455,"TX","Trinity County",28,7,25
 "2752",48457,"TX","Tyler County",40,0,0
 "2753",48459,"TX","Upshur County",37,0,0
-"2754",48461,"TX","Upton County",-1,0,0
+"2754",48461,"TX","Upton County",NA,0,NA
 "2755",48463,"TX","Uvalde County",17,0,0
 "2756",48465,"TX","Val Verde County",38,6,15.7894736842105
 "2757",48467,"TX","Van Zandt County",39,0,0
@@ -2765,7 +2765,7 @@
 "2764",48481,"TX","Wharton County",73,31,42.4657534246575
 "2765",48483,"TX","Wheeler County",5,0,0
 "2766",48485,"TX","Wichita County",128,25,19.53125
-"2767",48487,"TX","Wilbarger County",-1,0,0
+"2767",48487,"TX","Wilbarger County",NA,0,NA
 "2768",48489,"TX","Willacy County",114,25,21.9298245614035
 "2769",48491,"TX","Williamson County",642,121,18.8473520249221
 "2770",48493,"TX","Wilson County",33,0,0
@@ -2773,28 +2773,28 @@
 "2772",48497,"TX","Wise County",41,0,0
 "2773",48499,"TX","Wood County",55,0,0
 "2774",48501,"TX","Yoakum County",7,0,0
-"2775",48503,"TX","Young County",-1,0,0
+"2775",48503,"TX","Young County",NA,0,NA
 "2776",48505,"TX","Zapata County",8,0,0
 "2777",48507,"TX","Zavala County",8,0,0
-"2778",49001,"UT","Beaver County",-1,0,0
+"2778",49001,"UT","Beaver County",NA,0,NA
 "2779",49003,"UT","Box Elder County",19,0,0
 "2780",49005,"UT","Cache County",41,0,0
 "2781",49007,"UT","Carbon County",10,0,0
-"2782",49009,"UT","Daggett County",-1,0,0
+"2782",49009,"UT","Daggett County",NA,0,NA
 "2783",49011,"UT","Davis County",186,32,17.2043010752688
 "2784",49013,"UT","Duchesne County",7,0,0
-"2785",49015,"UT","Emery County",-1,0,0
-"2786",49017,"UT","Garfield County",-1,0,0
+"2785",49015,"UT","Emery County",NA,0,NA
+"2786",49017,"UT","Garfield County",NA,0,NA
 "2787",49019,"UT","Grand County",8,0,0
 "2788",49021,"UT","Iron County",17,0,0
 "2789",49023,"UT","Juab County",7,0,0
-"2790",49025,"UT","Kane County",-1,0,0
-"2791",49027,"UT","Millard County",-1,0,0
-"2792",49029,"UT","Morgan County",-1,0,0
-"2793",49031,"UT","Piute County",-1,0,0
-"2794",49033,"UT","Rich County",-1,0,0
+"2790",49025,"UT","Kane County",NA,0,NA
+"2791",49027,"UT","Millard County",NA,0,NA
+"2792",49029,"UT","Morgan County",NA,0,NA
+"2793",49031,"UT","Piute County",NA,0,NA
+"2794",49033,"UT","Rich County",NA,0,NA
 "2795",49035,"UT","Salt Lake County",1860,256,13.7634408602151
-"2796",49037,"UT","San Juan County",-1,0,0
+"2796",49037,"UT","San Juan County",NA,0,NA
 "2797",49039,"UT","Sanpete County",9,0,0
 "2798",49041,"UT","Sevier County",7,0,0
 "2799",49043,"UT","Summit County",21,0,0
@@ -2803,7 +2803,7 @@
 "2802",49049,"UT","Utah County",179,5,2.79329608938547
 "2803",49051,"UT","Wasatch County",7,0,0
 "2804",49053,"UT","Washington County",83,7,8.43373493975904
-"2805",49055,"UT","Wayne County",-1,0,0
+"2805",49055,"UT","Wayne County",NA,0,NA
 "2806",49057,"UT","Weber County",142,21,14.7887323943662
 "2807",50001,"VT","Addison County",33,0,0
 "2808",50003,"VT","Bennington County",47,8,17.0212765957447
@@ -2827,9 +2827,9 @@
 "2826",51011,"VA","Appomattox County",28,0,0
 "2827",51013,"VA","Arlington County",968,196,20.2479338842975
 "2828",51015,"VA","Augusta County",53,0,0
-"2829",51017,"VA","Bath County",-1,0,0
+"2829",51017,"VA","Bath County",NA,0,NA
 "2830",51019,"VA","Bedford County",53,6,11.3207547169811
-"2831",51021,"VA","Bland County",-1,0,0
+"2831",51021,"VA","Bland County",NA,0,NA
 "2832",51023,"VA","Botetourt County",25,0,0
 "2833",51025,"VA","Brunswick County",58,6,10.3448275862069
 "2834",51027,"VA","Buchanan County",9,0,0
@@ -2841,7 +2841,7 @@
 "2840",51037,"VA","Charlotte County",16,0,0
 "2841",51041,"VA","Chesterfield County",556,175,31.4748201438849
 "2842",51043,"VA","Clarke County",15,0,0
-"2843",51045,"VA","Craig County",-1,0,0
+"2843",51045,"VA","Craig County",NA,0,NA
 "2844",51047,"VA","Culpeper County",84,6,7.14285714285714
 "2845",51049,"VA","Cumberland County",17,0,0
 "2846",51051,"VA","Dickenson County",7,0,0
@@ -2863,7 +2863,7 @@
 "2862",51085,"VA","Hanover County",105,11,10.4761904761905
 "2863",51087,"VA","Henrico County",774,258,33.3333333333333
 "2864",51089,"VA","Henry County",47,0,0
-"2865",51091,"VA","Highland County",-1,0,0
+"2865",51091,"VA","Highland County",NA,0,NA
 "2866",51093,"VA","Isle of Wight County",76,7,9.21052631578947
 "2867",51095,"VA","James City County",53,5,9.43396226415094
 "2868",51097,"VA","King And Queen County",12,0,0
@@ -2916,7 +2916,7 @@
 "2915",51199,"VA","York County",55,5,9.09090909090909
 "2916",51510,"VA","Alexandria city",880,293,33.2954545454545
 "2917",51520,"VA","Bristol city",21,0,0
-"2918",51530,"VA","Buena Vista City",-1,0,0
+"2918",51530,"VA","Buena Vista City",NA,0,NA
 "2919",51540,"VA","Charlottesville city",145,35,24.1379310344828
 "2920",51550,"VA","Chesapeake city",506,163,32.2134387351779
 "2921",51570,"VA","Colonial Heights city",22,0,0
@@ -2938,7 +2938,7 @@
 "2937",51690,"VA","Martinsville city",31,0,0
 "2938",51700,"VA","Newport News city",721,228,31.622746185853
 "2939",51710,"VA","Norfolk city",1567,487,31.0784939374601
-"2940",51720,"VA","Norton city",-1,0,0
+"2940",51720,"VA","Norton city",NA,0,NA
 "2941",51730,"VA","Petersburg city",292,98,33.5616438356164
 "2942",51735,"VA","Poquoson city",6,0,0
 "2943",51740,"VA","Portsmouth city",601,193,32.1131447587354
@@ -2961,9 +2961,9 @@
 "2960",53013,"WA","Columbia County",12,0,0
 "2961",53015,"WA","Cowlitz County",112,0,0
 "2962",53017,"WA","Douglas County",13,0,0
-"2963",53019,"WA","Ferry County",-1,0,0
+"2963",53019,"WA","Ferry County",NA,0,NA
 "2964",53021,"WA","Franklin County",60,0,0
-"2965",53023,"WA","Garfield County",-1,0,0
+"2965",53023,"WA","Garfield County",NA,0,NA
 "2966",53025,"WA","Grant County",40,0,0
 "2967",53027,"WA","Grays Harbor County",78,0,0
 "2968",53029,"WA","Island County",77,0,0
@@ -2986,7 +2986,7 @@
 "2985",53063,"WA","Spokane County",543,61,11.2338858195212
 "2986",53065,"WA","Stevens County",22,0,0
 "2987",53067,"WA","Thurston County",269,35,13.0111524163569
-"2988",53069,"WA","Wahkiakum County",-1,0,0
+"2988",53069,"WA","Wahkiakum County",NA,0,NA
 "2989",53071,"WA","Walla Walla County",53,0,0
 "2990",53073,"WA","Whatcom County",200,33,16.5
 "2991",53075,"WA","Whitman County",21,0,0
@@ -2997,8 +2997,8 @@
 "2996",54007,"WV","Braxton County",8,0,0
 "2997",54009,"WV","Brooke County",16,0,0
 "2998",54011,"WV","Cabell County",150,42,28
-"2999",54013,"WV","Calhoun County",-1,0,0
-"3000",54015,"WV","Clay County",-1,0,0
+"2999",54013,"WV","Calhoun County",NA,0,NA
+"3000",54015,"WV","Clay County",NA,0,NA
 "3001",54017,"WV","Doddridge County",11,0,0
 "3002",54019,"WV","Fayette County",43,0,0
 "3003",54021,"WV","Gilmer County",28,7,25
@@ -3011,7 +3011,7 @@
 "3010",54035,"WV","Jackson County",15,0,0
 "3011",54037,"WV","Jefferson County",37,0,0
 "3012",54039,"WV","Kanawha County",326,61,18.7116564417178
-"3013",54041,"WV","Lewis County",-1,0,0
+"3013",54041,"WV","Lewis County",NA,0,NA
 "3014",54043,"WV","Lincoln County",9,0,0
 "3015",54045,"WV","Logan County",11,0,0
 "3016",54047,"WV","Mcdowell County",14,0,0
@@ -3026,24 +3026,24 @@
 "3025",54065,"WV","Morgan County",6,0,0
 "3026",54067,"WV","Nicholas County",6,0,0
 "3027",54069,"WV","Ohio County",43,0,0
-"3028",54071,"WV","Pendleton County",-1,0,0
+"3028",54071,"WV","Pendleton County",NA,0,NA
 "3029",54073,"WV","Pleasants County",5,0,0
 "3030",54075,"WV","Pocahontas County",6,0,0
 "3031",54077,"WV","Preston County",38,0,0
 "3032",54079,"WV","Putnam County",26,0,0
 "3033",54081,"WV","Raleigh County",117,32,27.3504273504274
 "3034",54083,"WV","Randolph County",26,0,0
-"3035",54085,"WV","Ritchie County",-1,0,0
-"3036",54087,"WV","Roane County",-1,0,0
+"3035",54085,"WV","Ritchie County",NA,0,NA
+"3036",54087,"WV","Roane County",NA,0,NA
 "3037",54089,"WV","Summers County",15,0,0
 "3038",54091,"WV","Taylor County",10,0,0
-"3039",54093,"WV","Tucker County",-1,0,0
+"3039",54093,"WV","Tucker County",NA,0,NA
 "3040",54095,"WV","Tyler County",10,0,0
 "3041",54097,"WV","Upshur County",7,0,0
 "3042",54099,"WV","Wayne County",10,0,0
 "3043",54101,"WV","Webster County",6,0,0
-"3044",54103,"WV","Wetzel County",-1,0,0
-"3045",54105,"WV","Wirt County",-1,0,0
+"3044",54103,"WV","Wetzel County",NA,0,NA
+"3045",54105,"WV","Wirt County",NA,0,NA
 "3046",54107,"WV","Wood County",51,0,0
 "3047",54109,"WV","Wyoming County",6,0,0
 "3048",55001,"WI","Adams County",22,0,0
@@ -3051,7 +3051,7 @@
 "3050",55005,"WI","Barron County",27,0,0
 "3051",55007,"WI","Bayfield County",7,0,0
 "3052",55009,"WI","Brown County",206,35,16.9902912621359
-"3053",55011,"WI","Buffalo County",-1,0,0
+"3053",55011,"WI","Buffalo County",NA,0,NA
 "3054",55013,"WI","Burnett County",11,0,0
 "3055",55015,"WI","Calumet County",9,0,0
 "3056",55017,"WI","Chippewa County",22,0,0
@@ -3064,21 +3064,21 @@
 "3063",55031,"WI","Douglas County",19,0,0
 "3064",55033,"WI","Dunn County",15,0,0
 "3065",55035,"WI","Eau Claire County",34,0,0
-"3066",55037,"WI","Florence County",-1,0,0
+"3066",55037,"WI","Florence County",NA,0,NA
 "3067",55039,"WI","Fond du Lac County",47,6,12.7659574468085
-"3068",55041,"WI","Forest County",-1,0,0
+"3068",55041,"WI","Forest County",NA,0,NA
 "3069",55043,"WI","Grant County",13,0,0
 "3070",55045,"WI","Green County",9,0,0
 "3071",55047,"WI","Green Lake County",10,0,0
 "3072",55049,"WI","Iowa County",7,0,0
-"3073",55051,"WI","Iron County",-1,0,0
+"3073",55051,"WI","Iron County",NA,0,NA
 "3074",55053,"WI","Jackson County",8,0,0
 "3075",55055,"WI","Jefferson County",25,0,0
 "3076",55057,"WI","Juneau County",14,0,0
 "3077",55059,"WI","Kenosha County",202,42,20.7920792079208
 "3078",55061,"WI","Kewaunee County",7,0,0
 "3079",55063,"WI","La Crosse County",101,18,17.8217821782178
-"3080",55065,"WI","Lafayette County",-1,0,0
+"3080",55065,"WI","Lafayette County",NA,0,NA
 "3081",55067,"WI","Langlade County",6,0,0
 "3082",55069,"WI","Lincoln County",6,0,0
 "3083",55071,"WI","Manitowoc County",37,0,0
@@ -3092,24 +3092,24 @@
 "3091",55085,"WI","Oneida County",11,0,0
 "3092",55087,"WI","Outagamie County",93,14,15.0537634408602
 "3093",55089,"WI","Ozaukee County",26,0,0
-"3094",55091,"WI","Pepin County",-1,0,0
+"3094",55091,"WI","Pepin County",NA,0,NA
 "3095",55093,"WI","Pierce County",11,0,0
 "3096",55095,"WI","Polk County",10,0,0
 "3097",55097,"WI","Portage County",25,0,0
-"3098",55099,"WI","Price County",-1,0,0
+"3098",55099,"WI","Price County",NA,0,NA
 "3099",55101,"WI","Racine County",203,47,23.1527093596059
-"3100",55103,"WI","Richland County",-1,0,0
+"3100",55103,"WI","Richland County",NA,0,NA
 "3101",55105,"WI","Rock County",135,40,29.6296296296296
 "3102",55107,"WI","Rusk County",9,0,0
 "3103",55109,"WI","St. Croix County",20,0,0
 "3104",55111,"WI","Sauk County",29,0,0
-"3105",55113,"WI","Sawyer County",-1,0,0
+"3105",55113,"WI","Sawyer County",NA,0,NA
 "3106",55115,"WI","Shawano County",14,0,0
 "3107",55117,"WI","Sheboygan County",58,0,0
-"3108",55119,"WI","Taylor County",-1,0,0
+"3108",55119,"WI","Taylor County",NA,0,NA
 "3109",55121,"WI","Trempealeau County",5,0,0
 "3110",55123,"WI","Vernon County",9,0,0
-"3111",55125,"WI","Vilas County",-1,0,0
+"3111",55125,"WI","Vilas County",NA,0,NA
 "3112",55127,"WI","Walworth County",47,0,0
 "3113",55129,"WI","Washburn County",9,0,0
 "3114",55131,"WI","Washington County",36,0,0
@@ -3119,104 +3119,104 @@
 "3118",55139,"WI","Winnebago County",87,5,5.74712643678161
 "3119",55141,"WI","Wood County",32,0,0
 "3120",56001,"WY","Albany County",15,0,0
-"3121",56003,"WY","Big Horn County",-1,0,0
+"3121",56003,"WY","Big Horn County",NA,0,NA
 "3122",56005,"WY","Campbell County",19,0,0
 "3123",56007,"WY","Carbon County",9,0,0
-"3124",56009,"WY","Converse County",-1,0,0
-"3125",56011,"WY","Crook County",-1,0,0
+"3124",56009,"WY","Converse County",NA,0,NA
+"3125",56011,"WY","Crook County",NA,0,NA
 "3126",56013,"WY","Fremont County",21,0,0
 "3127",56015,"WY","Goshen County",5,0,0
-"3128",56017,"WY","Hot Springs County",-1,0,0
-"3129",56019,"WY","Johnson County",-1,0,0
+"3128",56017,"WY","Hot Springs County",NA,0,NA
+"3129",56019,"WY","Johnson County",NA,0,NA
 "3130",56021,"WY","Laramie County",88,0,0
 "3131",56023,"WY","Lincoln County",6,0,0
 "3132",56025,"WY","Natrona County",35,0,0
-"3133",56027,"WY","Niobrara County",-1,0,0
+"3133",56027,"WY","Niobrara County",NA,0,NA
 "3134",56029,"WY","Park County",5,0,0
-"3135",56031,"WY","Platte County",-1,0,0
+"3135",56031,"WY","Platte County",NA,0,NA
 "3136",56033,"WY","Sheridan County",8,0,0
-"3137",56035,"WY","Sublette County",-1,0,0
+"3137",56035,"WY","Sublette County",NA,0,NA
 "3138",56037,"WY","Sweetwater County",31,0,0
 "3139",56039,"WY","Teton County",10,0,0
-"3140",56041,"WY","Uinta County",-1,0,0
-"3141",56043,"WY","Washakie County",-1,0,0
-"3142",56045,"WY","Weston County",-1,0,0
-"3143",72001,"PR","Adjuntas Municipio",-4,NA,NA
-"3144",72003,"PR","Aguada Municipio",-4,NA,NA
-"3145",72005,"PR","Aguadilla Municipio",-4,NA,NA
-"3146",72007,"PR","Aguas Buenas Municipio",-4,NA,NA
-"3147",72009,"PR","Aibonito Municipio",-4,NA,NA
-"3148",72011,"PR","Anasco Municipio",-4,NA,NA
-"3149",72013,"PR","Arecibo Municipio",-4,NA,NA
-"3150",72015,"PR","Arroyo Municipio",-4,NA,NA
-"3151",72017,"PR","Barceloneta Municipio",-4,NA,NA
-"3152",72019,"PR","Barranquitas Municipio",-4,NA,NA
-"3153",72021,"PR","Bayamon Municipio",-4,NA,NA
-"3154",72023,"PR","Cabo Rojo Municipio",-4,NA,NA
-"3155",72025,"PR","Caguas Municipio",-4,NA,NA
-"3156",72027,"PR","Camuy Municipio",-4,NA,NA
-"3157",72029,"PR","Canovanas Municipio",-4,NA,NA
-"3158",72031,"PR","Carolina Municipio",-4,NA,NA
-"3159",72033,"PR","Catano Municipio",-4,NA,NA
-"3160",72035,"PR","Cayey Municipio",-4,NA,NA
-"3161",72037,"PR","Ceiba Municipio",-4,NA,NA
-"3162",72039,"PR","Ciales Municipio",-4,NA,NA
-"3163",72041,"PR","Cidra Municipio",-4,NA,NA
-"3164",72043,"PR","Coamo Municipio",-4,NA,NA
-"3165",72045,"PR","Comerio Municipio",-4,NA,NA
-"3166",72047,"PR","Corozal Municipio",-4,NA,NA
-"3167",72049,"PR","Culebra Municipio",-4,NA,NA
-"3168",72051,"PR","Dorado Municipio",-4,NA,NA
-"3169",72053,"PR","Fajardo Municipio",-4,NA,NA
-"3170",72054,"PR","Florida Municipio",-4,NA,NA
-"3171",72055,"PR","Guanica Municipio",-4,NA,NA
-"3172",72057,"PR","Guayama Municipio",-4,NA,NA
-"3173",72059,"PR","Guayanilla Municipio",-4,NA,NA
-"3174",72061,"PR","Guaynabo Municipio",-4,NA,NA
-"3175",72063,"PR","Gurabo Municipio",-4,NA,NA
-"3176",72065,"PR","Hatillo Municipio",-4,NA,NA
-"3177",72067,"PR","Hormigueros Municipio",-4,NA,NA
-"3178",72069,"PR","Humacao Municipio",-4,NA,NA
-"3179",72071,"PR","Isabela Municipio",-4,NA,NA
-"3180",72073,"PR","Jayuya Municipio",-4,NA,NA
-"3181",72075,"PR","Juana Diaz Municipio",-4,NA,NA
-"3182",72077,"PR","Juncos Municipio",-4,NA,NA
-"3183",72079,"PR","Lajas Municipio",-4,NA,NA
-"3184",72081,"PR","Lares Municipio",-4,NA,NA
-"3185",72083,"PR","Las Marias Municipio",-4,NA,NA
-"3186",72085,"PR","Las Piedras Municipio",-4,NA,NA
-"3187",72087,"PR","Loiza Municipio",-4,NA,NA
-"3188",72089,"PR","Luquillo Municipio",-4,NA,NA
-"3189",72091,"PR","Manati Municipio",-4,NA,NA
-"3190",72093,"PR","Maricao Municipio",-4,NA,NA
-"3191",72095,"PR","Maunabo Municipio",-4,NA,NA
-"3192",72097,"PR","Mayaguez Municipio",-4,NA,NA
-"3193",72099,"PR","Moca Municipio",-4,NA,NA
-"3194",72101,"PR","Morovis Municipio",-4,NA,NA
-"3195",72103,"PR","Naguabo Municipio",-4,NA,NA
-"3196",72105,"PR","Naranjito Municipio",-4,NA,NA
-"3197",72107,"PR","Orocovis Municipio",-4,NA,NA
-"3198",72109,"PR","Patillas Municipio",-4,NA,NA
-"3199",72111,"PR","Penuelas Municipio",-4,NA,NA
-"3200",72113,"PR","Ponce Municipio",-4,NA,NA
-"3201",72115,"PR","Quebradillas Municipio",-4,NA,NA
-"3202",72117,"PR","Rincon Municipio",-4,NA,NA
-"3203",72119,"PR","Rio Grande Municipio",-4,NA,NA
-"3204",72121,"PR","Sabana Grande Municipio",-4,NA,NA
-"3205",72123,"PR","Salinas Municipio",-4,NA,NA
-"3206",72125,"PR","San German Municipio",-4,NA,NA
-"3207",72127,"PR","San Juan Municipio",-4,NA,NA
-"3208",72129,"PR","San Lorenzo Municipio",-4,NA,NA
-"3209",72131,"PR","San Sebastian Municipio",-4,NA,NA
-"3210",72133,"PR","Santa Isabel Municipio",-4,NA,NA
-"3211",72135,"PR","Toa Alta Municipio",-4,NA,NA
-"3212",72137,"PR","Toa Baja Municipio",-4,NA,NA
-"3213",72139,"PR","Trujillo Alto Municipio",-4,NA,NA
-"3214",72141,"PR","Utuado Municipio",-4,NA,NA
-"3215",72143,"PR","Vega Alta Municipio",-4,NA,NA
-"3216",72145,"PR","Vega Baja Municipio",-4,NA,NA
-"3217",72147,"PR","Vieques Municipio",-4,NA,NA
-"3218",72149,"PR","Villalba Municipio",-4,NA,NA
-"3219",72151,"PR","Yabucoa Municipio",-4,NA,NA
-"3220",72153,"PR","Yauco Municipio",-4,NA,NA
+"3140",56041,"WY","Uinta County",NA,0,NA
+"3141",56043,"WY","Washakie County",NA,0,NA
+"3142",56045,"WY","Weston County",NA,0,NA
+"3143",72001,"PR","Adjuntas Municipio",NA,NA,NA
+"3144",72003,"PR","Aguada Municipio",NA,NA,NA
+"3145",72005,"PR","Aguadilla Municipio",NA,NA,NA
+"3146",72007,"PR","Aguas Buenas Municipio",NA,NA,NA
+"3147",72009,"PR","Aibonito Municipio",NA,NA,NA
+"3148",72011,"PR","Anasco Municipio",NA,NA,NA
+"3149",72013,"PR","Arecibo Municipio",NA,NA,NA
+"3150",72015,"PR","Arroyo Municipio",NA,NA,NA
+"3151",72017,"PR","Barceloneta Municipio",NA,NA,NA
+"3152",72019,"PR","Barranquitas Municipio",NA,NA,NA
+"3153",72021,"PR","Bayamon Municipio",NA,NA,NA
+"3154",72023,"PR","Cabo Rojo Municipio",NA,NA,NA
+"3155",72025,"PR","Caguas Municipio",NA,NA,NA
+"3156",72027,"PR","Camuy Municipio",NA,NA,NA
+"3157",72029,"PR","Canovanas Municipio",NA,NA,NA
+"3158",72031,"PR","Carolina Municipio",NA,NA,NA
+"3159",72033,"PR","Catano Municipio",NA,NA,NA
+"3160",72035,"PR","Cayey Municipio",NA,NA,NA
+"3161",72037,"PR","Ceiba Municipio",NA,NA,NA
+"3162",72039,"PR","Ciales Municipio",NA,NA,NA
+"3163",72041,"PR","Cidra Municipio",NA,NA,NA
+"3164",72043,"PR","Coamo Municipio",NA,NA,NA
+"3165",72045,"PR","Comerio Municipio",NA,NA,NA
+"3166",72047,"PR","Corozal Municipio",NA,NA,NA
+"3167",72049,"PR","Culebra Municipio",NA,NA,NA
+"3168",72051,"PR","Dorado Municipio",NA,NA,NA
+"3169",72053,"PR","Fajardo Municipio",NA,NA,NA
+"3170",72054,"PR","Florida Municipio",NA,NA,NA
+"3171",72055,"PR","Guanica Municipio",NA,NA,NA
+"3172",72057,"PR","Guayama Municipio",NA,NA,NA
+"3173",72059,"PR","Guayanilla Municipio",NA,NA,NA
+"3174",72061,"PR","Guaynabo Municipio",NA,NA,NA
+"3175",72063,"PR","Gurabo Municipio",NA,NA,NA
+"3176",72065,"PR","Hatillo Municipio",NA,NA,NA
+"3177",72067,"PR","Hormigueros Municipio",NA,NA,NA
+"3178",72069,"PR","Humacao Municipio",NA,NA,NA
+"3179",72071,"PR","Isabela Municipio",NA,NA,NA
+"3180",72073,"PR","Jayuya Municipio",NA,NA,NA
+"3181",72075,"PR","Juana Diaz Municipio",NA,NA,NA
+"3182",72077,"PR","Juncos Municipio",NA,NA,NA
+"3183",72079,"PR","Lajas Municipio",NA,NA,NA
+"3184",72081,"PR","Lares Municipio",NA,NA,NA
+"3185",72083,"PR","Las Marias Municipio",NA,NA,NA
+"3186",72085,"PR","Las Piedras Municipio",NA,NA,NA
+"3187",72087,"PR","Loiza Municipio",NA,NA,NA
+"3188",72089,"PR","Luquillo Municipio",NA,NA,NA
+"3189",72091,"PR","Manati Municipio",NA,NA,NA
+"3190",72093,"PR","Maricao Municipio",NA,NA,NA
+"3191",72095,"PR","Maunabo Municipio",NA,NA,NA
+"3192",72097,"PR","Mayaguez Municipio",NA,NA,NA
+"3193",72099,"PR","Moca Municipio",NA,NA,NA
+"3194",72101,"PR","Morovis Municipio",NA,NA,NA
+"3195",72103,"PR","Naguabo Municipio",NA,NA,NA
+"3196",72105,"PR","Naranjito Municipio",NA,NA,NA
+"3197",72107,"PR","Orocovis Municipio",NA,NA,NA
+"3198",72109,"PR","Patillas Municipio",NA,NA,NA
+"3199",72111,"PR","Penuelas Municipio",NA,NA,NA
+"3200",72113,"PR","Ponce Municipio",NA,NA,NA
+"3201",72115,"PR","Quebradillas Municipio",NA,NA,NA
+"3202",72117,"PR","Rincon Municipio",NA,NA,NA
+"3203",72119,"PR","Rio Grande Municipio",NA,NA,NA
+"3204",72121,"PR","Sabana Grande Municipio",NA,NA,NA
+"3205",72123,"PR","Salinas Municipio",NA,NA,NA
+"3206",72125,"PR","San German Municipio",NA,NA,NA
+"3207",72127,"PR","San Juan Municipio",NA,NA,NA
+"3208",72129,"PR","San Lorenzo Municipio",NA,NA,NA
+"3209",72131,"PR","San Sebastian Municipio",NA,NA,NA
+"3210",72133,"PR","Santa Isabel Municipio",NA,NA,NA
+"3211",72135,"PR","Toa Alta Municipio",NA,NA,NA
+"3212",72137,"PR","Toa Baja Municipio",NA,NA,NA
+"3213",72139,"PR","Trujillo Alto Municipio",NA,NA,NA
+"3214",72141,"PR","Utuado Municipio",NA,NA,NA
+"3215",72143,"PR","Vega Alta Municipio",NA,NA,NA
+"3216",72145,"PR","Vega Baja Municipio",NA,NA,NA
+"3217",72147,"PR","Vieques Municipio",NA,NA,NA
+"3218",72149,"PR","Villalba Municipio",NA,NA,NA
+"3219",72151,"PR","Yabucoa Municipio",NA,NA,NA
+"3220",72153,"PR","Yauco Municipio",NA,NA,NA
 "3221",NA,NA,NA,NA,NA,NA

@@ -50,7 +50,6 @@ Year1,State Abbreviation,State,New Diagnoses State Rate,New Diagnoses State Case
 2008,WV,West Virginia,5,83,11,13.253012048192772
 2008,WI,Wisconsin,5,238,17,7.142857142857142
 2008,WY,Wyoming,5,23,3,13.043478260869565
-2009,State Abbreviation,State,New Diagnoses State Rate,New Diagnoses State Cases,New Diagnoses IDU Total Cases,NA
 2009,AL,Alabama,18,698,41,5.873925501432665
 2009,AK,Alaska,4,21,4,19.047619047619047
 2009,AZ,Arizona,12,643,66,10.26438569206843
@@ -102,7 +101,6 @@ Year1,State Abbreviation,State,New Diagnoses State Rate,New Diagnoses State Case
 2009,WV,West Virginia,5,82,10,12.195121951219512
 2009,WI,Wisconsin,6,278,24,8.633093525179856
 2009,WY,Wyoming,5,20,3,15
-2010,State Abbreviation,State,New Diagnoses State Rate,New Diagnoses State Cases,New Diagnoses IDU Total Cases,NA
 2010,AL,Alabama,17,682,40,5.865102639296188
 2010,AK,Alaska,6,35,3,8.571428571428571
 2010,AZ,Arizona,12,621,50,8.051529790660226
@@ -154,7 +152,6 @@ Year1,State Abbreviation,State,New Diagnoses State Rate,New Diagnoses State Case
 2010,WV,West Virginia,5,77,6,7.792207792207792
 2010,WI,Wisconsin,5,251,14,5.577689243027888
 2010,WY,Wyoming,4,19,3,15.789473684210526
-2011,State Abbreviation,State,New Diagnoses State Rate,New Diagnoses State Cases,New Diagnoses IDU Total Cases,NA
 2011,AL,Alabama,17,684,27,3.9473684210526314
 2011,AK,Alaska,4,24,4,16.666666666666664
 2011,AZ,Arizona,11,564,59,10.460992907801419
@@ -206,7 +203,6 @@ Year1,State Abbreviation,State,New Diagnoses State Rate,New Diagnoses State Case
 2011,WV,West Virginia,6,90,15,16.666666666666664
 2011,WI,Wisconsin,5,246,19,7.723577235772358
 2011,WY,Wyoming,3,15,0,0
-2012,State Abbreviation,State,New Diagnoses State Rate,New Diagnoses State Cases,New Diagnoses IDU Total Cases,NA
 2012,AL,Alabama,17,665,27,4.06015037593985
 2012,AK,Alaska,5,28,2,7.142857142857142
 2012,AZ,Arizona,12,626,56,8.945686900958465
@@ -258,7 +254,6 @@ Year1,State Abbreviation,State,New Diagnoses State Rate,New Diagnoses State Case
 2012,WV,West Virginia,5,80,7,8.75
 2012,WI,Wisconsin,5,217,15,6.912442396313365
 2012,WY,Wyoming,2,7,0,0
-2013,State Abbreviation,State,New Diagnoses State Rate,New Diagnoses State Cases,New Diagnoses IDU Total Cases,NA
 2013,AL,Alabama,16,633,29,4.581358609794629
 2013,AK,Alaska,4,23,1,4.3478260869565215
 2013,AZ,Arizona,13,696,65,9.339080459770114
@@ -310,7 +305,6 @@ Year1,State Abbreviation,State,New Diagnoses State Rate,New Diagnoses State Case
 2013,WV,West Virginia,5,74,16,21.62162162162162
 2013,WI,Wisconsin,5,243,13,5.349794238683128
 2013,WY,Wyoming,3,16,0,0
-2014,State Abbreviation,State,New Diagnoses State Rate,New Diagnoses State Cases,New Diagnoses IDU Total Cases,NA
 2014,AL,Alabama,17,672,27,4.017857142857143
 2014,AK,Alaska,6,38,0,0
 2014,AZ,Arizona,13,745,63,8.456375838926174
@@ -362,7 +356,6 @@ Year1,State Abbreviation,State,New Diagnoses State Rate,New Diagnoses State Case
 2014,WV,West Virginia,6,89,6,6.741573033707865
 2014,WI,Wisconsin,4,214,9,4.205607476635514
 2014,WY,Wyoming,2,10,1,10
-2015,State Abbreviation,State,New Diagnoses State Rate,New Diagnoses State Cases,New Diagnoses IDU Total Cases,NA
 2015,AL,Alabama,16,658,24,3.64741641337386
 2015,AK,Alaska,4,24,0,0
 2015,AZ,Arizona,12,695,60,8.633093525179856
@@ -414,7 +407,6 @@ Year1,State Abbreviation,State,New Diagnoses State Rate,New Diagnoses State Case
 2015,WV,West Virginia,5,72,6,8.333333333333332
 2015,WI,Wisconsin,5,223,8,3.587443946188341
 2015,WY,Wyoming,4,17,3,17.647058823529413
-2016,State Abbreviation,State,New Diagnoses State Rate,New Diagnoses State Cases,New Diagnoses IDU Total Cases,NA
 2016,AL,Alabama,13,533,24,4.50281425891182
 2016,AK,Alaska,6,37,0,0
 2016,AZ,Arizona,14,778,70,8.997429305912597

@@ -78,7 +78,7 @@ head(diag_08_16)
   
 ```
 
-We need to sort through some of what we need. First, let's get real variable names and also just select some of what we need
+We need to sort through some of what we need. First, let's get real variable names and also just select some of what we need. Also, NH does not give us data on IDU cases
 ```{r}
 colnames(diag_08_16) <-  c(varnames, "Year1", "drop")
 ```
@@ -87,7 +87,9 @@ diag_08_16 <- diag_08_16%>%
   slice(2:468)%>%
   select(Year1, `State Abbreviation`, State, 
            `New Diagnoses State Rate`,  `New Diagnoses State Cases`,
-           `New Diagnoses IDU Total Cases`)
+           `New Diagnoses IDU Total Cases`)%>%
+  mutate(`New Diagnoses IDU Total Cases`= 
+         if_else(`New Diagnoses IDU Total Cases` < 0, "NA",`New Diagnoses IDU Total Cases`))
 head(diag_08_16)
 ```
 I think a variable that shows the percentage of new diagnoses that are from IDUs would be helpful.

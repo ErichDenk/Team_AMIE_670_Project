@@ -1,0 +1,61 @@
+---
+title: "yearly-incidence-map"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+require(devtools)
+#devtools::install_github("UrbanInstitute/urbnmapr")
+require(urbnmapr)
+require(here)
+require(tidyverse)
+```
+
+```{r}
+tidyDiagData <- read.csv(here("Active-data-sets/statewide-new-diagnoses-clean.csv")) %>%
+  mutate(State = as.character(State)) %>%
+  select(., Year = Year1, state_name = State, per_IDU)
+
+write_csv(tidyDiagData, file.path(here("Active-data-sets/incidenceMapData.csv")))
+
+```
+
+```{r}
+states
+```
+
+
+map
+```{r}
+mapData <- left_join(tidyDiagData, states, by = "state_name")
+
+
+```
+Lets just start with 2008...
+```{r}
+
+incidenceMap <- mapData %>%
+  filter(., Year == 2008) %>%
+  # first layer plots states 
+  ggplot(data = states, mapping = aes(long, lat, group=group)) + 
+  # center the map view on the US
+  coord_map(projection = "albers", lat0 = 39, lat1 = 45) +
+  # black boarder and grey fill for all states
+  geom_polygon(color = "black", fill = NA) +
+  # outline for counties, I commented it out because it looked too busy 
+    # geom_polygon(data = counties, fill = NA, color = "white") +
+  # adding the IDU as the density fill per county
+  geom_polygon(data = mapData, aes(fill = per_IDU)) +
+  #change gradient for scale bar -- I wanted darker color to be higher IDU density. 
+  scale_fill_gradientn( colors = c("white", "blue"),
+                       guide = guide_colorbar(title.position = "top"))+
+  # re plot the black boarder lines
+    geom_polygon(color = "black", fill = NA)
+
+
+```
+

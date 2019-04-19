@@ -67,14 +67,14 @@ state_diag_2016 <- state_diag_2016%>%
 ```{r}
 
 diag_08_16 <- 
-  bind_rows(state_diag_2008,state_diag_2009)%>%
-  bind_rows(.,state_diag_2010)%>%
-  bind_rows(.,state_diag_2011)%>%
-  bind_rows(.,state_diag_2012)%>%
-  bind_rows(.,state_diag_2013)%>%
-  bind_rows(.,state_diag_2014)%>%
-  bind_rows(.,state_diag_2015)%>%
-  bind_rows(.,state_diag_2016)
+  bind_rows(state_diag_2008,state_diag_2009[-1,])%>%
+  bind_rows(.,state_diag_2010[-1,])%>%
+  bind_rows(.,state_diag_2011[-1,])%>%
+  bind_rows(.,state_diag_2012[-1,])%>%
+  bind_rows(.,state_diag_2013[-1,])%>%
+  bind_rows(.,state_diag_2014[-1,])%>%
+  bind_rows(.,state_diag_2015[-1,])%>%
+  bind_rows(.,state_diag_2016[-1,])
 head(diag_08_16)
   
 ```
@@ -84,26 +84,27 @@ We need to sort through some of what we need. First, let's get real variable nam
 colnames(diag_08_16) <-  c(varnames, "Year1", "drop")
 ```
 ```{r}
-diag_08_16 <- diag_08_16%>%
+#changed var name so I don't have to re run all of the code when I want to test this section 
+diagData <- diag_08_16%>%
   slice(2:468)%>%
   select(Year1, `State Abbreviation`, State, 
            `New Diagnoses State Rate`,  `New Diagnoses State Cases`,
-           `New Diagnoses IDU Total Cases`)%>%
-  mutate(`New Diagnoses IDU Total Cases`, 
-         if_else(State == "New Hampshire", "NA",`New Diagnoses IDU Total Cases`))
-head(diag_08_16)
+           `New Diagnoses IDU Total Cases`) %>% 
+  mutate (`New Diagnoses IDU Total Cases` = ifelse(`New Diagnoses IDU Total Cases` < 0, NA, `New Diagnoses IDU Total Cases`)) 
+
+head(diagData)
 ```
 I think a variable that shows the percentage of new diagnoses that are from IDUs would be helpful.
 ```{r}
-diag_08_16 <- diag_08_16%>%
+diagDataClean <- diagData%>%
   mutate(per_IDU = (as.numeric(`New Diagnoses IDU Total Cases`)/
                       as.numeric(`New Diagnoses State Cases`))*100)
-head(diag_08_16)
+head(diagDataClean)
 ```
 
 Let's save what we have as a csv in our data folder.
 ```{r}
-write_csv(diag_08_16, 
+write_csv(diagDataClean, 
           file.path("Active-data-sets/statewide-new-diagnoses-clean.csv"))
 ```
 

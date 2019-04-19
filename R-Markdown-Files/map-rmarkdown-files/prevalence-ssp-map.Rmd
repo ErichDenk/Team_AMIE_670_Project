@@ -11,15 +11,15 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ```{r}
 library(urbnmapr)
+require(devtools)
 library(tidyverse)
-require(stringr)
+require(here)
 ```
 
-need data frame without the word "county"
+read in/clean data frame for relevant variables
 ```{r}
 tidyData <- read.csv(here("Active-data-sets/2015-Prevalence-IDU-data.csv")) %>%
   mutate(County = as.character(County))%>%
-  #mutate(County = str_remove(string = County, pattern = "County"))%>%
   select(., county_name = County, State,PercentIDU)
   
 ```

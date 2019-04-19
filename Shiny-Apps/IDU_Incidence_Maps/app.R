@@ -6,10 +6,15 @@
 #
 #    http://shiny.rstudio.com/
 #
-incidenceData <- read.csv(here("Active-data-sets/incidenceMapData.csv"))
-mapCreateData <- read.csv(here("Active-data-sets/mapCreationDat.csv"))
 
-library(shiny)
+require(urbnmapr)
+require(tidyverse)
+require(shiny)
+
+
+incidenceData <- read.csv(here("Active-data-sets/incidenceMapData.csv"))
+mapCreateData <- left_join(tidyDiagData, states, by = "state_name")
+    
 
 # Define UI for application that draws a histogram
 ui <- fluidPage(
@@ -45,7 +50,7 @@ server <- function(input, output) {
             # outline for counties, I commented it out because it looked too busy 
             # geom_polygon(data = counties, fill = NA, color = "white") +
             # adding the IDU as the density fill per county
-            geom_polygon(data = mapData, aes(fill = log(per_IDU)) +
+            geom_polygon(data = mapData, aes(fill = log(per_IDU))) +
             #change gradient for scale bar -- I wanted darker color to be higher IDU density. 
             scale_fill_gradientn( colors = c("white", "blue"),
                                   guide = guide_colorbar(title.position = "top"))+

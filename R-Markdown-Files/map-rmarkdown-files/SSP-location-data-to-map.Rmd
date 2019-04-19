@@ -1,0 +1,40 @@
+---
+title: "SSP data to map"
+author: "Ann Marie"
+date: "4/19/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+require(here)
+require(tidyverse)
+require(zipcode)
+```
+
+
+```{r}
+sspDat <- read.csv(here("Active-data-sets/SSP-Location-Data")) %>%
+  mutate(city = as.character(City), state = as.character(State)) %>%
+  select(X, city, state)
+```
+
+```{r}
+data(zipcode.civicspace)
+zip <- zipcode.civicspace %>% 
+  select(city, state, latitude, longitude) %>% 
+  distinct(.) %>%
+  .[!duplicated(zip$city),]
+
+sspCoord <- left_join(zip, sspDat, by = c("city", "state")) %>%
+  filter(., !is.na(X)) %>%
+  select(., latitude, longitude) %>%
+  write.csv(here("Active-data-sets/sspLocationLatLong.csv"))
+
+
+
+```
+

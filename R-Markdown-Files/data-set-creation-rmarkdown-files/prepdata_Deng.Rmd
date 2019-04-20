@@ -15,13 +15,19 @@ When you click the **Knit** button a document will be generated that includes bo
 
 ```{r}
 require(tidyverse)
-setwd("~/Desktop/data")
-files <- dir(path ="~/Desktop/data/Team_AMIE_670_Project")
+setwd("~/ivyxd94/datasci group project/Source-Data/prep")
+files <- dir(path ="~/ivyxd94/datasci group project/Source-Data/prep")
 prepdata <- files %>%
   map(read_csv) %>%
   reduce(full_join) 
 prepdata$`GEO ID` <- NULL
-write_csv (prepdata,path ="prep.csv")
-write_dta (prepdata,path ="prep.dta")
+prepdata <- prepdata%>%
+  slice(1:261)%>%
+  select(Year, State, `State PrEP Users`,
+           `Male PrEP Users`,  `Female PrEP Users`,
+           `Age LE 24 PrEP Users`,`Age 25-34 PrEP Users`,`Age 35-44 PrEP Users`, `Age 45-54 PrEP Users`, `Age 55+ PrEP Users`,`State PrEP Rates`) 
+ 
+head(prepdata)
+write_csv (prepdata,path ="~/ivyxd94/datasci group project/Active-data-sets/prepdata.csv")
 ```
 

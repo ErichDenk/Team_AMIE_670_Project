@@ -9,19 +9,19 @@ output: pdf_document
 AidsVu provides state diagnoses data for the years 2008 to 2016. Let's upload that data so we can combine it to create a longitudinal dataset. We will need to add the relevant year before comibing as well.
 
 ```{r}
-<<<<<<< HEAD
 require(tidyverse)
 require(readxl)
+require(here)
 
-state_diag_2008 <- read_excel("Data/AIDSVu_State_New-DX-Data-Sets_2008.xlsx")
-state_diag_2009 <- read_excel("Data/AIDSVu_State_New-DX-Data-Sets_2009.xlsx")
-state_diag_2010 <- read_excel("Data/AIDSVu_State_New-DX-Data-Sets_2010.xlsx")
-state_diag_2011 <- read_excel("Data/AIDSVu_State_New-DX-Data-Sets_2011.xlsx")
-state_diag_2012 <- read_excel("Data/AIDSVu_State_New-DX-Data-Sets_2012.xlsx")
-state_diag_2013 <- read_excel("Data/AIDSVu_State_New-DX-Data-Sets_2013.xlsx")
-state_diag_2014 <- read_excel("Data/AIDSVu_State_New-DX-Data-Sets_2014.xlsx")
-state_diag_2015 <- read_excel("Data/AIDSVu_State_New-DX-Data-Sets_2015.xlsx")
-state_diag_2016 <- read_excel("Data/AIDSVu_State_New-DX-Data-Sets_2016.xlsx")
+state_diag_2008 <- read_excel(here("Source-Data/state-newdx/AIDSVu_State_New-DX-Data-Sets_2008.xlsx"))
+state_diag_2009 <- read_excel(here("Source-Data/state-newdx/AIDSVu_State_New-DX-Data-Sets_2009.xlsx"))
+state_diag_2010 <- read_excel(here("Source-Data/state-newdx/AIDSVu_State_New-DX-Data-Sets_2010.xlsx"))
+state_diag_2011 <- read_excel(here("Source-Data/state-newdx/AIDSVu_State_New-DX-Data-Sets_2011.xlsx"))
+state_diag_2012 <- read_excel(here("Source-Data/state-newdx/AIDSVu_State_New-DX-Data-Sets_2012.xlsx"))
+state_diag_2013 <- read_excel(here("Source-Data/state-newdx/AIDSVu_State_New-DX-Data-Sets_2013.xlsx"))
+state_diag_2014 <- read_excel(here("Source-Data/state-newdx/AIDSVu_State_New-DX-Data-Sets_2014.xlsx"))
+state_diag_2015 <- read_excel(here("Source-Data/state-newdx/AIDSVu_State_New-DX-Data-Sets_2015.xlsx"))
+state_diag_2016 <- read_excel(here("Source-Data/state-newdx/AIDSVu_State_New-DX-Data-Sets_2016.xlsx"))
 ```
 
 ```{r}
@@ -67,41 +67,45 @@ state_diag_2016 <- state_diag_2016%>%
 ```{r}
 
 diag_08_16 <- 
-  bind_rows(state_diag_2008,state_diag_2009)%>%
-  bind_rows(.,state_diag_2010)%>%
-  bind_rows(.,state_diag_2011)%>%
-  bind_rows(.,state_diag_2012)%>%
-  bind_rows(.,state_diag_2013)%>%
-  bind_rows(.,state_diag_2014)%>%
-  bind_rows(.,state_diag_2015)%>%
-  bind_rows(.,state_diag_2016)
+  bind_rows(state_diag_2008,state_diag_2009[-1,])%>%
+  bind_rows(.,state_diag_2010[-1,])%>%
+  bind_rows(.,state_diag_2011[-1,])%>%
+  bind_rows(.,state_diag_2012[-1,])%>%
+  bind_rows(.,state_diag_2013[-1,])%>%
+  bind_rows(.,state_diag_2014[-1,])%>%
+  bind_rows(.,state_diag_2015[-1,])%>%
+  bind_rows(.,state_diag_2016[-1,])
 head(diag_08_16)
   
 ```
 
-We need to sort through some of what we need. First, let's get real variable names and also just select some of what we need
+We need to sort through some of what we need. First, let's get real variable names and also just select some of what we need. Also, NH does not give us data on IDU cases
 ```{r}
 colnames(diag_08_16) <-  c(varnames, "Year1", "drop")
 ```
 ```{r}
-diag_08_16 <- diag_08_16%>%
+#changed var name so I don't have to re run all of the code when I want to test this section 
+diagData <- diag_08_16%>%
   slice(2:468)%>%
   select(Year1, `State Abbreviation`, State, 
            `New Diagnoses State Rate`,  `New Diagnoses State Cases`,
-           `New Diagnoses IDU Total Cases`)
-head(diag_08_16)
+           `New Diagnoses IDU Total Cases`) %>% 
+  mutate (`New Diagnoses IDU Total Cases` = ifelse(`New Diagnoses IDU Total Cases` < 0, NA, `New Diagnoses IDU Total Cases`)) 
+
+head(diagData)
 ```
 I think a variable that shows the percentage of new diagnoses that are from IDUs would be helpful.
 ```{r}
-diag_08_16 <- diag_08_16%>%
+diagDataClean <- diagData%>%
   mutate(per_IDU = (as.numeric(`New Diagnoses IDU Total Cases`)/
                       as.numeric(`New Diagnoses State Cases`))*100)
+head(diagDataClean)
 ```
 
 Let's save what we have as a csv in our data folder.
 ```{r}
-write_csv(diag_08_16, 
-          file.path("Data/statewide-new-diagnoses-clean.csv"))
+write_csv(diagDataClean, 
+          file.path("Active-data-sets/statewide-new-diagnoses-clean.csv"))
 ```
 
 

@@ -28,11 +28,7 @@ Year1,State Abbreviation,State,New Diagnoses State Rate,New Diagnoses State Case
 2008,MT,Montana,3,22,3,13.636363636363635
 2008,NE,Nebraska,7,97,7,7.216494845360824
 2008,NV,Nevada,19,395,33,8.354430379746836
-<<<<<<< HEAD
-2008,NH,New Hampshire,4,44,"NA",NA
-=======
 2008,NH,New Hampshire,4,44,NA,NA
->>>>>>> fc3dbb994f6f4c7d9459a4a8d186176e5c068780
 2008,NJ,New Jersey,21,1478,258,17.456021650879567
 2008,NM,New Mexico,9,152,17,11.18421052631579
 2008,NY,New York,30,4846,639,13.186132893107718
@@ -54,7 +50,6 @@ Year1,State Abbreviation,State,New Diagnoses State Rate,New Diagnoses State Case
 2008,WV,West Virginia,5,83,11,13.253012048192772
 2008,WI,Wisconsin,5,238,17,7.142857142857142
 2008,WY,Wyoming,5,23,3,13.043478260869565
-2009,State Abbreviation,State,New Diagnoses State Rate,New Diagnoses State Cases,New Diagnoses IDU Total Cases,NA
 2009,AL,Alabama,18,698,41,5.873925501432665
 2009,AK,Alaska,4,21,4,19.047619047619047
 2009,AZ,Arizona,12,643,66,10.26438569206843
@@ -84,11 +79,7 @@ Year1,State Abbreviation,State,New Diagnoses State Rate,New Diagnoses State Case
 2009,MT,Montana,4,32,2,6.25
 2009,NE,Nebraska,7,108,10,9.25925925925926
 2009,NV,Nevada,17,369,25,6.775067750677506
-<<<<<<< HEAD
-2009,NH,New Hampshire,4,40,"NA",NA
-=======
 2009,NH,New Hampshire,4,40,NA,NA
->>>>>>> fc3dbb994f6f4c7d9459a4a8d186176e5c068780
 2009,NJ,New Jersey,20,1445,269,18.6159169550173
 2009,NM,New Mexico,10,162,19,11.728395061728394
 2009,NY,New York,27,4387,525,11.96717574652382
@@ -110,7 +101,6 @@ Year1,State Abbreviation,State,New Diagnoses State Rate,New Diagnoses State Case
 2009,WV,West Virginia,5,82,10,12.195121951219512
 2009,WI,Wisconsin,6,278,24,8.633093525179856
 2009,WY,Wyoming,5,20,3,15
-2010,State Abbreviation,State,New Diagnoses State Rate,New Diagnoses State Cases,New Diagnoses IDU Total Cases,NA
 2010,AL,Alabama,17,682,40,5.865102639296188
 2010,AK,Alaska,6,35,3,8.571428571428571
 2010,AZ,Arizona,12,621,50,8.051529790660226
@@ -140,11 +130,7 @@ Year1,State Abbreviation,State,New Diagnoses State Rate,New Diagnoses State Case
 2010,MT,Montana,2,20,1,5
 2010,NE,Nebraska,8,115,9,7.82608695652174
 2010,NV,Nevada,17,377,21,5.570291777188329
-<<<<<<< HEAD
-2010,NH,New Hampshire,5,50,"NA",NA
-=======
 2010,NH,New Hampshire,5,50,NA,NA
->>>>>>> fc3dbb994f6f4c7d9459a4a8d186176e5c068780
 2010,NJ,New Jersey,19,1372,215,15.670553935860058
 2010,NM,New Mexico,9,148,10,6.756756756756757
 2010,NY,New York,25,4036,439,10.877106045589693
@@ -166,7 +152,6 @@ Year1,State Abbreviation,State,New Diagnoses State Rate,New Diagnoses State Case
 2010,WV,West Virginia,5,77,6,7.792207792207792
 2010,WI,Wisconsin,5,251,14,5.577689243027888
 2010,WY,Wyoming,4,19,3,15.789473684210526
-2011,State Abbreviation,State,New Diagnoses State Rate,New Diagnoses State Cases,New Diagnoses IDU Total Cases,NA
 2011,AL,Alabama,17,684,27,3.9473684210526314
 2011,AK,Alaska,4,24,4,16.666666666666664
 2011,AZ,Arizona,11,564,59,10.460992907801419
@@ -196,11 +181,7 @@ Year1,State Abbreviation,State,New Diagnoses State Rate,New Diagnoses State Case
 2011,MT,Montana,3,22,3,13.636363636363635
 2011,NE,Nebraska,5,79,2,2.5316455696202533
 2011,NV,Nevada,17,383,21,5.483028720626632
-<<<<<<< HEAD
-2011,NH,New Hampshire,4,39,"NA",NA
-=======
 2011,NH,New Hampshire,4,39,NA,NA
->>>>>>> fc3dbb994f6f4c7d9459a4a8d186176e5c068780
 2011,NJ,New Jersey,16,1191,169,14.189756507136861
 2011,NM,New Mexico,8,137,17,12.408759124087592
 2011,NY,New York,24,3870,390,10.077519379844961
@@ -222,7 +203,6 @@ Year1,State Abbreviation,State,New Diagnoses State Rate,New Diagnoses State Case
 2011,WV,West Virginia,6,90,15,16.666666666666664
 2011,WI,Wisconsin,5,246,19,7.723577235772358
 2011,WY,Wyoming,3,15,0,0
-2012,State Abbreviation,State,New Diagnoses State Rate,New Diagnoses State Cases,New Diagnoses IDU Total Cases,NA
 2012,AL,Alabama,17,665,27,4.06015037593985
 2012,AK,Alaska,5,28,2,7.142857142857142
 2012,AZ,Arizona,12,626,56,8.945686900958465
@@ -252,11 +232,7 @@ Year1,State Abbreviation,State,New Diagnoses State Rate,New Diagnoses State Case
 2012,MT,Montana,2,20,3,15
 2012,NE,Nebraska,6,83,3,3.614457831325301
 2012,NV,Nevada,16,362,23,6.353591160220995
-<<<<<<< HEAD
-2012,NH,New Hampshire,4,47,"NA",NA
-=======
 2012,NH,New Hampshire,4,47,NA,NA
->>>>>>> fc3dbb994f6f4c7d9459a4a8d186176e5c068780
 2012,NJ,New Jersey,17,1291,165,12.780790085205268
 2012,NM,New Mexico,7,119,11,9.243697478991598
 2012,NY,New York,22,3611,327,9.05566325117696
@@ -278,7 +254,6 @@ Year1,State Abbreviation,State,New Diagnoses State Rate,New Diagnoses State Case
 2012,WV,West Virginia,5,80,7,8.75
 2012,WI,Wisconsin,5,217,15,6.912442396313365
 2012,WY,Wyoming,2,7,0,0
-2013,State Abbreviation,State,New Diagnoses State Rate,New Diagnoses State Cases,New Diagnoses IDU Total Cases,NA
 2013,AL,Alabama,16,633,29,4.581358609794629
 2013,AK,Alaska,4,23,1,4.3478260869565215
 2013,AZ,Arizona,13,696,65,9.339080459770114
@@ -308,11 +283,7 @@ Year1,State Abbreviation,State,New Diagnoses State Rate,New Diagnoses State Case
 2013,MT,Montana,3,22,0,0
 2013,NE,Nebraska,5,79,3,3.79746835443038
 2013,NV,Nevada,19,435,22,5.057471264367816
-<<<<<<< HEAD
-2013,NH,New Hampshire,3,34,"NA",NA
-=======
 2013,NH,New Hampshire,3,34,NA,NA
->>>>>>> fc3dbb994f6f4c7d9459a4a8d186176e5c068780
 2013,NJ,New Jersey,16,1194,158,13.23283082077052
 2013,NM,New Mexico,8,144,12,8.333333333333332
 2013,NY,New York,20,3295,249,7.55690440060698
@@ -334,7 +305,6 @@ Year1,State Abbreviation,State,New Diagnoses State Rate,New Diagnoses State Case
 2013,WV,West Virginia,5,74,16,21.62162162162162
 2013,WI,Wisconsin,5,243,13,5.349794238683128
 2013,WY,Wyoming,3,16,0,0
-2014,State Abbreviation,State,New Diagnoses State Rate,New Diagnoses State Cases,New Diagnoses IDU Total Cases,NA
 2014,AL,Alabama,17,672,27,4.017857142857143
 2014,AK,Alaska,6,38,0,0
 2014,AZ,Arizona,13,745,63,8.456375838926174
@@ -364,11 +334,7 @@ Year1,State Abbreviation,State,New Diagnoses State Rate,New Diagnoses State Case
 2014,MT,Montana,2,14,1,7.142857142857142
 2014,NE,Nebraska,6,88,2,2.272727272727273
 2014,NV,Nevada,19,438,23,5.251141552511415
-<<<<<<< HEAD
-2014,NH,New Hampshire,4,41,"NA",NA
-=======
 2014,NH,New Hampshire,4,41,NA,NA
->>>>>>> fc3dbb994f6f4c7d9459a4a8d186176e5c068780
 2014,NJ,New Jersey,17,1241,151,12.167606768734892
 2014,NM,New Mexico,8,133,13,9.774436090225564
 2014,NY,New York,20,3371,247,7.327202610501335
@@ -390,7 +356,6 @@ Year1,State Abbreviation,State,New Diagnoses State Rate,New Diagnoses State Case
 2014,WV,West Virginia,6,89,6,6.741573033707865
 2014,WI,Wisconsin,4,214,9,4.205607476635514
 2014,WY,Wyoming,2,10,1,10
-2015,State Abbreviation,State,New Diagnoses State Rate,New Diagnoses State Cases,New Diagnoses IDU Total Cases,NA
 2015,AL,Alabama,16,658,24,3.64741641337386
 2015,AK,Alaska,4,24,0,0
 2015,AZ,Arizona,12,695,60,8.633093525179856
@@ -420,11 +385,7 @@ Year1,State Abbreviation,State,New Diagnoses State Rate,New Diagnoses State Case
 2015,MT,Montana,2,19,2,10.526315789473683
 2015,NE,Nebraska,5,81,2,2.4691358024691357
 2015,NV,Nevada,20,480,26,5.416666666666667
-<<<<<<< HEAD
-2015,NH,New Hampshire,2,24,"NA",NA
-=======
 2015,NH,New Hampshire,2,24,NA,NA
->>>>>>> fc3dbb994f6f4c7d9459a4a8d186176e5c068780
 2015,NJ,New Jersey,15,1161,111,9.560723514211885
 2015,NM,New Mexico,8,137,13,9.48905109489051
 2015,NY,New York,19,3108,244,7.850707850707852
@@ -446,7 +407,6 @@ Year1,State Abbreviation,State,New Diagnoses State Rate,New Diagnoses State Case
 2015,WV,West Virginia,5,72,6,8.333333333333332
 2015,WI,Wisconsin,5,223,8,3.587443946188341
 2015,WY,Wyoming,4,17,3,17.647058823529413
-2016,State Abbreviation,State,New Diagnoses State Rate,New Diagnoses State Cases,New Diagnoses IDU Total Cases,NA
 2016,AL,Alabama,13,533,24,4.50281425891182
 2016,AK,Alaska,6,37,0,0
 2016,AZ,Arizona,14,778,70,8.997429305912597
@@ -476,11 +436,7 @@ Year1,State Abbreviation,State,New Diagnoses State Rate,New Diagnoses State Case
 2016,MT,Montana,2,17,1,5.88235294117647
 2016,NE,Nebraska,5,76,4,5.263157894736842
 2016,NV,Nevada,21,525,33,6.2857142857142865
-<<<<<<< HEAD
-2016,NH,New Hampshire,4,42,"NA",NA
-=======
 2016,NH,New Hampshire,4,42,NA,NA
->>>>>>> fc3dbb994f6f4c7d9459a4a8d186176e5c068780
 2016,NJ,New Jersey,15,1143,97,8.486439195100612
 2016,NM,New Mexico,7,125,10,8
 2016,NY,New York,17,2875,209,7.269565217391305

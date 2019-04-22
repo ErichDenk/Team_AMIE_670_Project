@@ -7,5 +7,49 @@ output: pdf_document
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+require(tidyverse)
+require(caret)
+require(recipes)
+require(pdp)
+require(here)
 ```
+
+```{r}
+syringe_exchange_laws_clean <- read_csv(here("Active-data-sets/syringe-exchange-laws-clean.csv"))
+
+laws <- syringe_exchange_laws_clean
+head(laws)
+```
+We also need the other data from another set to be able to look longitudinally
+
+```{r}
+new_diag <- read_csv(
+  here("Active-data-sets/full_new_diag.csv"))
+
+new_diag$Year1 <- as.numeric(new_diag$Year1)
+head(new_diag)
+```
+
+```{r}
+full_dat <- full_join(new_diag,laws, by = "State")
+```
+
+```{r}
+full_dat <- full_dat%>%
+  mutate(`Law Name` = replace_na(`Law Name`,0))%>%
+  mutate(Year.y = replace_na(Year.y,0))%>%
+  mutate(Yes = if_else(Year.y <= Year1, 1, 0))%>%
+  mutate(No = if_else(Yes == 1, 0, 1))%>%
+  mutate(Allowed = if_else(Yes == 1, "Yes", "No"))%>%
+  select(-Year.y, -Year.x)%>%
+  rename("Year" = "Year1")%>%
+  select(State, `State Abbreviation`, Year, Allowed,
+         Yes, No, `Law Name`, everything())
+```
+
+Now we have a clean and combined data set ready for some machine learning!
+```{r}
+
+```
+
 

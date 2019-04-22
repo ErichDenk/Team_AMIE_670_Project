@@ -1,0 +1,174 @@
+---
+title: "prep map raw"
+author: "Ivy Deng"
+date: "4/20/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+load packages 
+```{r}
+library(sf)          # classes and functions for vector data
+library(raster)      # classes and functions for raster data
+library(spData)        # load geographic data
+library(spDataLarge)   # load larger geographic data
+library(dplyr)
+library(tmap)    # for static and interactive maps
+library(leaflet) # for interactive maps
+library(mapview) # for interactive maps
+library(ggplot2) # tidyverse vis package
+library(shiny)   # for web applications
+require(cartogram)
+require(lubridate)
+require(ggplot2)
+setwd("~/ivyxd94/datasci group project/Active-data-sets")
+require(tidyverse)
+require(shiny)
+require(here)
+require(urbnmapr)
+library(urbnthemes)
+
+```
+
+read&select data 
+```{r}
+setwd("~/Desktop/data/Team_AMIE_670_Project/Active-data-sets")
+prep <- read_csv("prep.csv") %>% 
+select(Year, State, `State PrEP Users`)
+```
+
+tidy & map data 
+```{r}
+tidydata <- prep %>%
+  mutate(state = as.character(State))%>%
+  mutate(year = as.integer(Year)) %>%
+  mutate(prepusers = as.numeric(`State PrEP Users`))%>%
+  select(., state_name = state,year,prepusers)
+mapdata <- left_join(tidydata, states, by = "state_name")
+na.omit(mapdata)
+```
+
+```
+```{r}
+theme_map <- function(...) {
+  theme_minimal() +
+  theme(
+    text = element_text(family = "Arial", color = "#22211d"),
+    axis.line = element_blank(),
+    axis.text.x = element_blank(),
+    axis.text.y = element_blank(),
+    axis.ticks = element_blank(),
+    axis.title.x = element_blank(),
+    axis.title.y = element_blank(),
+    legend.title = element_text(size=10),
+    legend.text=element_text(size=8),
+    legend.position = "bottom",
+    # panel.grid.minor = element_line(color = "#ebebe5", size = 0.2),
+    panel.grid.major = element_line(color = "#ebebe5", size = 0.2),
+    panel.grid.minor = element_blank(),
+    plot.background = element_rect(fill = "#f5f5f2", color = NA), 
+    panel.background = element_rect(fill = "#f5f5f2", color = NA), 
+    legend.background = element_rect(fill = "#f5f5f2", color = NA),
+    panel.border = element_blank(),
+    ...
+  )
+}
+```
+
+
+
+```{r}
+
+```
+
+
+```{r}
+library(viridis)
+mapdata %>% 
+  filter(year == 2012) %>% 
+  ggplot(mapping = aes(long, lat, group = group, fill = prepusers)) +
+  geom_polygon(color = "#ffffff", size = .25) +
+  scale_fill_viridis(option = "magma", direction = -1,
+  name = "State PrEP Users",
+  guide = guide_colorbar(
+      direction = "horizontal",
+      barheight = unit(1, units = "mm"),
+      barwidth = unit(30, units = "mm"),
+      draw.ulim = F,
+      title.position = 'top',
+      title.hjust = 0.5,
+      label.hjust = 0.5)) +
+  coord_map(projection = "albers", lat0 = 39, lat1 = 45) +
+  theme(legend.key.width = unit(.5, "in")) +
+   labs(x = NULL, 
+         y = NULL, 
+         title = "U.S. PrEP Users by State", 
+         fill = "State PrEP Users") +
+  theme_map()
+```
+
+
+Construct the "user interface".
+```{r}
+ui <- fluidPage(
+
+    # Application title
+    titlePanel("State PrEP Users by Year"),
+    sidebarLayout(
+        sidebarPanel(
+            selectInput(inputId = "year",choices = unique(tidydata$year),
+                        label = "Select Year",selected = 2012)
+        ),
+        mainPanel(
+           plotOutput("map")
+        )
+    )
+)
+```
+
+
+
+Construct the Server.
+```{r}
+server <- function(input, output) {
+    output$map <- renderPlot({
+      mapdata %>% 
+        filter(., year == input$year) %>% 
+        ggplot(mapping = aes(long, lat, group = group, fill = prepusers)) +
+  geom_polygon(color = "#ffffff", size = .25) +
+  scale_fill_viridis(option = "magma", direction = -1,
+  name = "State PrEP Users",
+  guide = guide_colorbar(
+      direction = "horizontal",
+      barheight = unit(2, units = "mm"),
+      barwidth = unit(50, units = "mm"),
+      draw.ulim = F,
+      title.position = 'top',
+      title.hjust = 0.5,
+      label.hjust = 0.5)) +
+  coord_map(projection = "albers", lat0 = 39, lat1 = 45) +
+  theme(legend.key.width = unit(.5, "in"),
+        legend.position = "bottom") +
+   labs(x = NULL, 
+         y = NULL, 
+         title = "U.S. PrEP Users by State", 
+         fill = "State PrEP Users") +
+  theme_map()})
+}
+```
+
+
+Run Application
+```{r}
+shinyApp(ui = ui, server = server)
+```
+

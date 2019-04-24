@@ -82,18 +82,23 @@ head(diag_08_16)
 We need to sort through some of what we need. First, let's get real variable names and also just select some of what we need. Also, NH does not give us data on IDU cases
 ```{r}
 colnames(diag_08_16) <-  c(varnames, "Year1", "drop")
+
 ```
 ```{r}
 #changed var name so I don't have to re run all of the code when I want to test this section 
 diagData <- diag_08_16%>%
   slice(2:468)%>%
-  select(Year1, `State Abbreviation`, State, 
-           `New Diagnoses State Rate`,  `New Diagnoses State Cases`,
-           `New Diagnoses IDU Total Cases`) %>% 
-  mutate (`New Diagnoses IDU Total Cases` = ifelse(`New Diagnoses IDU Total Cases` < 0, NA, `New Diagnoses IDU Total Cases`)) 
+  mutate (`New Diagnoses IDU Total Cases` = ifelse(`New Diagnoses IDU Total Cases` < 0, NA, `New Diagnoses IDU Total Cases`))
 
+write_csv(diagData, file.path(here("Active-data-sets/full_new_diag.csv")))
+```
+```{r}
+diagData <- diagData%>%
+  select(Year1, `State Abbreviation`, State, `New Diagnoses State Rate`, 
+         `New Diagnoses State Cases`,`New Diagnoses IDU Total Cases`)
 head(diagData)
 ```
+
 I think a variable that shows the percentage of new diagnoses that are from IDUs would be helpful.
 ```{r}
 diagDataClean <- diagData%>%
@@ -104,7 +109,12 @@ head(diagDataClean)
 
 Let's save what we have as a csv in our data folder.
 ```{r}
+<<<<<<< HEAD:R-Markdown-Files/data-set-creation-rmarkdown-files/Statewide New Diagnoses.Rmd
+write_csv(diagDataClean, 
+          file.path(here("Active-data-sets/statewide-new-diagnoses-clean.csv")))
+=======
 write_csv(diagDataClean, here(("Active-data-sets/incidenceDat.csv")))
+>>>>>>> 791eda49c24bdefd962f6c15856384f990891c46:R-Markdown-Files/data-set-creation-rmarkdown-files/Statewide New Diagnoses for mapping.Rmd
 ```
 
 

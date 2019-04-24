@@ -51,7 +51,6 @@ GEO ID,State Abbreviation,State,Year,State PrEP Users,State PrEP Rates,State PrE
 55,WI,Wisconsin,2012,82,2,Y,50,2,Y,32,1,Y,15,2,Y,18,2,Y,26,4,Y,14,2,Y,9,1,N
 56,WY,Wyoming,2012,2,0,N,1,0,N,1,0,N,-1,-1,N,-1,-1,N,1,1,N,-1,-1,N,1,1,N
 72,PR,Puerto Rico,2012,15,0,Y,8,1,N,7,0,N,3,0,N,4,1,N,5,1,N,3,1,N,-1,-1,N
-NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 1,AL,Alabama,2013,111,3,Y,59,3,Y,52,2,Y,12,1,Y,35,6,Y,29,5,Y,26,4,Y,10,1,N
 2,AK,Alaska,2013,12,2,Y,8,3,N,4,1,N,4,3,N,3,3,N,-1,-1,N,2,2,N,3,2,N
 4,AZ,Arizona,2013,209,4,Y,119,4,Y,90,3,Y,27,2,Y,64,7,Y,67,8,Y,42,5,Y,9,1,N

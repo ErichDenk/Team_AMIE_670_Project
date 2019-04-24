@@ -14,6 +14,7 @@ library(urbnmapr)
 require(devtools)
 library(tidyverse)
 require(here)
+require(rgdal)
 ```
 
 read in/clean data frame for relevant variables
@@ -21,27 +22,50 @@ read in/clean data frame for relevant variables
 tidyData <- read.csv(here("Active-data-sets/2015-Prevalence-IDU-data.csv")) %>%
   mutate(County = as.character(County))%>%
   select(., county_name = County, State,PercentIDU)
-  
+
+sspLocation <- read.csv(here("Active-data-sets/sspLocationLatLong.csv")) %>%
+  select(., state, latitude, longitude) 
 ```
 
 map
 ```{r}
 mapData <- left_join(tidyData, counties, by = "county_name")
 
+a = data.frame("West" = c("WA", "OR", "CA", "NV", "UT", "ID", "MT", "WY", "CO", NA, NA, NA, NA, NA), Southwest = c("TX", "AZ", "NM", "OK", NA, NA,NA,NA,NA,NA,NA,NA,NA,NA), Midwest = c("ND", "SD", "NE", "KS", "MO", "IL", "IA", "MN", "WI", "MI", "OH", "IN", NA, NA), Southeast = c("AR", "LA", "AL", "MS", "GA", "FL", "SC", "NC", "TN", "KY", "VA", "DE", "MD", "WV"), Northeast = c("PA", "NJ", "CT", "NY", "RI", "VT", "NH", "MA", "ME", NA,NA,NA,NA,NA))
+
+a
+
+West <- c("WA", "OR", "CA", "NV", "UT", "ID", "MT", "WY", "CO")
+
+Southwest <- c("TX", "AZ", "NM", "OK")
+
+Midwest <- c("ND", "SD", "NE", "KS", "MO", "IL", "IA", "MN", "WI", "MI", "OH", "IN")
+
+Southeast <- c("AR", "LA", "AL", "MS", "GA", "FL", "SC", "NC", "TN", "KY", "VA", "DE", "MD", "WV")
+
+Northeast <- c("PA", "NJ", "CT", "NY", "RI", "VT", "NH", "MA", "ME")
+
+USA <- c(West, Southwest, Midwest, Southeast, Northeast) 
+
+a = Northeast
+
 mapData %>%
   # first layer plots states 
-  ggplot(data = states, mapping = aes(long, lat, group=group)) + 
+  ggplot(data = states[states$state_abbv %in% a,], mapping = aes(long, lat, group=group)) + 
   # center the map view on the US
   coord_map(projection = "albers", lat0 = 39, lat1 = 45) +
   # black boarder and grey fill for all states
   geom_polygon(color = "black", fill = "grey") +
-  # outline for counties, I commented it out because it looked too busy 
-    # geom_polygon(data = counties, fill = NA, color = "white") +
   # adding the IDU as the density fill per county
-  geom_polygon(data = mapData, aes(fill = PercentIDU)) +
+  geom_polygon(data = mapData[mapData$state_abbv %in% a,], aes(fill = PercentIDU)) +
   #change gradient for scale bar -- I wanted darker color to be higher IDU density. 
   scale_fill_gradientn( colors = c("white", "blue"),
                        guide = guide_colorbar(title.position = "top"))+
   # re plot the black boarder lines
-    geom_polygon(color = "black", fill = NA)
+  geom_polygon(color = "black", fill = NA) +
+  geom_point(data=sspLocation[sspLocation$state %in% a,], mapping =aes(x=longitude, y=latitude), inherit.aes = FALSE)
+
+#would be good to have a toggle for if you want ssp location on or off -- so we can see the chloropleth better
+
+
 ```

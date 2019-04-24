@@ -1,0 +1,115 @@
+---
+title: "Statewide New Diagnoses"
+author: "Erich Denk"
+date: "4/11/2019"
+output: pdf_document
+---
+## Note from AM -- looks like 2008 AL data is missing, maybe just accidentally deleted the first row? Also, headers are included for each year. 
+
+AidsVu provides state diagnoses data for the years 2008 to 2016. Let's upload that data so we can combine it to create a longitudinal dataset. We will need to add the relevant year before comibing as well.
+
+```{r}
+require(tidyverse)
+require(readxl)
+require(here)
+
+state_diag_2008 <- read_excel(here("Source-Data/state-newdx/AIDSVu_State_New-DX-Data-Sets_2008.xlsx"))
+state_diag_2009 <- read_excel(here("Source-Data/state-newdx/AIDSVu_State_New-DX-Data-Sets_2009.xlsx"))
+state_diag_2010 <- read_excel(here("Source-Data/state-newdx/AIDSVu_State_New-DX-Data-Sets_2010.xlsx"))
+state_diag_2011 <- read_excel(here("Source-Data/state-newdx/AIDSVu_State_New-DX-Data-Sets_2011.xlsx"))
+state_diag_2012 <- read_excel(here("Source-Data/state-newdx/AIDSVu_State_New-DX-Data-Sets_2012.xlsx"))
+state_diag_2013 <- read_excel(here("Source-Data/state-newdx/AIDSVu_State_New-DX-Data-Sets_2013.xlsx"))
+state_diag_2014 <- read_excel(here("Source-Data/state-newdx/AIDSVu_State_New-DX-Data-Sets_2014.xlsx"))
+state_diag_2015 <- read_excel(here("Source-Data/state-newdx/AIDSVu_State_New-DX-Data-Sets_2015.xlsx"))
+state_diag_2016 <- read_excel(here("Source-Data/state-newdx/AIDSVu_State_New-DX-Data-Sets_2016.xlsx"))
+```
+
+```{r}
+varnames <- state_diag_2008[2,]
+
+state_diag_2008 <- state_diag_2008%>%
+  mutate(year = 2008)%>%
+  slice(2:53)
+state_diag_2009 <- state_diag_2009%>%
+  mutate(year = 2009)%>%
+  slice(2:53)%>%
+  rename("2008 State New Diagnoses Data -AIDSVu" =`2009 State New Diagnoses Data - AIDSVu`)
+state_diag_2010 <- state_diag_2010%>%
+  mutate(year = 2010)%>%
+  slice(2:53)%>%
+  rename("2008 State New Diagnoses Data -AIDSVu" = `2010 State New Diagnoses Data - AIDSVu`)
+state_diag_2011 <- state_diag_2011%>%
+  mutate(year = 2011)%>%
+  slice(2:53)%>%
+  rename("2008 State New Diagnoses Data -AIDSVu" = `2011 State New Diagnoses Data - AIDSVu`)
+state_diag_2012 <- state_diag_2012%>%
+  mutate(year = 2012)%>%
+  slice(2:53)%>%
+  rename("2008 State New Diagnoses Data -AIDSVu" = `2012 State New Diagnoses Data - AIDSVu`)
+state_diag_2013 <- state_diag_2013%>%
+  mutate(year = 2013)%>%
+  slice(2:53)%>%
+  rename("2008 State New Diagnoses Data -AIDSVu" = `2013 State New Diagnoses Data - AIDSVu`)
+state_diag_2014 <- state_diag_2014%>%
+  mutate(year = 2014)%>%
+  slice(2:53)%>%
+  rename("2008 State New Diagnoses Data -AIDSVu" = `2014 State New Diagnoses Data - AIDSVu`)
+state_diag_2015 <- state_diag_2015%>%
+  mutate(year = 2015)%>%
+  slice(2:53)%>%
+  rename("2008 State New Diagnoses Data -AIDSVu" = `2015 State New Diagnoses Data - AIDSVu`)
+state_diag_2016 <- state_diag_2016%>%
+  mutate(year = 2016)%>%
+  slice(2:53)%>%
+  rename("2008 State New Diagnoses Data -AIDSVu" = `2016 State New Diagnoses Data - AIDSVu`)
+```
+
+```{r}
+
+diag_08_16 <- 
+  bind_rows(state_diag_2008,state_diag_2009[-1,])%>%
+  bind_rows(.,state_diag_2010[-1,])%>%
+  bind_rows(.,state_diag_2011[-1,])%>%
+  bind_rows(.,state_diag_2012[-1,])%>%
+  bind_rows(.,state_diag_2013[-1,])%>%
+  bind_rows(.,state_diag_2014[-1,])%>%
+  bind_rows(.,state_diag_2015[-1,])%>%
+  bind_rows(.,state_diag_2016[-1,])
+head(diag_08_16)
+  
+```
+
+We need to sort through some of what we need. First, let's get real variable names and also just select some of what we need. Also, NH does not give us data on IDU cases
+```{r}
+colnames(diag_08_16) <-  c(varnames, "Year1", "drop")
+```
+```{r}
+#changed var name so I don't have to re run all of the code when I want to test this section 
+diagData <- diag_08_16%>%
+  slice(2:468)%>%
+  select(Year1, `State Abbreviation`, State, 
+           `New Diagnoses State Rate`,  `New Diagnoses State Cases`,
+           `New Diagnoses IDU Total Cases`) %>% 
+  mutate (`New Diagnoses IDU Total Cases` = ifelse(`New Diagnoses IDU Total Cases` < 0, NA, `New Diagnoses IDU Total Cases`)) 
+
+head(diagData)
+```
+I think a variable that shows the percentage of new diagnoses that are from IDUs would be helpful.
+```{r}
+diagDataClean <- diagData%>%
+  mutate(per_IDU = (as.numeric(`New Diagnoses IDU Total Cases`)/
+                      as.numeric(`New Diagnoses State Cases`))*100)
+head(diagDataClean)
+```
+
+Let's save what we have as a csv in our data folder.
+```{r}
+write_csv(diagDataClean, here(("Active-data-sets/incidenceDat.csv")))
+```
+
+
+=======
+
+```
+
+>>>>>>> 41d0f88bec6304a6b89ee114cde6948a9f2b3927

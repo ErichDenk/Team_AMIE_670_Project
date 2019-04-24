@@ -33,10 +33,8 @@ tidyData <- prevData %>%
   mutate (CountyPrevalence = ifelse(CountyPrevalence < 0, NA, CountyPrevalence)) %>%
   mutate(PercentIDU = ((TotalIDU/CountyPrevalence)*100))
   
-
-#filter out SD data because they do not report, and lists -2 which messes up data
-#tidyData <- tidyData[-(2363:2428),]
 ```
+
 ```{r}
 write.csv(tidyData, here("Active-data-sets/2015-Prevalence-IDU-data.csv"))
 ```

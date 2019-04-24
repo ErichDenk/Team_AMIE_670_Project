@@ -10,11 +10,37 @@
 require(urbnmapr)
 require(tidyverse)
 require(shiny)
+require(viridis)
 
-
-incidenceData <- read.csv(here("Active-data-sets/incidenceMapData.csv"))
-mapCreateData <- left_join(tidyDiagData, states, by = "state_name")
+incidenceData <- read.csv(here("Active-data-sets/incidenceDat.csv")) %>%
+    select(., state_name = State, Year = Year1, NewDiag = "New.Diagnoses.State.Cases") %>%
+    mutate(state_name = as.character(state_name))
+mapCreateData <- left_join(incidenceData, states, by = "state_name")
     
+
+theme_map <- function(...) {
+    theme_minimal() +
+        theme(
+            text = element_text(family = "Arial", color = "#22211d"),
+            axis.line = element_blank(),
+            axis.text.x = element_blank(),
+            axis.text.y = element_blank(),
+            axis.ticks = element_blank(),
+            axis.title.x = element_blank(),
+            axis.title.y = element_blank(),
+            legend.title = element_text(size=10),
+            legend.text=element_text(size=8),
+            legend.position = "bottom",
+            # panel.grid.minor = element_line(color = "#ebebe5", size = 0.2),
+            panel.grid.major = element_line(color = "#ebebe5", size = 0.2),
+            panel.grid.minor = element_blank(),
+            plot.background = element_rect(fill = "#f5f5f2", color = NA), 
+            panel.background = element_rect(fill = "#f5f5f2", color = NA), 
+            legend.background = element_rect(fill = "#f5f5f2", color = NA),
+            panel.border = element_blank(),
+            ...
+        )
+}
 
 # Define UI for application that draws a histogram
 ui <- fluidPage(
@@ -50,10 +76,24 @@ server <- function(input, output) {
             # outline for counties, I commented it out because it looked too busy 
             # geom_polygon(data = counties, fill = NA, color = "white") +
             # adding the IDU as the density fill per county
-            geom_polygon(data = mapData, aes(fill = log(per_IDU))) +
+            geom_polygon(data = mapCreateData, aes(fill = log(NewDiag))) +
             #change gradient for scale bar -- I wanted darker color to be higher IDU density. 
-            scale_fill_gradientn( colors = c("white", "blue"),
-                                  guide = guide_colorbar(title.position = "top"))+
+            
+            scale_fill_viridis(option = "magma", direction = -1, 
+                               name = "IDU Incidence",
+                               guide = guide_colorbar(
+                                   direction = "horizontal",
+                                   barheight = unit(2, units = "mm"),
+                                   barwidth = unit(50, units = "mm"),
+                                   draw.ulim = F,
+                                   title.position = 'top',
+                                   title.hjust = 0.5,
+                                   label.hjust = 0.5)) +
+            
+                               
+            #scale_fill_gradientn( colors = c("white", "blue"),
+                             
+                               #   guide = guide_colorbar(title.position = "top"))+
             # re plot the black boarder lines
             geom_polygon(color = "black", fill = NA)
             })

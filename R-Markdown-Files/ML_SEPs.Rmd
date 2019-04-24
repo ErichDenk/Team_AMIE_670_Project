@@ -13,7 +13,7 @@ require(recipes)
 require(pdp)
 require(here)
 ```
-
+#Preparation of Data
 ```{r}
 syringe_exchange_laws_clean <- read_csv(here("Active-data-sets/syringe-exchange-laws-clean.csv"))
 
@@ -34,14 +34,24 @@ head(new_diag)
 full_dat <- full_join(new_diag,laws, by = "State")
 ```
 
+We need to build out the dataset to show if there is a law allowing SEPs on the books
+```{r}
+full_dat <- full_dat%>%
+  select(State, `State Abbreviation`, Year.x, Year.y, Year1, Allowed,
+          Yes, No, `Law Name`, everything())%>%
+  rename("Law Year" = Year.y)
+```
 ```{r}
 ml_seps <- full_dat%>%
-  mutate(`Law Name` = replace_na(`Law Name`,0))%>%
-  mutate(Year.y = replace_na(Year.y,0))%>%
-  mutate(Yes = if_else(Year.y <= Year1, 1, 0))%>%
-  mutate(No = if_else(Yes == 1, 0, 1))%>%
+  mutate(`Law Name` = replace_na(`Law Name`, 0))%>%
+  mutate(`Law Year` = replace_na(`Law Year`, 0))%>%
+  mutate(Yes = if_else(`Law Year` <= Year.x & `Law Year` != 0, 1, 0))
+
+```
+```{r}
+ml_seps <- ml_seps%>%
   mutate(Allowed = if_else(Yes == 1, "Yes", "No"))%>%
-  select(-Year.y, -Year.x)%>%
+  select(-`Law Year`, -Year.x)%>%
   rename("Year" = "Year1")%>%
   select(State, `State Abbreviation`, Year, Allowed,
          Yes, No, `Law Name`, everything())%>%
@@ -51,25 +61,79 @@ ml_seps <- full_dat%>%
 
 But we don't want a dataset with this many variables and options to predict SEP laws. Thinking about what might be most interesting from our data set, I would like to drop a fair number of the variables, keeping only the IDU transmission data. It seems unlikely that we would get much information from non-IDU related data. We will get the same information from the percentages as we do the total cases in terms of variation, so I only want the raw cases. I also am not interested in the stability measures. 
 
-To do this, I will use the select helper `contains` to find only those variables that contain what I'm after
+To do this, I will use the select helper `contains` to find only those variables that contain what I'm after. Also, a good number of our variables are completely missing so I will drop those and fill in the remaining. 
+
+We also have some observations that are coded as negative numbers because they were not available. We want to replace these with NA
 ```{r}
 idu_dat <- ml_seps%>%
-  select(State, Year, Allowed, Yes, No, `New Diagnoses State Rate`,
+  select(Year, Allowed, `New Diagnoses State Rate`,
          `New Diagnoses Male Rate`, `New Diagnoses Female Rate`,
          `New Diagnoses Black Rate`, `New Diagnoses Hispanic Rate`,
          `New Diagnoses White Rate`, 
          `New Diagnoses American Indian/Alaska Native Rate`,
-         `New Diagnoses Multiple Race Rate`, contains(" IDU "),                   contains(" MSM/IDU "))
+         `New Diagnoses Multiple Race Rate`, contains(" IDU "),                   contains(" MSM/IDU "))%>%
+  select(-`New Diagnoses IDU and Multiple Race Cases`,
+         -`New Diagnoses IDU and Multiple Race Percent`,
+         -`New Diagnoses IDU and Native Hawaiian/Other Pacific Islander Cases`,
+         -`New Diagnoses IDU and Native Hawaiian/Other Pacific Islander Percent`,
+         -`New Diagnoses MSM/IDU and Multiple Race Cases`,
+         -`New Diagnoses MSM/IDU and Multiple Race Percent`,
+         -`New Diagnoses MSM/IDU and Native Hawaiian/Other Pacific Islander Cases`,
+         -`New Diagnoses MSM/IDU and Native Hawaiian/Other Pacific Islander Percent`)%>%
+  mutate(`New Diagnoses IDU Total Cases` =
+           replace_na(`New Diagnoses IDU Total Cases`, 0))
 ```
-We also have some observations that are coded as negative numbers because they were not available. We want to replace these with NA
+
+We need to make "Allowed" our variable we are looking to predict a two level factor. Also, after the first round of machine learning, the state variable dummies are too colinear with the "Allowed" variable
 
 ```{r}
-idu_dat<- lapply(idu_dat, function(x){replace(x, x < 0, NA)})
+idu_dat$Allowed <- as.factor(idu_dat$Allowed)
+idu_dat$Year <- as.factor(idu_dat$Year)
+require(forcats)
+fct_relevel(idu_dat$Allowed, c("Yes", "No"))
+
+colnames(idu_dat) <- make.names(colnames(idu_dat))
+
 ```
-This is much more appraochable for us. There are some variables that 
+
+This is much more appraochable for us. It might be worth some exploratory data analysis before we get to our machine learning. 
+
+```{r}
+idu_dat%>%
+  group_by(Year)
+  ggplot(mapping = aes(x = idu_dat$Year,
+                       y = idu_dat$New.Diagnoses.IDU.Total.Cases))+
+  geom_bar(stat ="identity", fill = "#008FD5")+
+    ggthemes::theme_fivethirtyeight()+
+    theme(panel.background = element_blank(),
+        panel.grid.major.x = element_blank(),
+        plot.title = element_text(face = "bold", size = 14),
+        plot.subtitle = element_text(face = "italic", size =10),
+        plot.caption = element_text(face = "italic"))+
+    labs(title = "The Needle and the Damage Done",
+         subtitle = "HIV cases transmitted by Injection Drug Use are falling",
+         caption = "Source: AidsVu")
+```
+```{r}
+idu_dat%>%
+  mutate(Yes = if_else(Allowed == "Yes", 1, 0))%>%
+  ggplot(aes(x = Year, y = Yes))+
+  geom_bar(stat = "identity",fill = "#FF2700")+
+  ggthemes::theme_fivethirtyeight()+
+  theme(panel.background = element_blank(),
+        panel.grid.major.x = element_blank(),
+        plot.title = element_text(face = "bold", size = 14),
+        plot.subtitle = element_text(face = "italic", size =10),
+        plot.caption = element_text(face = "italic"),)+
+  labs(title = "States increasingly allowing Syringe Exchange Programs",
+       subtitle = "SEPs, while controversial, are becoming a common policy tool",
+       caption = "Source: Center for Disease Control")
+  
+```
+
 Now we have a clean and combined data set ready for some machine learning! First let's separate out our data into training and testing data
 ```{r}
-index <- createDataPartition(idu_dat$Yes, p = .75, list = F)
+index <- createDataPartition(idu_dat$Allowed, p = .75, list = F)
 train_dat <- idu_dat[index,]
 test_dat <- idu_dat[-index,]
 
@@ -79,15 +143,12 @@ dim(test_dat)
 
 We have a lot of variables to look at. It might be worth getting going on the machine learning aspect to find out what is important.
 
-Let's clean and impute any missing values using a random imputation via knn.
+```{r}
+skimr::skim(train_dat)
+```
 
 ```{r}
-our_recipe_train <- recipe(Yes~., data = train_dat)
-our_recipe_train
-
-our_recipe_train <-
-  our_recipe_train %>% 
-  step_knnimpute(all_predictors())
+our_recipe_train <- recipe(Allowed~., data = train_dat)
 our_recipe_train
 ```
 Pre-processing is necessary first. Let's start with any continuous variables
@@ -111,11 +172,200 @@ And now we must prepare the recipe.
 prepared_recipe_train <- our_recipe_train%>%
   prep()
 prepared_recipe_train
+
 ```
 Now it is time to bake.
 ```{r}
 train_dat2 <- bake(prepared_recipe_train, new_data = train_dat)
-
+test_dat2 <- bake(prepared_recipe_train, test_dat)
+glimpse(train_dat2)
 
 ```
+Wooo! Looks like that did the trick. We have dummies for each state and all of our new diagnoses via IDU
 
+```{r}
+set.seed(1234)
+
+my_folds <- createFolds(train_dat2$Allowed, k = 5)
+
+sapply(my_folds, length)
+```
+
+#K Nearest Neighbors
+We've started at 5 folds of 69 observations each and can adjust from there. We now need to tell caret that we are working on a classification issue. 
+
+```{r}
+conditions <- 
+  trainControl(method = 'cv',
+               summaryFunction = twoClassSummary,
+               classProbs = TRUE,
+               index = my_folds)
+```
+This is our cross-validation, which can be used for all our machine learning methods.
+
+Let's begin with a k-nearest neighbors model to predict.
+```{r}
+model_knn <- 
+  train(Allowed~.,
+        data = train_dat2,
+        method = "knn",
+        metric = "ROC",
+        trControl = conditions)
+
+model_knn
+```
+This model is great on sensitivity, but not very great on specificity. That is we are good at getting the true negatives, but not the true positives. In total, our model predicts whether a state allows SEPs at a 64% rate. 
+
+```{r}
+plot(model_knn)
+```
+9 Neighbors is our most accurate specification. 
+
+We now can look at how the knn model does on the test data...
+```{r}
+require(e1071)
+pred <- predict(model_knn, newdata = test_dat2)
+confusionMatrix(table(pred, test_dat2$Allowed), positive = "Yes")
+```
+We actually do better on the test data, with 86% correctly predicted. Again, our sensitivity is not great at 26%. We are good at determining which state years do not allow SSPs, but not which ones do. Let's tweak things a bit to see if we can do any better
+
+```{r}
+knn_tune = expand.grid(k = c(1,3,5,10))
+knn_tune
+```
+
+```{r}
+model_knn2 <- 
+  train(Allowed ~.,
+        data = train_dat2,
+        method = "knn",
+        tuneGrid = knn_tune,
+        trControl = conditions)
+plot(model_knn2)
+```
+```{r}
+pred2 <- predict(model_knn2, newdata = test_dat2)
+confusionMatrix(table(pred2, test_dat2$Allowed), positive = "Yes")
+```
+We've improved! Our accuracy in total is up to almost 86%. However, we are still not very sensitive to true positives. Basically, since most state-years do not allow SEPs, our model guesses that they will not. 
+
+#Regression Trees
+```{r}
+model_cart <- 
+  train(Allowed~.,
+        data = train_dat2,
+        method = "rpart",
+        metric = "ROC",
+        trControl = conditions)
+
+model_cart
+```
+This model is only does slightly better than a coin flip in a whole, which isn't great. However, we do better on the sensitivity measures now and worse on the specificity measures. But we can try to mix up our tuning parameters a bit to see if things are better. We can let our tree be deeper and see if we do any better. 
+
+```{r}
+tune_cart2 <- expand.grid(cp = c(0.0010281))
+
+model_cart2 <- 
+  train(Allowed ~ .,
+        data = train_dat2,
+        method = "rpart",
+        metric = "ROC",
+        tuneGrid = tune_cart2,
+        trControl = conditions)
+
+model_cart2
+```
+Not great. Allowing a deeper tree didn't do much to our results if anything. Our ROC remains slightly above 60%. I don't think that the random trees are the way to go.
+
+#Random Forests
+```{r}
+model_rf <- 
+  train(Allowed ~ .,
+        data = train_dat2,
+        method = "ranger",
+        metric = "ROC",
+        importance = 'impurity',
+        trControl = conditions)
+model_rf
+```
+Our best model has an mrty = 2. We don't do well on specificity but extremely well on sensitivity throughout. 
+
+```{r}
+plot(model_rf)
+```
+
+Let's allow some space to try different mtry. We can't have more than we do variables. So let's try multiples of 10. From above it looks like the extra tree split rule does better so we will go with that.
+
+```{r}
+rf_tune = expand.grid(mtry = c(10, 20, 30, 40, 50), splitrule = "extratrees",
+                      min.node.size = 1)
+rf_tune
+```
+
+```{r}
+model_rf2 <- 
+  train(Allowed ~ .,
+        data = train_dat2,
+        method = "ranger",
+        metric = "ROC",
+        importance = 'impurity',
+        tuneGrid = rf_tune,
+        trControl = conditions)
+model_rf2
+```
+```{r}
+plot(model_rf2)
+```
+Interestingly our ROC takes a hit as we go with fewer and fewer randomly selected predictors.
+
+#Comparing our Models
+So of the three we did, which one is the best?
+```{r}
+model_list <- 
+  list(
+    knn1 = model_knn,
+    knn2 = model_knn2,
+    cart1 = model_cart,
+    cart2 = model_cart2,
+    rf = model_rf,
+    rf2 = model_rf2
+  )
+
+resamples(model_list)
+```
+```{r, fig.width=10,fig.height=10}
+dotplot(resamples(model_list))
+```
+
+Based on this, the second random forest model did the best generally. It is close on specificity to other models and is the third best of the six in terms of sensitivity. We are interested in the true positives, so we don't want to sacrifice too much in terms of sensitivity for a high model accuracy.
+
+Let's see how it the second random forest model did against the test data.
+```{r}
+pred <- predict(model_rf2,newdata = test_dat2)
+confusionMatrix(table(pred,test_dat2$Allowed))
+```
+We did pretty well! Our overall accuracy at 89% is solid and our specificity of 42% is better than expected from what we did with our training data. 
+
+So what are the most important variables in predicting whether or not a state allows syringe exchange programs? We can find out
+
+```{r}
+importance <- varImp(model_rf)
+importance
+```
+Interestingly, the most important variables have to do with hispanic cases, black percentages, white cases, and the overall state HIV diagnoses rate. From a policy perspective, it seems that whe certain groups are particularly impacted a state may be more or more likely to allow a SEP. The issue is it is hard to interpret how these are related to the outcome variable. 
+
+Let's plot the top ten most important factors in prediction for our random forest model.
+
+
+```{r}
+plot(varImp(model_rf))
+```
+```{r,fig.width=7,fig.height=7}
+grid.arrange(
+  partial(model_rf2, pred.var = "New.Diagnoses.IDU.and.Hispanic.Cases", plot = T),
+  partial(model_rf2, pred.var = "New.Diagnoses.MSM.IDU.and.Hispanic.Cases", plot = T),
+  partial(model_rf2, pred.var = "New.Diagnoses.IDU.and.Black.Percent", plot =T)
+)
+```
+
+This shows an interesting relationship. The more IDU new diagnoses there are for these minority, the less likely the state allows the SEP. The inverse relationship between us predicting a SEP and the likelihood that minorities are severely impacted is disheartening.

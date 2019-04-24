@@ -24,19 +24,29 @@ prevalenceData <- read.csv(here("Active-data-sets/2015-Prevalence-IDU-data.csv")
 sspLocation <- read.csv(here("Active-data-sets/sspLocationLatLong.csv")) %>%
     select(., state, latitude, longitude) 
 
-mapData <- left_join(tidyData, counties, by = "county_name")
+mapData <- left_join(prevalenceData, counties, by = "county_name")
 
-West <- c("WA", "OR", "CA", "NV", "UT", "ID", "MT", "WY", "CO")
 
-Southwest <- c("TX", "AZ", "NM", "OK")
+stateSSPnum <- 
+    sspLocation %>%
+    select(., state) %>%
+    mutate(., State= as.character(state)) %>%
+    group_by(State) %>%
+    count(.)
 
-Midwest <- c("ND", "SD", "NE", "KS", "MO", "IL", "IA", "MN", "WI", "MI", "OH", "IN")
+prevAve <-  read.csv(here("Active-data-sets/2015-Prevalence-IDU-data.csv")) %>%
+    select(., State, CountyPrevalence, TotalIDU) %>%
+    mutate(State = as.character(State)) %>%
+    na.omit() %>%
+    group_by(State) %>%
+    summarize(., totalIDU = sum(TotalIDU)) 
 
-Southeast <- c("AR", "LA", "AL", "MS", "GA", "FL", "SC", "NC", "TN", "KY", "VA", "DE", "MD", "WV")
-
-Northeast <- c("PA", "NJ", "CT", "NY", "RI", "VT", "NH", "MA", "ME")
-
-USA <- c(West, Southwest, Midwest, Southeast, Northeast) 
+sspPlot <- full_join(prevAve, stateSSPnum, by = "State") %>%
+    #mutate(., sspNum = replace(.$n, is.na(.$n), 0)) %>%
+    mutate(., totalIDU = replace(.$totalIDU, .$totalIDU==0, NA)) %>%
+    mutate(., sspAvail = totalIDU/n) %>%
+    select(State, sspAvail) %>%
+    na.omit()
 
 
 regions = data.frame("West" = c("WA", "OR", "CA", "NV", "UT", "ID", "MT", "WY", "CO", NA, NA, NA, NA, NA), Southwest = c("TX", "AZ", "NM", "OK", NA, NA,NA,NA,NA,NA,NA,NA,NA,NA), Midwest = c("ND", "SD", "NE", "KS", "MO", "IL", "IA", "MN", "WI", "MI", "OH", "IN", NA, NA), Southeast = c("AR", "LA", "AL", "MS", "GA", "FL", "SC", "NC", "TN", "KY", "VA", "DE", "MD", "WV"), Northeast = c("PA", "NJ", "CT", "NY", "RI", "VT", "NH", "MA", "ME", NA,NA,NA,NA,NA))
@@ -55,12 +65,13 @@ ui <- fluidPage(
             #selectInput(inputId = "year", choices = unique(incidenceData$Year), label = "Select Year", selected = 2008)
       sidebarLayout(
           sidebarPanel(
-              selectInput(inputId = "region", choices = c( "West", "Southwest", "Midwest", "Southeast", "Northeast", "USA"), label = "Select Region", selected = "USA")
+              selectInput(inputId = "region", choices = c("USA", "West", "Southwest", "Midwest", "Southeast", "Northeast"), label = "Select Region", selected = "USA")
       ),
         
         # Show a plot of the generated distribution
         mainPanel(
-            plotOutput("map")
+            plotOutput("map"),
+            plotOutput("sspDensity")
         )
     )
 )
@@ -106,6 +117,20 @@ server <- function(input, output) {
             geom_polygon(color = "black", fill = NA) +
             geom_point(data=sspLocation[sspLocation$state %in% data,], mapping =aes(x=longitude, y=latitude), inherit.aes = FALSE)
     })
+    
+    output$sspDensity <- renderPlot({
+        data <- switch(input$region, 
+                       "West" = regions$West,
+                       "Southwest" = regions$Southwest,
+                       "Midwest" = regions$Midwest,
+                       "Southeast" = regions$Southeast,
+                       "Northeast" = regions$Northeast, 
+                       "USA" = c(as.character(regions$West), as.character(regions$Southwest), as.character(regions$Southeast), as.character(regions$Northeast), as.character(regions$Midwest)))
+        
+        ggplot(sspPlot[sspPlot$State %in% data,], aes(State, sspAvail)) +
+            geom_col()
+    })
+    
     }
 
 

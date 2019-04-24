@@ -49,6 +49,10 @@ sspPlot <- full_join(prevAve, stateSSPnum, by = "State") %>%
     na.omit()
 
 
+LawDat <-  read.csv(here("Active-data-sets/legal-data-for-map"))
+
+
+
 regions = data.frame("West" = c("WA", "OR", "CA", "NV", "UT", "ID", "MT", "WY", "CO", NA, NA, NA, NA, NA), Southwest = c("TX", "AZ", "NM", "OK", NA, NA,NA,NA,NA,NA,NA,NA,NA,NA), Midwest = c("ND", "SD", "NE", "KS", "MO", "IL", "IA", "MN", "WI", "MI", "OH", "IN", NA, NA), Southeast = c("AR", "LA", "AL", "MS", "GA", "FL", "SC", "NC", "TN", "KY", "VA", "DE", "MD", "WV"), Northeast = c("PA", "NJ", "CT", "NY", "RI", "VT", "NH", "MA", "ME", NA,NA,NA,NA,NA))
 
 # Define UI for application that draws a histogram
@@ -71,7 +75,8 @@ ui <- fluidPage(
         # Show a plot of the generated distribution
         mainPanel(
             plotOutput("map"),
-            plotOutput("sspDensity")
+            plotOutput("sspDensity"),
+            plotOutput("legalStatus")
         )
     )
 )
@@ -129,6 +134,19 @@ server <- function(input, output) {
         
         ggplot(sspPlot[sspPlot$State %in% data,], aes(State, sspAvail)) +
             geom_col()
+    })
+    
+    output$legalStatus <- renderPlot({
+        data <- switch(input$region, 
+                       "West" = regions$West,
+                       "Southwest" = regions$Southwest,
+                       "Midwest" = regions$Midwest,
+                       "Southeast" = regions$Southeast,
+                       "Northeast" = regions$Northeast, 
+                       "USA" = c(as.character(regions$West), as.character(regions$Southwest), as.character(regions$Southeast), as.character(regions$Northeast), as.character(regions$Midwest)))
+        
+        ggplot(LawDat[LawDat$State %in% data,], aes(State, Legal)) +
+        geom_col()
     })
     
     }

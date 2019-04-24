@@ -98,3 +98,21 @@ ggplot(sspPlot, aes(State, sspAvail)) +
 
 ```
 
+```{r}
+Law = read.csv(here("Active-data-sets/syringe-exchange-laws-clean.csv")) %>%
+  select(State, Legal = Yes) 
+
+convertAbbr <- states %>%
+  select(state_abbv, state_name) %>%
+  group_by(state_abbv, state_name) %>%
+  count(.) %>% 
+  select(state_abbv, State = state_name)
+
+LawDat <- left_join(Law, convertAbbr, by = "State") %>%
+  select(State = state_abbv, Legal) %>%
+  write.csv(here("Active-data-sets/legal-data-for-map"), row.names=F)
+
+ggplot(Law, aes(State, Legal)) +
+  geom_col()
+```
+

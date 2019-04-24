@@ -16,7 +16,7 @@ require(tidyverse)
 ```
 
 ```{r}
-tidyDiagData <- read.csv(here("Active-data-sets/statewide-new-diagnoses-clean.csv")) %>%
+tidyDiagData <- read.csv(here("Active-data-sets/incidenceDat.csv")) %>%
   mutate(State = as.character(State)) %>%
   select(., Year = Year1, state_name = State, per_IDU)
 

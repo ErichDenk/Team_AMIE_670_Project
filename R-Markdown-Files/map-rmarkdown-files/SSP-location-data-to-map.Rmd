@@ -26,13 +26,19 @@ sspDat <- read.csv(here("Active-data-sets/SSP-Location-Data")) %>%
 data(zipcode.civicspace)
 zip <- zipcode.civicspace %>% 
   select(city, state, latitude, longitude) %>% 
-  distinct(.) %>%
-  .[!duplicated(zip$city),]
+  distinct(.) 
 
-sspCoord <- left_join(zip, sspDat, by = c("city", "state")) %>%
-  filter(., !is.na(X)) %>%
-  select(., latitude, longitude) %>%
-  write.csv(here("Active-data-sets/sspLocationLatLong.csv"))
+zip <- zip[!duplicated(zip[c("city","state")]),]
+
+
+sspCoord <- right_join(zip, sspDat, by = c("city", "state")) %>%
+  na.omit(.) %>% 
+  filter(., state !="HI", state != "PR", state != "AK") %>%
+  select(., state, latitude, longitude) 
+
+#should be 237, but only 222 were recognized by the zip package. lost 6%... will revisit if time. 
+# took out AK, HI, PR for mapping ease... will revisit this if time as well
+write.csv(sspCoord, here("Active-data-sets/sspLocationLatLong.csv"))
 
 
 

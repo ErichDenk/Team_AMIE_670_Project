@@ -35,7 +35,7 @@ full_dat <- full_join(new_diag,laws, by = "State")
 ```
 
 ```{r}
-full_dat <- full_dat%>%
+ml_seps <- full_dat%>%
   mutate(`Law Name` = replace_na(`Law Name`,0))%>%
   mutate(Year.y = replace_na(Year.y,0))%>%
   mutate(Yes = if_else(Year.y <= Year1, 1, 0))%>%
@@ -44,12 +44,78 @@ full_dat <- full_dat%>%
   select(-Year.y, -Year.x)%>%
   rename("Year" = "Year1")%>%
   select(State, `State Abbreviation`, Year, Allowed,
-         Yes, No, `Law Name`, everything())
+         Yes, No, `Law Name`, everything())%>%
+  drop_na(`State Abbreviation`)
+  
 ```
 
-Now we have a clean and combined data set ready for some machine learning!
+But we don't want a dataset with this many variables and options to predict SEP laws. Thinking about what might be most interesting from our data set, I would like to drop a fair number of the variables, keeping only the IDU transmission data. It seems unlikely that we would get much information from non-IDU related data. We will get the same information from the percentages as we do the total cases in terms of variation, so I only want the raw cases. I also am not interested in the stability measures. 
+
+To do this, I will use the select helper `contains` to find only those variables that contain what I'm after
 ```{r}
+idu_dat <- ml_seps%>%
+  select(State, Year, Allowed, Yes, No, `New Diagnoses State Rate`,
+         `New Diagnoses Male Rate`, `New Diagnoses Female Rate`,
+         `New Diagnoses Black Rate`, `New Diagnoses Hispanic Rate`,
+         `New Diagnoses White Rate`, 
+         `New Diagnoses American Indian/Alaska Native Rate`,
+         `New Diagnoses Multiple Race Rate`, contains(" IDU "),                   contains(" MSM/IDU "))
+```
+We also have some observations that are coded as negative numbers because they were not available. We want to replace these with NA
 
+```{r}
+idu_dat<- lapply(idu_dat, function(x){replace(x, x < 0, NA)})
+```
+This is much more appraochable for us. There are some variables that 
+Now we have a clean and combined data set ready for some machine learning! First let's separate out our data into training and testing data
+```{r}
+index <- createDataPartition(idu_dat$Yes, p = .75, list = F)
+train_dat <- idu_dat[index,]
+test_dat <- idu_dat[-index,]
+
+dim(train_dat)
+dim(test_dat)
 ```
 
+We have a lot of variables to look at. It might be worth getting going on the machine learning aspect to find out what is important.
+
+Let's clean and impute any missing values using a random imputation via knn.
+
+```{r}
+our_recipe_train <- recipe(Yes~., data = train_dat)
+our_recipe_train
+
+our_recipe_train <-
+  our_recipe_train %>% 
+  step_knnimpute(all_predictors())
+our_recipe_train
+```
+Pre-processing is necessary first. Let's start with any continuous variables
+```{r}
+our_recipe_train <-
+  our_recipe_train %>% 
+  step_center(all_numeric())%>% 
+  step_scale(all_numeric())
+our_recipe_train
+```
+
+From my glimpse of the data, we only have a few non-numeric entries. These include which state, as well as the stability measures for each category.
+```{r}
+our_recipe_train <- 
+  our_recipe_train %>% 
+  step_dummy(all_nominal(), -all_outcomes())
+our_recipe_train
+```
+And now we must prepare the recipe.
+```{r}
+prepared_recipe_train <- our_recipe_train%>%
+  prep()
+prepared_recipe_train
+```
+Now it is time to bake.
+```{r}
+train_dat2 <- bake(prepared_recipe_train, new_data = train_dat)
+
+
+```
 

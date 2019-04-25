@@ -3,33 +3,60 @@ title: "PPOL 670 Project Showcase"
 author: "Team AMIE"
 date: "4/25/2019"
 output: slidy_presentation
+footer: "Team AMIE"
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
+require(tidyverse)
+require(caret)
+require(recipes)
+require(pdp)
+require(here)
 ```
 
-## R Markdown
+## Problem Statement and Background
 
-This is an R Markdown presentation. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+- HIV is transmitted through a variety of ways. One is Injection Drug Use (IDU)
+- Some states have attempted to address the tranmission of HIV and other disease via Syringe Exchange Programs (SEPs)
+- Another policy intervention is encouragement of PrEP, a treatment for at-risk people before they come into contact with HIV
+- We sought to begin to understand how well these policy interventions work
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document.
+## Problem Statement and Background (cont)
 
-## Slide with Bullets
+```{r}
+idu_dat <- read_csv("idu_dat.csv")
 
-- Bullet 1
-- Bullet 2
-- Bullet 3
-
-## Slide with R Output
-
-```{r cars, echo = TRUE}
-summary(cars)
+idu_plot <- 
+  idu_dat%>%
+  ggplot(mapping = aes(x = idu_dat$Year,
+                       y = idu_dat$New.Diagnoses.IDU.Total.Cases))+
+  geom_bar(stat ="identity", fill = "#008FD5", alpha = 0.8)+
+    ggthemes::theme_fivethirtyeight()+
+    theme(panel.background = element_blank(),
+        panel.grid.major.x = element_blank(),
+        plot.title = element_text(face = "bold", size = 14),
+        plot.subtitle = element_text(face = "italic", size =10),
+        plot.caption = element_text(face = "italic"))+
+    labs(title = "The Needle and the Damage Done",
+         subtitle = "HIV cases transmitted by Injection Drug Use are falling",
+         caption = "Source: AidsVu")
 ```
 
-## Slide with Plot
-
-```{r pressure}
-interactive_plot
+```{r, idu_plot, fig.align='center', fig.height=5, fig.width=6}
+idu_plot
 ```
+## Approach/Design
+
+## Approach/Design (cont)
+
+## Methods/Tools
+
+## Methods/Tools
+
+## Results
+
+## Lessons Learned
+
+## Thanks
 

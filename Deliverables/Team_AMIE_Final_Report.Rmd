@@ -9,13 +9,18 @@ output: pdf_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-#Introduction and Background
+#Problem Statement and Background
 
-#Mapping and Shiny Apps
+#Research Design/Approach
 
-##PrEP Data
+#Methods and Tools
 
-##New Diagnoses Data
+##Mapping and Shiny Apps
 
-#Predicting State SEP Laws with Machine Learning
+###PrEP Data
 
+###New Diagnoses Data
+
+##Predicting State SEP Laws with Machine Learning
+
+#Results & Discussions

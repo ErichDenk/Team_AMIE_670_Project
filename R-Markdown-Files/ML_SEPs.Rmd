@@ -93,14 +93,14 @@ require(forcats)
 fct_relevel(idu_dat$Allowed, c("Yes", "No"))
 
 colnames(idu_dat) <- make.names(colnames(idu_dat))
-
+write_csv(idu_dat, "idu_dat.csv") 
 ```
 
 This is much more appraochable for us. It might be worth some exploratory data analysis before we get to our machine learning. 
 
 ```{r}
-idu_dat%>%
-  group_by(Year)
+idu_plot <- 
+  idu_dat%>%
   ggplot(mapping = aes(x = idu_dat$Year,
                        y = idu_dat$New.Diagnoses.IDU.Total.Cases))+
   geom_bar(stat ="identity", fill = "#008FD5", alpha = 0.8)+
@@ -113,9 +113,11 @@ idu_dat%>%
     labs(title = "The Needle and the Damage Done",
          subtitle = "HIV cases transmitted by Injection Drug Use are falling",
          caption = "Source: AidsVu")
+idu_plot
+save(idu_plot, file = "idu_plot")
 ```
 ```{r}
-idu_dat%>%
+SEP_plot <- idu_dat%>%
   mutate(Yes = if_else(Allowed == "Yes", 1, 0))%>%
   ggplot(aes(x = Year, y = Yes))+
   geom_bar(stat = "identity",fill = "#FF2700", alpha = 0.8)+
@@ -128,6 +130,7 @@ idu_dat%>%
   labs(title = "States increasingly allowing Syringe Exchange Programs",
        subtitle = "SEPs, while controversial, are becoming a common policy tool",
        caption = "Source: Center for Disease Control")
+SEP_plot
   
 ```
 

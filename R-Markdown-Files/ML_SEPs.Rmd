@@ -1,5 +1,5 @@
 ---
-title: "Predicting SEP Laws with ML"
+title: "Predicting Syringe Exchange Laws with ML"
 author: "Erich Denk"
 date: "4/22/2019"
 output: pdf_document
@@ -103,7 +103,7 @@ idu_dat%>%
   group_by(Year)
   ggplot(mapping = aes(x = idu_dat$Year,
                        y = idu_dat$New.Diagnoses.IDU.Total.Cases))+
-  geom_bar(stat ="identity", fill = "#008FD5")+
+  geom_bar(stat ="identity", fill = "#008FD5", alpha = 0.8)+
     ggthemes::theme_fivethirtyeight()+
     theme(panel.background = element_blank(),
         panel.grid.major.x = element_blank(),
@@ -118,7 +118,7 @@ idu_dat%>%
 idu_dat%>%
   mutate(Yes = if_else(Allowed == "Yes", 1, 0))%>%
   ggplot(aes(x = Year, y = Yes))+
-  geom_bar(stat = "identity",fill = "#FF2700")+
+  geom_bar(stat = "identity",fill = "#FF2700", alpha = 0.8)+
   ggthemes::theme_fivethirtyeight()+
   theme(panel.background = element_blank(),
         panel.grid.major.x = element_blank(),
@@ -214,7 +214,7 @@ model_knn <-
 
 model_knn
 ```
-This model is great on sensitivity, but not very great on specificity. That is we are good at getting the true negatives, but not the true positives. In total, our model predicts whether a state allows SEPs at a 64% rate. 
+This model is great on sensitivity, but not very great on specificity. That is we are good at getting the true negatives, but not the true positives. In total, our model predicts whether a state allows SEPs at a more than 60% rate. 
 
 ```{r}
 plot(model_knn)
@@ -227,7 +227,7 @@ require(e1071)
 pred <- predict(model_knn, newdata = test_dat2)
 confusionMatrix(table(pred, test_dat2$Allowed), positive = "Yes")
 ```
-We actually do better on the test data, with 86% correctly predicted. Again, our sensitivity is not great at 26%. We are good at determining which state years do not allow SSPs, but not which ones do. Let's tweak things a bit to see if we can do any better
+We actually do better on the test data, with 86% correctly predicted. Again, our sensitivity is not great. We are good at determining which state years do not allow SSPs, but not which ones do. Let's tweak things a bit to see if we can do any better
 
 ```{r}
 knn_tune = expand.grid(k = c(1,3,5,10))
@@ -247,7 +247,7 @@ plot(model_knn2)
 pred2 <- predict(model_knn2, newdata = test_dat2)
 confusionMatrix(table(pred2, test_dat2$Allowed), positive = "Yes")
 ```
-We've improved! Our accuracy in total is up to almost 86%. However, we are still not very sensitive to true positives. Basically, since most state-years do not allow SEPs, our model guesses that they will not. 
+We've improved! Our accuracy in total is up quite a bit. However, we are still not very sensitive to true positives. Basically, since most state-years do not allow SEPs, our model guesses that they will not. 
 
 #Regression Trees
 ```{r}
@@ -275,7 +275,7 @@ model_cart2 <-
 
 model_cart2
 ```
-Not great. Allowing a deeper tree didn't do much to our results if anything. Our ROC remains slightly above 60%. I don't think that the random trees are the way to go.
+Not great. Allowing a deeper tree didn't do much to our results if anything. Our ROC remains slightly better than a coin flip. I don't think that the random trees are the way to go.
 
 #Random Forests
 ```{r}
@@ -346,26 +346,60 @@ confusionMatrix(table(pred,test_dat2$Allowed))
 ```
 We did pretty well! Our overall accuracy at 89% is solid and our specificity of 42% is better than expected from what we did with our training data. 
 
-So what are the most important variables in predicting whether or not a state allows syringe exchange programs? We can find out
+So what are the most important variables in predicting whether or not a state allows syringe exchange programs? We can find out!
 
 ```{r}
-importance <- varImp(model_rf)
+importance <- varImp(model_rf2)
 importance
 ```
 Interestingly, the most important variables have to do with hispanic cases, black percentages, white cases, and the overall state HIV diagnoses rate. From a policy perspective, it seems that whe certain groups are particularly impacted a state may be more or more likely to allow a SEP. The issue is it is hard to interpret how these are related to the outcome variable. 
 
 Let's plot the top ten most important factors in prediction for our random forest model.
-
-
+How to do the top 10? `top_n` does not work for this type of data apparently 
 ```{r}
 plot(varImp(model_rf))
 ```
-```{r,fig.width=7,fig.height=7}
-grid.arrange(
-  partial(model_rf2, pred.var = "New.Diagnoses.IDU.and.Hispanic.Cases", plot = T),
-  partial(model_rf2, pred.var = "New.Diagnoses.MSM.IDU.and.Hispanic.Cases", plot = T),
-  partial(model_rf2, pred.var = "New.Diagnoses.IDU.and.Black.Percent", plot =T)
-)
-```
+This graph has too much going on. I'd like to be able to look at only a handful of them. To do this, I want to grab variable importance and put it in a nice graph.
+```{r}
+require(ggthemes)
+require(ggiraph)
 
-This shows an interesting relationship. The more IDU new diagnoses there are for these minority, the less likely the state allows the SEP. The inverse relationship between us predicting a SEP and the likelihood that minorities are severely impacted is disheartening.
+grab_varimp <-
+    varImp(model_rf2)$importance %>% 
+      mutate(keyword = rownames(.)) %>% 
+      as_tibble() %>% 
+      rename(importance = Overall) %>% 
+      arrange(desc(importance))
+```
+Now that we have this, we can try to do a cool little interactive plot to see importance on both relative and more specific terms.
+```{r, fig.width=9,fig.height=9}
+require(wesanderson)
+require(ggplot2)
+pal1 <- wes_palette(name = "GrandBudapest2", 6, type = "continuous")
+
+plot_varimp <- 
+  grab_varimp %>% 
+    mutate(keyword = fct_reorder(keyword,importance)) %>% 
+    mutate(sum_report = str_glue('keyword: "{keyword}"\nImportance: {round(importance,2)}%')) %>% 
+    top_n(10, importance) %>% 
+    ggplot(aes(keyword,importance,
+               fill=importance)) +
+    geom_point() +
+    geom_hline(aes(yintercept = max(importance)),color="grey20",size=1,alpha=.25) +
+    geom_bar_interactive(aes(tooltip=sum_report),
+                         stat="identity",color="grey10") + 
+    coord_flip() +
+    scale_fill_gradientn(colors = pal1) +
+    theme_hc() +
+    labs(y="Importance of the Feature in Predicting SEPs\n(higher values == more important)",
+         x="Features")+
+    theme(legend.position = "none",
+          axis.title = element_text(family="serif",size=10),
+          axis.text = element_text(family="serif",size=10)) -> plt_obj
+  interactive_plot <- girafe(ggobj = plt_obj,width = 5,height=5)
+  girafe_options(interactive_plot, opts_toolbar(position = "topleft"))
+  
+ggsave("importance.png", plot = plot_varimp)
+
+```
+THis plot shows the most important features in predicting whether or not a state has an SEP. It would make sense that 2016 as a year would make sense, given that more and more states allowed SEPs. Interestingly, MSM/IDU and IDU cases among hispanics have the highest predictive power. Also of note is the importance of the new Diagnoses in the White demographic. 

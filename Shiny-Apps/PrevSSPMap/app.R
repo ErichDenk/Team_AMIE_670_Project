@@ -26,6 +26,9 @@ sspLocation <- read.csv(here("Active-data-sets/sspLocationLatLong.csv")) %>%
 mapDataPrev <- left_join(prevalenceData, counties, by = "county_name") %>%
     na.omit()
 
+
+
+
 theme_map <- function(...) {
     theme_minimal() +
         theme(

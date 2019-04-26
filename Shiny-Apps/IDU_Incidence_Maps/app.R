@@ -11,6 +11,7 @@ require(urbnmapr)
 require(tidyverse)
 require(shiny)
 require(viridis)
+require(here)
 
 incidenceData <- read.csv(here("Active-data-sets/incidenceDat.csv")) %>%
     select(., state_name = State, Year = Year1, NewDiag = "New.Diagnoses.State.Cases") %>%

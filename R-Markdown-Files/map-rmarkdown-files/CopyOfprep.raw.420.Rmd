@@ -36,16 +36,16 @@ require(shiny)
 require(here)
 require(urbnmapr)
 library(urbnthemes)
-
+library(markdown)
 ```
 
 read&select data 
 ```{r}
 
-prep <- read_csv("~/Desktop/data/Team_AMIE_670_Project/Active-data-sets/prep.csv")%>%
+prep <- read_csv(here("Active-data-sets/prep.csv"))%>%
 dplyr::select(Year, State, `State PrEP Users`)
 
-incidenceData <- read.csv("~/Desktop/data/Team_AMIE_670_Project/Active-data-sets/incidenceDat.csv") %>%
+incidenceData <- read.csv(here("Active-data-sets/incidenceDat.csv")) %>%
 dplyr::select(., state_name = State, Year = Year1, NewDiag = "New.Diagnoses.State.Cases") %>%
     mutate(state_name = as.character(state_name))
 mapCreateData <- left_join(incidenceData, states, by = "state_name")
@@ -137,6 +137,25 @@ ui <- fluidPage(
 )
 ```
 
+```{r}
+#combine hiv prevalence & prep users by year  output TABLE1 
+prep1 <- prep %>%
+  rename("state_name" = State)
+  
+newincidencedata <- subset(incidenceData, Year >= 2012 )%>%
+                    mutate(Year = as.numeric(Year))
+  
+table1 <- full_join(newincidencedata,prep1,
+          by=c('state_name','Year')
+          )%>%
+  rename(`New Diagnosis` = NewDiag)
+
+
+sspidu <- right_join(prevAve,sspDensity, by = "State")
+sspidu2 <- select(sspidu, -X1)
+sspiduprev <- full_join (sspidu2, prevalenceData)
+
+```
 
 
 Construct the Server.

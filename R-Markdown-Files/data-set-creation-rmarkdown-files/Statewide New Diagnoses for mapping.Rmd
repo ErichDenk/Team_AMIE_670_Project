@@ -112,9 +112,14 @@ Let's save what we have as a csv in our data folder.
 <<<<<<< HEAD:R-Markdown-Files/data-set-creation-rmarkdown-files/Statewide New Diagnoses.Rmd
 write_csv(diagDataClean, 
           file.path(here("Active-data-sets/statewide-new-diagnoses-clean.csv")))
-=======
+
 write_csv(diagDataClean, here(("Active-data-sets/incidenceDat.csv")))
->>>>>>> 791eda49c24bdefd962f6c15856384f990891c46:R-Markdown-Files/data-set-creation-rmarkdown-files/Statewide New Diagnoses for mapping.Rmd
+
+incidenceData <- read.csv(here("Active-data-sets/incidenceDat.csv")) %>%
+  select(., state_name = State, Year = Year1, NewDiag = "New.Diagnoses.State.Cases") %>%
+  mutate(state_name = as.character(state_name))
+
+require(tidyverse)
 ```
 
 

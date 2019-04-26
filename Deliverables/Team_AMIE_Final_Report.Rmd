@@ -1,0 +1,26 @@
+---
+title: "Final Report"
+author: "Team AMIE"
+date: "4/25/2019"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+#Problem Statement and Background
+
+#Research Design/Approach
+
+#Methods and Tools
+
+##Mapping and Shiny Apps
+
+###PrEP Data
+
+###New Diagnoses Data
+
+##Predicting State SEP Laws with Machine Learning
+
+#Results & Discussions

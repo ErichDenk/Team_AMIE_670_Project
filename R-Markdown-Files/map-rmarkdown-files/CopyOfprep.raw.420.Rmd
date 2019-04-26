@@ -41,9 +41,14 @@ library(urbnthemes)
 
 read&select data 
 ```{r}
-setwd("~/Desktop/data/Team_AMIE_670_Project/Active-data-sets")
-prep <- read_csv("prep.csv") %>% 
-select(Year, State, `State PrEP Users`)
+
+prep <- read_csv("~/Desktop/data/Team_AMIE_670_Project/Active-data-sets/prep.csv")%>%
+dplyr::select(Year, State, `State PrEP Users`)
+
+incidenceData <- read.csv("~/Desktop/data/Team_AMIE_670_Project/Active-data-sets/incidenceDat.csv") %>%
+dplyr::select(., state_name = State, Year = Year1, NewDiag = "New.Diagnoses.State.Cases") %>%
+    mutate(state_name = as.character(state_name))
+mapCreateData <- left_join(incidenceData, states, by = "state_name")
 ```
 
 tidy & map data 
@@ -52,13 +57,14 @@ tidydata <- prep %>%
   mutate(state = as.character(State))%>%
   mutate(year = as.integer(Year)) %>%
   mutate(prepusers = as.numeric(`State PrEP Users`))%>%
-  select(., state_name = state,year,prepusers)
+  dplyr::select(., state_name = state,year,prepusers)
 mapdata <- left_join(tidydata, states, by = "state_name")
 na.omit(mapdata)
 ```
 
-```
+
 ```{r}
+
 theme_map <- function(...) {
   theme_minimal() +
   theme(
@@ -82,12 +88,6 @@ theme_map <- function(...) {
     ...
   )
 }
-```
-
-
-
-```{r}
-
 ```
 
 
@@ -129,7 +129,9 @@ ui <- fluidPage(
                         label = "Select Year",selected = 2012)
         ),
         mainPanel(
-           plotOutput("map")
+           plotOutput("map"),
+           plotOutput("map2")
+           
         )
     )
 )
@@ -162,6 +164,30 @@ server <- function(input, output) {
          y = NULL, 
          title = "U.S. PrEP Users by State", 
          fill = "State PrEP Users") +
+  theme_map()})
+    
+    output$map2 <- renderPlot({
+        mapCreateData %>%
+            filter(., Year == input$year) %>%
+            ggplot(mapping = aes(long, lat, group = group, fill = log(NewDiag))) +
+  geom_polygon(color = "#ffffff", size = .25) +
+  scale_fill_viridis(option = "magma", direction = -1,
+  name = "HIV New Diagnosis",
+  guide = guide_colorbar(
+      direction = "horizontal",
+      barheight = unit(2, units = "mm"),
+      barwidth = unit(50, units = "mm"),
+      draw.ulim = F,
+      title.position = 'top',
+      title.hjust = 0.5,
+      label.hjust = 0.5)) +
+  coord_map(projection = "albers", lat0 = 39, lat1 = 45) +
+  theme(legend.key.width = unit(.5, "in"),
+        legend.position = "bottom") +
+   labs(x = NULL, 
+         y = NULL, 
+         title = "U.S. HIV New Diagnosis by State", 
+         fill = "State New Diagnosis") +
   theme_map()})
 }
 ```

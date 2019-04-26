@@ -1,9 +1,13 @@
 ---
 title: "PPOL 670 Project Showcase"
-author: "Team AMIE"
-date: "4/25/2019"
+author: "Ivy Deng, Erich Denk, and Ann-Marie Stringer"
+date: "4/29/2019"
 output: slidy_presentation
-footer: "Team AMIE"
+footer: "            Team AMIE            "
+incremental: TRUE
+duration: 12
+theme: united
+highlight: tango
 ---
 
 ```{r setup, include=FALSE}
@@ -15,21 +19,25 @@ require(pdp)
 require(here)
 ```
 
-## Problem Statement and Background
+## <span style="color:steelblue">**Problem Statement and Background** </span>
 
-- HIV is transmitted through a variety of ways. One is Injection Drug Use (IDU)
-- Some states have attempted to address the tranmission of HIV and other disease via Syringe Exchange Programs (SEPs)
-- Another policy intervention is encouragement of PrEP, a treatment for at-risk people before they come into contact with HIV
-- We sought to begin to understand how well these policy interventions work
-
-## Problem Statement and Background (cont)
-
-```{r}
+- HIV still a problem in the US today more than a million americans live with hiv (CDC)
+- No known cure to HIV, only ARV
+- HIV disproportionately affects historically marginalized communities
+    - MSM population
+    - Injection Drug Users 
+    - Black population
+- Two prevention policies
+  1. Syringe Services Programs (SSPs)/ Syringe Exchange Programs (SEPs)
+  2. Pre-exposure prophylaxis (PrEP)
+  
+## <span style="color:steelblue">**Problem Statement and Background** </span>
+```{r, include=FALSE}
 idu_dat <- read_csv("idu_dat.csv")
 
 idu_plot <- 
   idu_dat%>%
-  ggplot(mapping = aes(x = idu_dat$Year,
+  ggplot(mapping = aes(x = as.character(idu_dat$Year),
                        y = idu_dat$New.Diagnoses.IDU.Total.Cases))+
   geom_bar(stat ="identity", fill = "#008FD5", alpha = 0.8)+
     ggthemes::theme_fivethirtyeight()+
@@ -43,20 +51,75 @@ idu_plot <-
          caption = "Source: AidsVu")
 ```
 
-```{r, idu_plot, fig.align='center', fig.height=5, fig.width=6}
-idu_plot
+*Two trends that brought our research question about*
+```{r, include=FALSE}
+SEP_plot <- idu_dat%>%
+  mutate(Yes = if_else(Allowed == "Yes", 1, 0))%>%
+  ggplot(aes(x = as.character(Year), y = Yes))+
+  geom_bar(stat = "identity",fill = "#FF2700", alpha = 0.8)+
+  ggthemes::theme_fivethirtyeight()+
+  theme(panel.background = element_blank(),
+        panel.grid.major.x = element_blank(),
+        plot.title = element_text(face = "bold", size = 14),
+        plot.subtitle = element_text(face = "italic", size =10),
+        plot.caption = element_text(face = "italic"),)+
+  labs(title = "States increasingly allowing \nSyringe Exchange Programs",
+       subtitle = "SEPs, while controversial, are becoming a common policy tool",
+       caption = "Source: Center for Disease Control")
 ```
-## Approach/Design
+```{r, fig.width=9, fig.height=4, fig.align='center'}
+plots <- grid.arrange(idu_plot,SEP_plot, ncol = 2)
+```
 
-## Approach/Design (cont)
+## <span style="color:steelblue">**Aim** </span>
 
-## Methods/Tools
+ >Build a dashboard that walks policy makers and key stakeholders through the unmet need of these two prevention methods (PrEP and SSP). And, for the states that do allow SSPs, can we predict when they will allow them using new diagnoses data?
 
-## Methods/Tools
+## <span style="color:steelblue">**Approach and Design** </span>
+- Three main data sources
+  1. AidsVu
+  2. Center for Disease Control and Prevention State Laws
+  3. NASEN SSP locations
+  
+## <span style="color:steelblue">**Approach and Design (cont)** </span>
+- Our original goal -- countywide incidence - yearly incidence data not available
 
-## Results
+- Time series at state level doesn’t really show visual change in mapping  - not really impactful. 
 
-## Lessons Learned
+- The methods we did use..
+  - Web scraping (very minimal, just NASEN)
+  - Data Wrangling
+  - Data Visualization
+  - Mapping
+  - Machine Learning
+  - Shiny
 
-## Thanks
+## <span style="color:steelblue">**Methods and Tools** </span>
+
+- The Shiny App
+- Urban Maps
+- Caret
+- ggiraph
+
+## <span style="color:steelblue">**Results** </span> 
+
+Our dashboard: *link to dashboard*
+
+## <span style="color:steelblue">**Results** </span>
+
+The machine learning outcomes
+insert ggiraph
+```{r}
+
+```
+
+## <span style="color:steelblue">**Results** </span>
+
+## <span style="color:steelblue">**Lessons Learned** </span>
+
+- Be flexible! Try to let your preconcieved notions go
+
+## <span style="color:steelblue">**Thanks!** </span>
+
+
 

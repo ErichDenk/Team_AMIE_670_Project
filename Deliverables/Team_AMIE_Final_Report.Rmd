@@ -11,9 +11,28 @@ knitr::opts_chunk$set(echo = TRUE)
 
 #Problem Statement and Background
 
+In 2015, there were an estimated 1.1 million people living with HIV in the United States. In 2016, there were almost 40,000 new cases of HIV. 1 of 10 of new diagnoses in 2016 was attributable to injection drug use.  
+
+So far, there is no known cure to HIV.The main treatment for HIV is a class of drugs called antiretrovirals. These drugs don’t cure HIV, but they can reduce the amount of virus in the body of someone with HIV. However, antiretroviral drugs can cause severe side effects that can make some people stop taking them. 
+
+Historically marginalized populations, such as men who have sex with men (sometimes referred to as MSM), people who inject drugs, sex workers, and African Americans, are disporportionally affected by HIV. There is also a cyclical relationship between stigma and HIV; people who experience stigma and discrimination are marginalized and made more vulnerable to HIV, while those living with HIV are more vulnerable to experiencing stigma and discrimination. Therefore, it is critical to implement HIV prevention interventions to protect these marginalized populations from exposure to HIV. 
+
+Currently, the two main HIV prevention strategies in the U.S. are pre-exposure prophylaxis (PrEP) and Syringe service programs (SSPs).PrEP is the use of drugs for people who are HIV negative but who are also at high-risk of contracting HIV. They high-risk populations in include MSM, injuction drug users, and sex workers. 
+
+Syringe services programs (SSPs), also referred to as needle exchange programs (NEPs) and syringe exchange programs (SEPs)  provide sterile needles and syringes to drug users and safely dispose of used needles and syringes as a preventative measure for HIV and other infections that are transmissible by blood. Many of these programs integrate other intervention strategies, such as testing, treatment, and counseling services. 
+
+As of 2014, 33 states had explicitly banned SSPs, and the federal funding of SSPs was prohibited.  In 2016, the law was changed to allow jurisdictions to use federal funding to support certain components of SSPs, excluding the purchase of the actual syringe and needles (Weinmeyer 2016). Despite this new legal opportunity, SSPs remain a controversial topic with strong opposition. Opponents to SSPs believe that federal funding of these programs indicates approval of illegal drug use, will lead to an increase in drug use and will lessen the moral and logistical barrier of access for children to become users. Despite the research and evidence that has been presented to oppose these viewpoints, adequate SSPs are still not available. 
+
+There is a need to understand the effectiveness of HIV prevention strategies in limiting transmission of HIV in high-risk areas and understand the potential of uptake of SSPs to decrease transmission among injection drug users (IDU) in areas where need for SSPs have not been met. 
+
+Through analyzing data on new incidence of HIV (particularly the incidences due to IDU), information on legalization of SSPs by states, and locations and numbers of SSPs by states,this study explores the unmet need of the two prevention methods (SSP and PrEP) and predictors of when the state will legalize operations of SSPs.  
+
+
 #Research Design/Approach
 
+
 #Methods and Tools
+
 
 ##Mapping and Shiny Apps
 

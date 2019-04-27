@@ -230,7 +230,7 @@ require(e1071)
 pred <- predict(model_knn, newdata = test_dat2)
 confusionMatrix(table(pred, test_dat2$Allowed), positive = "Yes")
 ```
-We actually do better on the test data, with 86% correctly predicted. Again, our sensitivity is not great. We are good at determining which state years do not allow SSPs, but not which ones do. Let's tweak things a bit to see if we can do any better
+We actually do better on the test data, with 83% correctly predicted. Again, our sensitivity is not great. We are good at determining which state years do not allow SSPs, but not which ones do. Let's tweak things a bit to see if we can do any better
 
 ```{r}
 knn_tune = expand.grid(k = c(1,3,5,10))
@@ -291,7 +291,7 @@ model_rf <-
         trControl = conditions)
 model_rf
 ```
-Our best model has an mrty = 2. We don't do well on specificity but extremely well on sensitivity throughout. 
+Our best model has an mrty = 32. We don't do well on specificity but extremely well on sensitivity throughout. 
 
 ```{r}
 plot(model_rf)
@@ -345,9 +345,9 @@ Based on this, the second random forest model did the best generally. It is clos
 Let's see how it the second random forest model did against the test data.
 ```{r}
 pred <- predict(model_rf2,newdata = test_dat2)
-confusionMatrix(table(pred,test_dat2$Allowed))
+confusionMatrix(table(pred,test_dat2$Allowed), positive = "Yes")
 ```
-We did pretty well! Our overall accuracy at 89% is solid and our specificity of 42% is better than expected from what we did with our training data. 
+We did pretty well! Our overall accuracy at 84% is solid. But again, we struggle saying which states do allow SSPs.  
 
 So what are the most important variables in predicting whether or not a state allows syringe exchange programs? We can find out!
 
@@ -355,7 +355,7 @@ So what are the most important variables in predicting whether or not a state al
 importance <- varImp(model_rf2)
 importance
 ```
-Interestingly, the most important variables have to do with hispanic cases, black percentages, white cases, and the overall state HIV diagnoses rate. From a policy perspective, it seems that whe certain groups are particularly impacted a state may be more or more likely to allow a SEP. The issue is it is hard to interpret how these are related to the outcome variable. 
+Interestingly, the most important variables have to do with hispanic cases, black percentages, asian cases, and the overall state HIV diagnoses rate. From a policy perspective, it seems that whe certain groups are particularly impacted a state may be more or more likely to allow a SEP. The issue is it is hard to interpret how these are related to the outcome variable. 
 
 Let's plot the top ten most important factors in prediction for our random forest model.
 How to do the top 10? `top_n` does not work for this type of data apparently 
@@ -373,6 +373,8 @@ grab_varimp <-
       as_tibble() %>% 
       rename(importance = Overall) %>% 
       arrange(desc(importance))
+
+write_csv(grab_varimp, "ggiraph.csv")
 ```
 Now that we have this, we can try to do a cool little interactive plot to see importance on both relative and more specific terms.
 ```{r, fig.width=9,fig.height=9}
@@ -405,4 +407,4 @@ plot_varimp <-
 ggsave("importance.png", plot = plot_varimp)
 
 ```
-THis plot shows the most important features in predicting whether or not a state has an SEP. It would make sense that 2016 as a year would make sense, given that more and more states allowed SEPs. Interestingly, MSM/IDU and IDU cases among hispanics have the highest predictive power. Also of note is the importance of the new Diagnoses in the White demographic. 
+This plot shows the most important features in predicting whether or not a state has an SEP. It would make sense that 2016 as a year would make sense, given that more and more states allowed SEPs. Interestingly, MSM/IDU and IDU cases among hispanics have the highest predictive power. Also of note is the importance of the new Diagnoses in the White demographic. 

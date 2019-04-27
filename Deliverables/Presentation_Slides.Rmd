@@ -6,8 +6,6 @@ output: slidy_presentation
 footer: "            Team AMIE            "
 incremental: TRUE
 duration: 12
-theme: united
-highlight: tango
 ---
 
 ```{r setup, include=FALSE}
@@ -19,7 +17,7 @@ require(pdp)
 require(here)
 ```
 
-## <span style="color:steelblue">**Problem Statement and Background** </span>
+# <span style="color:steelblue">**Problem Statement and Background** </span>
 
 - HIV still a problem in the US today more than a million americans live with hiv (CDC)
 - No known cure to HIV, only ARV
@@ -31,7 +29,7 @@ require(here)
   1. Syringe Services Programs (SSPs)/ Syringe Exchange Programs (SEPs)
   2. Pre-exposure prophylaxis (PrEP)
   
-## <span style="color:steelblue">**Problem Statement and Background** </span>
+# <span style="color:steelblue">**Problem Statement and Background** </span>
 ```{r, include=FALSE}
 idu_dat <- read_csv("idu_dat.csv")
 
@@ -71,55 +69,99 @@ SEP_plot <- idu_dat%>%
 plots <- grid.arrange(idu_plot,SEP_plot, ncol = 2)
 ```
 
-## <span style="color:steelblue">**Aim** </span>
+# <span style="color:steelblue">**Aim** </span>
 
  >Build a dashboard that walks policy makers and key stakeholders through the unmet need of these two prevention methods (PrEP and SSP). And, for the states that do allow SSPs, can we predict when they will allow them using new diagnoses data?
 
-## <span style="color:steelblue">**Approach and Design** </span>
+# <span style="color:steelblue">**Approach and Design** </span>
 - Three main data sources
   1. AidsVu
   2. Center for Disease Control and Prevention State Laws
   3. NASEN SSP locations
   
-## <span style="color:steelblue">**Approach and Design (cont)** </span>
+# <span style="color:steelblue">**Approach and Design (cont)** </span>
 - Our original goal -- countywide incidence - yearly incidence data not available
 
 - Time series at state level doesn’t really show visual change in mapping  - not really impactful. 
 
 - The methods we did use..
-  - Web scraping (very minimal, just NASEN)
+  - Web scraping (just NASEN)
   - Data Wrangling
   - Data Visualization
   - Mapping
   - Machine Learning
   - Shiny
 
-## <span style="color:steelblue">**Methods and Tools** </span>
+# <span style="color:steelblue">**Methods and Tools** </span>
 
+- Dplyr and the <span style="color:dodgerblue">**tidyverse** </span>
 - The Shiny App
 - Urban Maps
 - Caret
 - ggiraph
 
-## <span style="color:steelblue">**Results** </span> 
+# <span style="color:steelblue">**Results** </span> 
 
-Our dashboard: *link to dashboard*
+The shiny app dashboard. Combines a number of efforts together
 
-## <span style="color:steelblue">**Results** </span>
+<span style="color:dodgerblue"> Our dashboard: </span> *link to dashboard*
 
-The machine learning outcomes
-insert ggiraph
-```{r}
+# <span style="color:steelblue">**Results** </span>
+The second (an less successful) effort: Our supervised machine learning results
+
+- Random regression trees
+- knn
+- random forests
+
+Extremely good at predicting which state-years would *not* allow Syringe Exchange Programs, but not very good at predicting those that do.
+
+Random Forest with extratrees and mtry = 34 was the best model. In that model, here is the relative importance
+
+# <span style="color:steelblue">**Results** </span>
+```{r, include = FALSE}
+require(wesanderson)
+require(ggplot2)
+require(ggiraph)
+require(ggthemes)
+
+pal1 <- wes_palette(name = "GrandBudapest2", 6, type = "continuous")
+grab_varimp <- read_csv(here("R-markdown-Files/ggiraph.csv"))
+```
+```{r, fig.width=5,fig.height=5, fig.align='center'}
+plot_varimp <- 
+  grab_varimp %>% 
+    mutate(keyword = fct_reorder(keyword,importance)) %>% 
+    mutate(sum_report = str_glue('keyword: "{keyword}"\nImportance: {round(importance,2)}%')) %>% 
+    top_n(10, importance) %>% 
+    ggplot(aes(keyword,importance,
+               fill=importance)) +
+    geom_point() +
+    geom_hline(aes(yintercept = max(importance)),color="grey20",size=1,alpha=.25) +
+    geom_bar_interactive(aes(tooltip=sum_report),
+                         stat="identity",color="grey10") + 
+    coord_flip() +
+    scale_fill_gradientn(colors = pal1) +
+    theme_hc() +
+    labs(y="Importance of the Feature in Predicting SEPs\n(higher values == more important)",
+         x="Features")+
+    theme(legend.position = "none",
+          axis.title = element_text(family="serif",size=10),
+          axis.text = element_text(family="serif",size=10)) -> plt_obj
+  interactive_plot <- girafe(ggobj = plt_obj,width = 4,height=4)
+  girafe_options(interactive_plot, opts_toolbar(position = "topleft"))
 
 ```
 
-## <span style="color:steelblue">**Results** </span>
+# <span style="color:steelblue">**Results** </span>
+- 
 
-## <span style="color:steelblue">**Lessons Learned** </span>
+# <span style="color:steelblue">**Lessons Learned** </span>
 
 - Be flexible! Try to let your preconcieved notions go
 
-## <span style="color:steelblue">**Thanks!** </span>
+- Opportunity to learn about a new topic
 
+# <span style="color:steelblue">**Thanks!** </span>
 
+- Any questions?
 

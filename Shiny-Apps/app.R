@@ -36,7 +36,8 @@ newincidencedata <- subset(incidenceData, Year >= 2012 )%>%
 table1 <- full_join(newincidencedata,prep1,
                     by=c('state_name','Year')
 )%>%
-  rename(`New Diagnosis` = NewDiag)
+  rename(`New Diagnosis` = NewDiag) %>%
+  rename(`State` = state_name)
 
 
 prevalenceData <- read.csv("activedata/2015-Prevalence-IDU-data.csv") %>%
@@ -68,11 +69,17 @@ sspDensityDat <- read.csv("activedata/sspDensity.csv")
 
 sspidu <- right_join(prevAve,sspDensityDat, by = "State")
 sspidu2 <- select(sspidu, -X)
-sspiduprev <- full_join (sspidu2, prevalenceData)
+sspiduprev <- full_join (sspidu2, prevalenceData) %>%
+  rename(`County` = county_name) %>%
+  rename(`Percent HIV Cases due to IDU` = PercentIDU) %>%
+  rename(`State Total IDU` = totalIDU) %>%
+  rename(`SSP Exist` = sspExist) %>%
+  rename(`State SSP Burden`= sspBurden) 
 
 
 
 regions = data.frame("West" = c("WA", "OR", "CA", "NV", "UT", "ID", "MT", "WY", "CO", NA, NA, NA, NA, NA), Southwest = c("TX", "AZ", "NM", "OK", NA, NA,NA,NA,NA,NA,NA,NA,NA,NA), Midwest = c("ND", "SD", "NE", "KS", "MO", "IL", "IA", "MN", "WI", "MI", "OH", "IN", NA, NA), Southeast = c("AR", "LA", "AL", "MS", "GA", "FL", "SC", "NC", "TN", "KY", "VA", "DE", "MD", "WV"), Northeast = c("PA", "NJ", "CT", "NY", "RI", "VT", "NH", "MA", "ME", NA,NA,NA,NA,NA))
+
 
 
 theme_chart <- function(...) {
@@ -88,6 +95,12 @@ theme_chart <- function(...) {
       panel.background = element_rect(fill = "#f5f5f2", color = NA), 
       legend.background = element_rect(fill = "#f5f5f2", color = NA),
       panel.border = element_blank(),
+      plot.caption = element_text(size = 8, 
+                                  hjust = 0.92, 
+                                  margin = margin(t = 0.2, 
+                                                  b = 0, 
+                                                  unit = "cm"), 
+                                  color = "#939184"),
       ...
     )
 }
@@ -104,7 +117,7 @@ theme_map <- function(...) {
       axis.title.x = element_blank(),
       axis.title.y = element_blank(),
       legend.title = element_text(size=10),
-      legend.text=element_text(size=8),
+      legend.text=element_text(size=7),
       legend.position = "bottom",
       # panel.grid.minor = element_line(color = "#ebebe5", size = 0.2),
       panel.grid.major = element_line(color = "#ebebe5", size = 0.2),
@@ -113,6 +126,19 @@ theme_map <- function(...) {
       panel.background = element_rect(fill = "#f5f5f2", color = NA), 
       legend.background = element_rect(fill = "#f5f5f2", color = NA),
       panel.border = element_blank(),
+      plot.caption = element_text(size = 8, 
+                                  hjust = 0.92, 
+                                  margin = margin(t = 0.2, 
+                                                  b = 0, 
+                                                  unit = "cm"), 
+                                  color = "#939184"),
+      plot.title = element_text(hjust = 0.5, color = "#4e4d47"),
+      plot.subtitle = element_text(hjust = 0.5, color = "#4e4d47", 
+                                   margin = margin(b = -0.1, 
+                                                   t = -0.1, 
+                                                   l = 2, 
+                                                   unit = "cm"), 
+                                   debug = F),
       ...
     )
 }
@@ -121,6 +147,8 @@ theme_map <- function(...) {
 regions = data.frame("West" = c("WA", "OR", "CA", "NV", "UT", "ID", "MT", "WY", "CO", NA, NA, NA, NA, NA), Southwest = c("TX", "AZ", "NM", "OK", NA, NA,NA,NA,NA,NA,NA,NA,NA,NA), Midwest = c("ND", "SD", "NE", "KS", "MO", "IL", "IA", "MN", "WI", "MI", "OH", "IN", NA, NA), Southeast = c("AR", "LA", "AL", "MS", "GA", "FL", "SC", "NC", "TN", "KY", "VA", "DE", "MD", "WV"), Northeast = c("PA", "NJ", "CT", "NY", "RI", "VT", "NH", "MA", "ME", NA,NA,NA,NA,NA))
 
 library(rsconnect)
+
+library(RGraphics)
 
 
 #ui
@@ -138,7 +166,7 @@ ui <- navbarPage("TEAM AMIE",
                       )
                     )
            ),
-           tabPanel(("HIV Prevalence due to Injection Drug Use by State and Syringe Services Program Locations"),
+           tabPanel(("HIV, Injection Drug Use (IDU), and Syringe Service Program (SSP)"),
                     
                     # Button which can hopefully be used to toggle SSP location points on/off
                     #  sidebarLayout(
@@ -164,7 +192,7 @@ ui <- navbarPage("TEAM AMIE",
                       tabPanel("State Prep Users and HIV Prevalence",
                                DT::dataTableOutput("table1")
                       ),
-                      tabPanel("HIV Prevalence due to Injection Drug Use by State and Syringe Services Program Locations",
+                      tabPanel("HIV, Injection Drug Use (IDU), and Syringe Service Program (SSP)",
                                DT::dataTableOutput("sspiduprev")
                       )
                     )
@@ -180,7 +208,7 @@ server <-function(input, output, session) {
       ggplot(mapping = aes(long, lat, group = group, fill = prepusers)) +
       geom_polygon(color = "#ffffff", size = .25) +
       scale_fill_viridis(option = "magma", direction = -1,
-                         name = "State PrEP Users",
+                         name = "Number of PrEP Users",
                          guide = guide_colorbar(
                            direction = "horizontal",
                            barheight = unit(2, units = "mm"),
@@ -194,14 +222,16 @@ server <-function(input, output, session) {
             legend.position = "bottom") +
       labs(x = NULL, 
            y = NULL, 
-           title = "U.S. PrEP Users by State", 
+           title = "PrEP Users by State", 
+           subtitle = "The number of persons who had at least one day of prescribed oral TDF/FTC for PrEP in a year",
+           caption = "Author: Team AMIE; Geometries: Urban Institute; Data: ACS",
            fill = "State PrEP Users") +
-      theme_map()})
+      theme_map() })
   
   output$map2 <- renderPlot({
     mapCreateData %>%
       filter(., Year == input$year) %>%
-      ggplot(mapping = aes(long, lat, group = group, fill = log(NewDiag))) +
+      ggplot(mapping = aes(long, lat, group = group, fill = NewDiag)) +
       geom_polygon(color = "#ffffff", size = .25) +
       scale_fill_viridis(option = "magma", direction = -1,
                          name = "HIV New Diagnosis",
@@ -218,9 +248,11 @@ server <-function(input, output, session) {
             legend.position = "bottom") +
       labs(x = NULL, 
            y = NULL, 
-           title = "U.S. HIV New Diagnosis by State", 
+           title = "HIV New Diagnosis by State", 
+           caption = "Author: Team AMIE; Geometries: Urban Institute; Data: CDC",
+           subtitle = "The number of persons newly diagnosed with HIV infection during a given 1-year time period.",
            fill = "State New Diagnosis") +
-      theme_map()})
+      theme_map() })
   
   output$map3 <- renderPlot({
     data <- switch(input$region, 
@@ -237,19 +269,19 @@ server <-function(input, output, session) {
       # center the map view on the US
       coord_map(projection = "albers", lat0 = 39, lat1 = 45) +
       # black  boarder and white fill for all states (NA space will be white)
-      geom_polygon(color = "black", fill = "white") +
+      geom_polygon(color = "#241e64", fill = "#c6c2c2", size = 0.50) +
       # adding the IDU as the density fill per county
       geom_polygon(data = mapDataPrev[mapDataPrev$state_abbv %in% data,], aes(fill = PercentIDU)) +
       #change gradient for scale bar -- I wanted darker color to be higher IDU density. 
       # re plot the black boarder lines
-      geom_polygon(color = "black", fill = NA) +
+      geom_polygon(color = "#241e64", fill = NA, size = 0.50) +
       geom_point(data=sspLocation[sspLocation$state %in% data,], mapping =aes(x=longitude, y=latitude), inherit.aes = FALSE, size = input$SSPdot, alpha = 2/3) +
       scale_fill_viridis(option = "magma", direction = -1, 
-                         name = "IDU Prevalence",
+                         name = "Percent of all HIV Cases due to IDU Transimission",
                          guide = guide_colorbar(
                            direction = "horizontal",
                            barheight = unit(2, units = "mm"),
-                           barwidth = unit(50, units = "mm"),
+                           barwidth = unit(90, units = "mm"),
                            draw.ulim = F,
                            title.position = 'top',
                            title.hjust = 0.5,
@@ -258,7 +290,9 @@ server <-function(input, output, session) {
             legend.position = "bottom") +
       labs(x = NULL, 
            y = NULL, 
-           title = "HIV prevalence due to injection drug use transmission and syringe service program locations", 
+           title = "HIV, Injection Drug Use (IDU), and Syringe Service Program (SSP)", 
+           subtitle = "Percent of all HIV Cases due to IDU and Locations of SSPs",
+           caption = "Author: Team AMIE; Geometries: Urban Institute; Data: CDC, NASEN",
            fill = "HIV Prevalence due to IDU Transmission as a Percent of all HIV Cases") +
       theme_map() 
   })

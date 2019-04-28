@@ -104,7 +104,7 @@ plots <- grid.arrange(idu_plot,SEP_plot, ncol = 2)
 
 The shiny app dashboard. Combines a number of efforts together
 
-<span style="color:dodgerblue"> Our dashboard: </span> *link to dashboard*
+ Our [dashboard](https://ivy-deng.shinyapps.io/Shiny-Apps/)
 
 # <span style="color:steelblue">**Results** </span>
 The second (an less successful) effort: Our supervised machine learning results
@@ -151,9 +151,6 @@ plot_varimp <-
   girafe_options(interactive_plot, opts_toolbar(position = "topleft"))
 
 ```
-
-# <span style="color:steelblue">**Results** </span>
-- 
 
 # <span style="color:steelblue">**Lessons Learned** </span>
 

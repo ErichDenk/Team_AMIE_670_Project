@@ -1,6 +1,6 @@
 ---
 title: "PPOL 670 Project Showcase"
-author: "Ivy Deng, Erich Denk, and Ann-Marie Stringer"
+author: "Ivy Deng, Erich Denk, and Ann Marie Stringer"
 date: "4/29/2019"
 output: slidy_presentation
 footer: "            Team AMIE            "
@@ -15,19 +15,54 @@ require(caret)
 require(recipes)
 require(pdp)
 require(here)
+require(knitr)
 ```
 
 # <span style="color:steelblue">**Problem Statement and Background** </span>
 
+<style>
+.column-left{
+  float: left;
+  width: 50%;
+  text-align: left;
+}
+
+.column-right{
+  float: right;
+  width: 50%;
+  text-align: right;
+}
+</style>
+
+<div class="column-left">
 - HIV still a problem in the US today more than a million americans live with hiv (CDC)
 - No known cure to HIV, only ARV
 - HIV disproportionately affects historically marginalized communities
     - MSM population
-    - Injection Drug Users 
+    - Injection Drug Users
     - Black population
-- Two prevention policies
+- Two prevention methods - both cotroversial/stigmatized 
   1. Syringe Services Programs (SSPs)/ Syringe Exchange Programs (SEPs)
   2. Pre-exposure prophylaxis (PrEP)
+</div>
+<div class="column-right">
+```{r, out.width="60%"}
+include_graphics(here("Deliverables/Use-Clean-Needles.png"))
+```
+
+<font size="1">Retrieved from: http://www.buffalotracehealth.com/syringe-access-exchange-program/ </font>
+
+
+```{r, out.width="60%"}
+include_graphics(here("Deliverables/prepPill.jpg"))
+```
+
+<font size="1">Retrieved from: http://www.araratpharmacy.com/PrEP-HIV-Prevention.html </font>
+
+</div>
+
+
+  
   
 # <span style="color:steelblue">**Problem Statement and Background** </span>
 ```{r, include=FALSE}
@@ -49,7 +84,7 @@ idu_plot <-
          caption = "Source: AidsVu")
 ```
 
-*Two trends that brought our research question about*
+*Trends that brought our research question about*
 ```{r, include=FALSE}
 SEP_plot <- idu_dat%>%
   mutate(Yes = if_else(Allowed == "Yes", 1, 0))%>%
@@ -64,10 +99,20 @@ SEP_plot <- idu_dat%>%
   labs(title = "States increasingly allowing \nSyringe Exchange Programs",
        subtitle = "SEPs, while controversial, are becoming a common policy tool",
        caption = "Source: Center for Disease Control")
+
 ```
 ```{r, fig.width=9, fig.height=4, fig.align='center'}
 plots <- grid.arrange(idu_plot,SEP_plot, ncol = 2)
 ```
+
+# <span style="color:steelblue">**Problem Statement and Background (cont.)** </span>
+*Trends that brought our research question about*
+
+```{r, fig.align='center', out.width='40%'}
+include_graphics(here("Deliverables/PrEP-BarChart.jpg"))
+```
+<font size="1">Retrieved from: https://www.hiv.gov/blog/prep-prescriptions-rise-more-work-remains </font>
+
 
 # <span style="color:steelblue">**Aim** </span>
 
@@ -79,7 +124,7 @@ plots <- grid.arrange(idu_plot,SEP_plot, ncol = 2)
   2. Center for Disease Control and Prevention State Laws
   3. NASEN SSP locations
   
-# <span style="color:steelblue">**Approach and Design (cont)** </span>
+# <span style="color:steelblue">**Approach and Design (cont.)** </span>
 - Our original goal -- countywide incidence - yearly incidence data not available
 
 - Time series at state level doesn’t really show visual change in mapping  - not really impactful. 
@@ -105,9 +150,13 @@ plots <- grid.arrange(idu_plot,SEP_plot, ncol = 2)
 The shiny app dashboard. Combines a number of efforts together
 
  Our [dashboard](https://ivy-deng.shinyapps.io/Shiny-Apps/)
+ 
+- Some findings
+  1. PReP usage does not match the need for most states - mapping provides clear visualization of which states in particular
+  2. The states with highest unmet need for SSP do not have legislation in place to legalize SSPs
 
 # <span style="color:steelblue">**Results** </span>
-The second (an less successful) effort: Our supervised machine learning results
+The second (and less successful) effort: Our supervised machine learning results
 
 - Random regression trees
 - knn

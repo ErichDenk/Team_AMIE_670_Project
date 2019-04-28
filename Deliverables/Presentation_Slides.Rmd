@@ -2,9 +2,11 @@
 title: "PPOL 670 Project Showcase"
 author: "Ivy Deng, Erich Denk, and Ann-Marie Stringer"
 date: "4/29/2019"
-output: slidy_presentation
-footer: "            Team AMIE            "
-incremental: TRUE
+output:
+  ioslides_presentation: default
+  slidy_presentation: default
+incremental: yes
+footer: '            Team AMIE            '
 duration: 12
 ---
 
@@ -15,6 +17,9 @@ require(caret)
 require(recipes)
 require(pdp)
 require(here)
+require(ggplot2)
+require(ggthemes)
+require(ggiraph)
 ```
 
 # <span style="color:steelblue">**Problem Statement and Background** </span>
@@ -25,6 +30,7 @@ require(here)
     - MSM population
     - Injection Drug Users 
     - Black population
+    - Sex Workers
 - Two prevention policies
   1. Syringe Services Programs (SSPs)/ Syringe Exchange Programs (SEPs)
   2. Pre-exposure prophylaxis (PrEP)
@@ -60,7 +66,7 @@ SEP_plot <- idu_dat%>%
         panel.grid.major.x = element_blank(),
         plot.title = element_text(face = "bold", size = 14),
         plot.subtitle = element_text(face = "italic", size =10),
-        plot.caption = element_text(face = "italic"),)+
+        plot.caption = element_text(face = "italic")) +
   labs(title = "States increasingly allowing \nSyringe Exchange Programs",
        subtitle = "SEPs, while controversial, are becoming a common policy tool",
        caption = "Source: Center for Disease Control")
@@ -99,12 +105,19 @@ plots <- grid.arrange(idu_plot,SEP_plot, ncol = 2)
 - Urban Maps
 - Caret
 - ggiraph
+- ggplot2
 
 # <span style="color:steelblue">**Results** </span> 
 
 The shiny app dashboard. Combines a number of efforts together
 
-<span style="color:dodgerblue"> Our dashboard: </span> *link to dashboard*
+<span style="color:dodgerblue"> Our dashboard: </span> https://ivy-deng.shinyapps.io/Shiny-Apps/
+
+- Unmet PrEP Demand in states such as Texas, California, Louisiana, Georgia, and Florida. California, Texas, and Florida show a decreasing trend of number of PrEP users overtime. 
+
+- Southern states in general have more cases of HIV new diagnosis than other regions. However, there are fewer users of PrEP in those states compared to other regions. 
+
+-(Ann Marie: Results from HIV IDU and SSP map)
 
 # <span style="color:steelblue">**Results** </span>
 The second (an less successful) effort: Our supervised machine learning results
@@ -137,7 +150,7 @@ plot_varimp <-
                fill=importance)) +
     geom_point() +
     geom_hline(aes(yintercept = max(importance)),color="grey20",size=1,alpha=.25) +
-    geom_bar_interactive(aes(tooltip=sum_report),
+    geom_bar_interactive (aes(tooltip=sum_report),
                          stat="identity",color="grey10") + 
     coord_flip() +
     scale_fill_gradientn(colors = pal1) +
@@ -152,14 +165,23 @@ plot_varimp <-
 
 ```
 
-# <span style="color:steelblue">**Results** </span>
-- 
 
 # <span style="color:steelblue">**Lessons Learned** </span>
 
 - Be flexible! Try to let your preconcieved notions go
 
 - Opportunity to learn about a new topic
+
+- [urbnmapr] package! Perfect for mapping geospatial data. 
+
+- Shiny app. Efficient way to display data in various forms and let audience interact with data. 
+
+
+# <span style="color:steelblue">**Conclusions** </span>
+
+- States with a high HIV prevalence should invest more resources in supporting and promoting HIV prevention programs (PrEP and SSPs)
+
+- 
 
 # <span style="color:steelblue">**Thanks!** </span>
 

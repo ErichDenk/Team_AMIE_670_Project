@@ -149,7 +149,9 @@ include_graphics(here("Deliverables/PrEP-BarChart.jpg"))
 
 The shiny app dashboard. Combines a number of efforts together
 
- Our [dashboard](https://ivy-deng.shinyapps.io/Shiny-Apps/)
+ Our [dashboard](https://annmarie.shinyapps.io/Shiny-Apps/)
+
+- [(backup link)](https://ivy-deng.shinyapps.io/Shiny-Apps/)
  
 - Some findings
   1. PReP usage does not match the need for most states - mapping provides clear visualization of which states in particular

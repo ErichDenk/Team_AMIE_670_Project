@@ -111,6 +111,7 @@ plots <- grid.arrange(idu_plot,SEP_plot, ncol = 2)
 
 The shiny app dashboard. Combines a number of efforts together
 
+<<<<<<< HEAD
 <span style="color:dodgerblue"> Our dashboard: </span> 
 https://ivy-deng.shinyapps.io/Shiny-Apps/
 
@@ -119,6 +120,9 @@ https://ivy-deng.shinyapps.io/Shiny-Apps/
 - Southern states in general have more cases of HIV new diagnosis than other regions. However, there are fewer users of PrEP in those states compared to other regions. 
 
 -(Ann Marie: Results from HIV IDU and SSP map)
+=======
+ Our [dashboard](https://ivy-deng.shinyapps.io/Shiny-Apps/)
+>>>>>>> f09dd1c093d5c13292ea068eb750521db0a5dee6
 
 # <span style="color:steelblue">**Results** </span>
 The second (an less successful) effort: Our supervised machine learning results
@@ -166,7 +170,10 @@ plot_varimp <-
 
 ```
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> f09dd1c093d5c13292ea068eb750521db0a5dee6
 # <span style="color:steelblue">**Lessons Learned** </span>
 
 - Be flexible! Try to let your preconcieved notions go

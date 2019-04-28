@@ -111,7 +111,8 @@ plots <- grid.arrange(idu_plot,SEP_plot, ncol = 2)
 
 The shiny app dashboard. Combines a number of efforts together
 
-<span style="color:dodgerblue"> Our dashboard: </span> https://ivy-deng.shinyapps.io/Shiny-Apps/
+<span style="color:dodgerblue"> Our dashboard: </span> 
+https://ivy-deng.shinyapps.io/Shiny-Apps/
 
 - Unmet PrEP Demand in states such as Texas, California, Louisiana, Georgia, and Florida. California, Texas, and Florida show a decreasing trend of number of PrEP users overtime. 
 

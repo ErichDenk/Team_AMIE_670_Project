@@ -1,0 +1,12 @@
+name: Shiny-Apps
+title: Shiny-Apps
+username:
+account: ivy-deng
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 895357
+bundleId: 2044032
+url: https://ivy-deng.shinyapps.io/Shiny-Apps/
+when: 1556417962.29095
+asMultiple: FALSE
+asStatic: FALSE

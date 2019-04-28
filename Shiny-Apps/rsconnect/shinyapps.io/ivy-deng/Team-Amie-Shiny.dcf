@@ -5,8 +5,9 @@ account: ivy-deng
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 895279
-bundleId: 2043948
+bundleId: 2044008
 url: https://ivy-deng.shinyapps.io/Team-Amie-Shiny/
-when: 1556413056.12879
+when: 1556416372.30959
 asMultiple: FALSE
 asStatic: FALSE
+ignoredFiles: data loading before shiny.Rmd|fullshiny_attempt.R

@@ -5,7 +5,6 @@ library(raster)      # classes and functions for raster data
 library(dplyr)
 
 library(ggplot2) # tidyverse vis package
-library(shiny)   # for web applications
 
 require(ggplot2)
 
@@ -20,15 +19,113 @@ require(viridis)
 
 
 #load all datasets
+prep <- read.csv("activedata/prep.csv") %>%
+  dplyr::select(Year, State, State.PrEP.Users)
+
+incidenceData <- read.csv("activedata/incidenceDat.csv") %>%
+  select(., state_name = State, Year = Year1, NewDiag = "New.Diagnoses.State.Cases") %>%
+  mutate(state_name = as.character(state_name))
+mapCreateData <- left_join(incidenceData, states, by = "state_name")
+
+prep1 <- prep %>%
+  rename("state_name" = State)
+
+newincidencedata <- subset(incidenceData, Year >= 2012 )%>%
+  mutate(Year = as.numeric(Year))
+
+table1 <- full_join(newincidencedata,prep1,
+                    by=c('state_name','Year')
+)%>%
+  rename(`New Diagnosis` = NewDiag)
+
+
+prevalenceData <- read.csv("activedata/2015-Prevalence-IDU-data.csv") %>%
+  mutate(County = as.character(County))%>%
+  select(., county_name = County, State,PercentIDU)
+
+sspLocation <- read.csv("activedata/sspLocationLatLong.csv") %>%
+  select(., state, latitude, longitude) 
+
+mapDataPrev <- left_join(prevalenceData, counties, by = "county_name") %>%
+  na.omit()
+
+tidydata <- prep %>%
+  mutate(state = as.character(State))%>%
+  mutate(year = as.integer(Year)) %>%
+  mutate(prepusers = as.numeric(State.PrEP.Users))%>%
+  dplyr::select(., state_name = state,year,prepusers)
+mapdata <- left_join(tidydata, states, by = "state_name")
+na.omit(mapdata)
+
+prevAve <-  read.csv("activedata/2015-Prevalence-IDU-data.csv") %>%
+  select(., State, CountyPrevalence, TotalIDU) %>%
+  mutate(State = as.character(State)) %>%
+  na.omit() %>%
+  group_by(State) %>%
+  summarize(., totalIDU = sum(TotalIDU)) 
+
+sspDensityDat <- read.csv("activedata/sspDensity.csv")
+
+sspidu <- right_join(prevAve,sspDensityDat, by = "State")
+sspidu2 <- select(sspidu, -X)
+sspiduprev <- full_join (sspidu2, prevalenceData)
 
 
 
 regions = data.frame("West" = c("WA", "OR", "CA", "NV", "UT", "ID", "MT", "WY", "CO", NA, NA, NA, NA, NA), Southwest = c("TX", "AZ", "NM", "OK", NA, NA,NA,NA,NA,NA,NA,NA,NA,NA), Midwest = c("ND", "SD", "NE", "KS", "MO", "IL", "IA", "MN", "WI", "MI", "OH", "IN", NA, NA), Southeast = c("AR", "LA", "AL", "MS", "GA", "FL", "SC", "NC", "TN", "KY", "VA", "DE", "MD", "WV"), Northeast = c("PA", "NJ", "CT", "NY", "RI", "VT", "NH", "MA", "ME", NA,NA,NA,NA,NA))
 
 
+theme_chart <- function(...) {
+  theme_minimal() +
+    theme(
+      text = element_text(family = "Arial", color = "#22211d"),
+      legend.title = element_text(size=10),
+      legend.text=element_text(size=8),
+      # panel.grid.minor = element_line(color = "#ebebe5", size = 0.2),
+      panel.grid.major = element_line(color = "#ebebe5", size = 0.2),
+      panel.grid.minor = element_blank(),
+      plot.background = element_rect(fill = "#f5f5f2", color = NA), 
+      panel.background = element_rect(fill = "#f5f5f2", color = NA), 
+      legend.background = element_rect(fill = "#f5f5f2", color = NA),
+      panel.border = element_blank(),
+      ...
+    )
+}
+
+
+theme_map <- function(...) {
+  theme_minimal() +
+    theme(
+      text = element_text(family = "Arial", color = "#22211d"),
+      axis.line = element_blank(),
+      axis.text.x = element_blank(),
+      axis.text.y = element_blank(),
+      axis.ticks = element_blank(),
+      axis.title.x = element_blank(),
+      axis.title.y = element_blank(),
+      legend.title = element_text(size=10),
+      legend.text=element_text(size=8),
+      legend.position = "bottom",
+      # panel.grid.minor = element_line(color = "#ebebe5", size = 0.2),
+      panel.grid.major = element_line(color = "#ebebe5", size = 0.2),
+      panel.grid.minor = element_blank(),
+      plot.background = element_rect(fill = "#f5f5f2", color = NA), 
+      panel.background = element_rect(fill = "#f5f5f2", color = NA), 
+      legend.background = element_rect(fill = "#f5f5f2", color = NA),
+      panel.border = element_blank(),
+      ...
+    )
+}
+
+
+regions = data.frame("West" = c("WA", "OR", "CA", "NV", "UT", "ID", "MT", "WY", "CO", NA, NA, NA, NA, NA), Southwest = c("TX", "AZ", "NM", "OK", NA, NA,NA,NA,NA,NA,NA,NA,NA,NA), Midwest = c("ND", "SD", "NE", "KS", "MO", "IL", "IA", "MN", "WI", "MI", "OH", "IN", NA, NA), Southeast = c("AR", "LA", "AL", "MS", "GA", "FL", "SC", "NC", "TN", "KY", "VA", "DE", "MD", "WV"), Northeast = c("PA", "NJ", "CT", "NY", "RI", "VT", "NH", "MA", "ME", NA,NA,NA,NA,NA))
+
+library(rsconnect)
+
+
 #ui
 
-ui <- navbarPage("Team Amie",
+ui <- navbarPage("TEAM AMIE",
            tabPanel("State PrEP Users and HIV Prevalence",
                     sidebarLayout(
                       sidebarPanel(

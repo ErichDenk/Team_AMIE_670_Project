@@ -1,7 +1,7 @@
 library(sf)          # classes and functions for vector data
 library(raster)      # classes and functions for raster data
 library(spData)        # load geographic data
-library(spDataLarge)   # load larger geographic data
+#library(spDataLarge)   # load larger geographic data
 library(dplyr)
 library(tmap)    # for static and interactive maps
 library(leaflet) # for interactive maps
@@ -11,7 +11,7 @@ library(shiny)   # for web applications
 require(cartogram)
 require(lubridate)
 require(ggplot2)
-setwd("~/ivyxd94/datasci group project/Active-data-sets")
+#setwd("~/ivyxd94/datasci group project/Active-data-sets")
 require(tidyverse)
 require(shiny)
 require(here)
@@ -19,6 +19,7 @@ require(urbnmapr)
 library(urbnthemes)
 library(markdown)
 library(DT)
+require(viridis)
 
 
 #load all datasets
@@ -202,20 +203,7 @@ server <-function(input, output, session) {
     #coord_flip() 
     
     
-  })
   
-  output$legalStatus <- renderPlot({
-  data <- switch(input$region, 
-                  "West" = regions$West,
-                   "Southwest" = regions$Southwest,
-                  "Midwest" = regions$Midwest,
-                 "Southeast" = regions$Southeast,
-                "Northeast" = regions$Northeast, 
-                "USA" = c(as.character(regions$West), as.character(regions$Southwest), as.character(regions$Southeast), as.character(regions$Northeast), as.character(regions$Midwest)))
-  
-     ggplot(LawDat[LawDat$State %in% data,], aes(State, Legal)) +
-     geom_col()
-     
       })
   
   output$table1 <- DT::renderDataTable({

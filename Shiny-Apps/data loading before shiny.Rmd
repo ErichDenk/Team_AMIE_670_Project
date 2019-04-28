@@ -10,17 +10,14 @@ Try executing this chunk by clicking the *Run* button within the chunk or by pla
 ```{r}
 library(sf)          # classes and functions for vector data
 library(raster)      # classes and functions for raster data
-library(spData)        # load geographic data
-#library(spDataLarge)   # load larger geographic data
+
 library(dplyr)
-library(tmap)    # for static and interactive maps
-library(leaflet) # for interactive maps
-library(mapview) # for interactive maps
+
 library(ggplot2) # tidyverse vis package
 library(shiny)   # for web applications
 require(cartogram)
-require(lubridate)
-#setwd("~/ivyxd94/datasci group project/Active-data-sets")
+
+
 require(tidyverse)
 require(here)
 require(urbnmapr)
@@ -30,10 +27,10 @@ library(markdown)
 
 
 ```{r}
-prep <- read.csv(here("Active-data-sets/prep.csv")) %>%
+prep <- read.csv("activedata/prep.csv") %>%
 dplyr::select(Year, State, State.PrEP.Users)
 
-incidenceData <- read.csv(here("Active-data-sets/incidenceDat.csv")) %>%
+incidenceData <- read.csv("activedata/incidenceDat.csv") %>%
 select(., state_name = State, Year = Year1, NewDiag = "New.Diagnoses.State.Cases") %>%
     mutate(state_name = as.character(state_name))
 mapCreateData <- left_join(incidenceData, states, by = "state_name")
@@ -57,11 +54,11 @@ table1 <- full_join(newincidencedata,prep1,
 
 
 ```{r}
-prevalenceData <- read.csv(here("Active-data-sets/2015-Prevalence-IDU-data.csv")) %>%
+prevalenceData <- read.csv("activedata/2015-Prevalence-IDU-data.csv") %>%
     mutate(County = as.character(County))%>%
     select(., county_name = County, State,PercentIDU)
 
-sspLocation <- read.csv(here("Active-data-sets/sspLocationLatLong.csv")) %>%
+sspLocation <- read.csv("activedata/sspLocationLatLong.csv") %>%
     select(., state, latitude, longitude) 
 
 mapDataPrev <- left_join(prevalenceData, counties, by = "county_name") %>%
@@ -82,14 +79,14 @@ na.omit(mapdata)
 ```
 
 ```{r}
-prevAve <-  read.csv(here("Active-data-sets/2015-Prevalence-IDU-data.csv")) %>%
+prevAve <-  read.csv("activedata/2015-Prevalence-IDU-data.csv") %>%
     select(., State, CountyPrevalence, TotalIDU) %>%
     mutate(State = as.character(State)) %>%
     na.omit() %>%
     group_by(State) %>%
     summarize(., totalIDU = sum(TotalIDU)) 
 
-sspDensityDat <- read.csv(here("Active-data-sets/sspDensity.csv"))
+sspDensityDat <- read.csv("activedata/sspDensity.csv")
 
 sspidu <- right_join(prevAve,sspDensityDat, by = "State")
 sspidu2 <- select(sspidu, -X)

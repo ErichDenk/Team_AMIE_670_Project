@@ -1,0 +1,52 @@
+State,Allowed,Yes,No,Law Name,Year
+Alabama,No,0,1,NA,NA
+Alaska,No,0,1,NA,NA
+Arizona,No,0,1,NA,NA
+Arkansas,No,0,1,NA,NA
+California,Yes,1,0,Cal. Health & Safety Code &sect; 121349,2011
+Colorado,Yes,1,0,Colo. Rev. Stat. &sect; 25-1-520,2012
+Connecticut,Yes,0,0,Conn. Gen. Stat. &sect; 19a-124,2014
+Delaware,Yes,1,0,"Del. Code tit. 29, &sect; 7991",2006
+District of Columbia,Yes,1,0,D.C. Code &sect; 48-1103.01,2006
+Florida,Yes,0,0,Fla. Stat. &sect; 381.0038,NA
+Georgia,No,0,1,NA,NA
+Hawaii,Yes,1,0,Rev. Stat. &sect; 490:1-101,2016
+Idaho,No,0,1,NA,NA
+Illinois,No,0,1,NA,NA
+Indiana,Yes,0,0,Ind. Code &sect; 16-41-7.5-4,2015
+Iowa,No,0,1,NA,NA
+Kansas,No,0,1,NA,NA
+Kentucky,Yes,1,0,Ky. Rev. Stat. Ann. &sect; 218A.500,2015
+Louisiana,No,0,1,NA,NA
+Maine,Yes,1,0,"Me. Stat. tit. 22, &sect; 1341",2016
+Maryland,Yes,1,0,"Md. Code, Health Law &sect; 24-802",2016
+Massachusetts,Yes,1,0,"Mass. Gen. Laws ch. 111, &sect; 215",2006
+Michigan,No,0,1,NA,NA
+Minnesota,No,0,1,NA,NA
+Mississippi,No,0,1,NA,NA
+Missouri,No,0,1,NA,NA
+Montana,No,0,1,NA,NA
+Nebraska,No,0,1,NA,NA
+Nevada,Yes,1,0,Nev. Rev. Stat. &sect; 439.987,2013
+New Hampshire,No,0,1,NA,NA
+New Jersey,Yes,1,0,N.J. Rev. Stat. &sect; 26:5C-28,2013
+New Mexico,Yes,1,0,N.M. Stat. &sect; 24-2C-4,1997
+New York,Yes,1,0,"N.Y. Comp. Codes R. & Regs. tit. 10, &sect; 80.135",2000
+North Carolina,Yes,1,0,N.C. Gen. Stat. &sect; 90-113.27,2016
+North Dakota,No,0,1,NA,NA
+Ohio,Yes,1,0,Ohio Rev. Code &sect; 3707.57,2016
+Oklahoma,No,0,1,NA,NA
+Oregon,No,0,1,NA,NA
+Pennsylvania,No,0,1,NA,NA
+Rhode Island,Yes,1,0,23 R.I. Gen. Laws &sect; 23-11-19,2013
+South Carolina,No,0,1,NA,NA
+South Dakota,No,0,1,NA,NA
+Tennessee,No,0,1,NA,NA
+Texas,No,0,1,NA,NA
+Utah,Yes,1,0,Utah Code &sect; 26-7-8,2016
+Vermont,Yes,1,0,"Vt. Stat. Ann. tit. 18, &sect; 4478",2018
+Virginia,No,0,1,NA,NA
+Washington,Yes,1,0,"Wash. Rev. Code &sect; 70.24.400 (2010) (See Spokane County Health Dist. v. Brockett, 839 P.2d 324 (1992))",2010
+West Virginia,No,0,1,NA,NA
+Wisconsin,No,0,1,NA,NA
+Wyoming,No,0,1,NA,NA

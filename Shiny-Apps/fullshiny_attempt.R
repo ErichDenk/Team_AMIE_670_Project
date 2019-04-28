@@ -1,17 +1,14 @@
 library(sf)          # classes and functions for vector data
 library(raster)      # classes and functions for raster data
-library(spData)        # load geographic data
-#library(spDataLarge)   # load larger geographic data
+
+
 library(dplyr)
-library(tmap)    # for static and interactive maps
-library(leaflet) # for interactive maps
-library(mapview) # for interactive maps
+
 library(ggplot2) # tidyverse vis package
 library(shiny)   # for web applications
-require(cartogram)
-require(lubridate)
+
 require(ggplot2)
-#setwd("~/ivyxd94/datasci group project/Active-data-sets")
+
 require(tidyverse)
 require(shiny)
 require(here)
@@ -31,7 +28,7 @@ regions = data.frame("West" = c("WA", "OR", "CA", "NV", "UT", "ID", "MT", "WY", 
 
 #ui
 
-ui <- navbarPage("Navbar!",
+ui <- navbarPage("Team Amie",
            tabPanel("State PrEP Users and HIV Prevalence",
                     sidebarLayout(
                       sidebarPanel(

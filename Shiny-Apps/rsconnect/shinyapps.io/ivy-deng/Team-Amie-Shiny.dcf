@@ -1,0 +1,12 @@
+name: Team-Amie-Shiny
+title: Team-Amie-Shiny
+username:
+account: ivy-deng
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 895279
+bundleId: 2043948
+url: https://ivy-deng.shinyapps.io/Team-Amie-Shiny/
+when: 1556413056.12879
+asMultiple: FALSE
+asStatic: FALSE

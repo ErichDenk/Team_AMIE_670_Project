@@ -3,10 +3,9 @@ title: "PPOL 670 Project Showcase"
 author: "Ivy Deng, Erich Denk, and Ann Marie Stringer"
 date: "4/29/2019"
 output:
-  ioslides_presentation: default
   slidy_presentation: default
 incremental: yes
-footer: '            Team AMIE            '
+footer: 'Team AMIE'
 duration: 12
 ---
 
@@ -17,13 +16,10 @@ require(caret)
 require(recipes)
 require(pdp)
 require(here)
-<<<<<<< HEAD
 require(knitr)
-=======
 require(ggplot2)
 require(ggthemes)
 require(ggiraph)
->>>>>>> 5f8f3ab19c11ddc29851cedd65eab9ae5a41e167
 ```
 
 # <span style="color:steelblue">**Problem Statement and Background** </span>
@@ -49,12 +45,8 @@ require(ggiraph)
     - MSM population
     - Injection Drug Users
     - Black population
-<<<<<<< HEAD
+    - Sex workers
 - Two prevention methods - both cotroversial/stigmatized 
-=======
-    - Sex Workers
-- Two prevention policies
->>>>>>> 5f8f3ab19c11ddc29851cedd65eab9ae5a41e167
   1. Syringe Services Programs (SSPs)/ Syringe Exchange Programs (SEPs)
   2. Pre-exposure prophylaxis (PrEP)
 </div>
@@ -121,7 +113,7 @@ plots <- grid.arrange(idu_plot,SEP_plot, ncol = 2)
 # <span style="color:steelblue">**Problem Statement and Background (cont.)** </span>
 *Trends that brought our research question about*
 
-```{r, fig.align='center', out.width='40%'}
+```{r, fig.align='center', out.width='30%'}
 include_graphics(here("Deliverables/PrEP-BarChart.jpg"))
 ```
 <font size="1">Retrieved from: https://www.hiv.gov/blog/prep-prescriptions-rise-more-work-remains </font>
@@ -161,30 +153,24 @@ include_graphics(here("Deliverables/PrEP-BarChart.jpg"))
 
 # <span style="color:steelblue">**Results** </span> 
 
-The shiny app dashboard. Combines a number of efforts together
+- The shiny app dashboard. Combines a number of efforts together
 
-<<<<<<< HEAD
- Our [dashboard](https://annmarie.shinyapps.io/Shiny-Apps/)
+  - Our [dashboard](https://annmarie.shinyapps.io/Shiny-Apps/)
 
-- [(backup link)](https://ivy-deng.shinyapps.io/Shiny-Apps/)
+  - [(backup link)](https://ivy-deng.shinyapps.io/Shiny-Apps/)
  
-- Some findings
-  1. PReP usage does not match the need for most states - mapping provides clear visualization of which states in particular
-  2. The states with highest unmet need for SSP do not have legislation in place to legalize SSPs
-=======
-<<<<<<< HEAD
-<span style="color:dodgerblue"> Our dashboard: </span> 
-https://ivy-deng.shinyapps.io/Shiny-Apps/
 
-- Unmet PrEP Demand in states such as Texas, California, Louisiana, Georgia, and Florida. California, Texas, and Florida show a decreasing trend of number of PrEP users overtime. 
+Some findings
 
-- Southern states in general have more cases of HIV new diagnosis than other regions. However, there are fewer users of PrEP in those states compared to other regions. 
+- PReP usage does not match the need for most states - mapping provides clear visualization of which states in particular
+  - Unmet PrEP Demand in states such as Texas, Louisiana, Georgia, and Florida. California, Texas, and Florida show a decreasing trend of number of PrEP users overtime. 
+  - Southern states in general have more cases of HIV new diagnosis than other regions. However, there are fewer users of PrEP in those states compared to other regions. 
+- The states with highest unmet need for SSP do not have legislation in place to legalize SSPs
+  - Especially: TX, FL, GA, PA
+  - West and Northeast regions tend to be more likely to have legislation and lower unmet need, South least likely. 
 
--(Ann Marie: Results from HIV IDU and SSP map)
-=======
- Our [dashboard](https://ivy-deng.shinyapps.io/Shiny-Apps/)
->>>>>>> f09dd1c093d5c13292ea068eb750521db0a5dee6
->>>>>>> 5f8f3ab19c11ddc29851cedd65eab9ae5a41e167
+
+
 
 # <span style="color:steelblue">**Results** </span>
 The second (and less successful) effort: Our supervised machine learning results
@@ -232,10 +218,6 @@ plot_varimp <-
 
 ```
 
-<<<<<<< HEAD
-
-=======
->>>>>>> f09dd1c093d5c13292ea068eb750521db0a5dee6
 # <span style="color:steelblue">**Lessons Learned** </span>
 
 - Be flexible! Try to let your preconcieved notions go
@@ -249,9 +231,7 @@ plot_varimp <-
 
 # <span style="color:steelblue">**Conclusions** </span>
 
-- States with a high HIV prevalence should invest more resources in supporting and promoting HIV prevention programs (PrEP and SSPs)
-
-- 
+- States with a high HIV prevalence/incidence should invest more resources in supporting and promoting HIV prevention programs (PrEP and SSPs)
 
 # <span style="color:steelblue">**Thanks!** </span>
 

@@ -231,7 +231,7 @@ server <-function(input, output, session) {
   output$map2 <- renderPlot({
     mapCreateData %>%
       filter(., Year == input$year) %>%
-      ggplot(mapping = aes(long, lat, group = group, fill = NewDiag)) +
+      ggplot(mapping = aes(long, lat, group = group, fill = log(NewDiag))) +
       geom_polygon(color = "#ffffff", size = .25) +
       scale_fill_viridis(option = "magma", direction = -1,
                          name = "HIV New Diagnosis",

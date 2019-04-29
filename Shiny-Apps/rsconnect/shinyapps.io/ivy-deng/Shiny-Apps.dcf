@@ -5,8 +5,8 @@ account: ivy-deng
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 895357
-bundleId: 2044821
+bundleId: 2045277
 url: https://ivy-deng.shinyapps.io/Shiny-Apps/
-when: 1556470946.52416
+when: 1556486829.71248
 asMultiple: FALSE
 asStatic: FALSE

@@ -126,6 +126,10 @@ Through our analysis of HIV prevalence data and SEP locations/state legislation,
 
 From the machine learning perspective, the random forest model had the most predictive accuracy of the three models employed. A random forest model with extratrees and mtry = 32 correctly predicts the SEP law status in more than 80% of state-years.
 
+Static Version of `ggiraph` plot of importance
+```{r, out.width="60%"}
+include_graphics(here("Appendix-images/ML_plot.PNG"))
+```
 More interestingly the most important factors in prediction were related to Hispanic incidence of HIV from IDU, Hispanic incidence of HIV and MSM/IDU, and incidence in those over 55 years and older. These and other factors are demonstrated in the interactive model (shown in static form) below. The year was given as the most important factor, but this makes sense in that it is the last year available in the data set. 
 
 ##Next Steps
@@ -133,39 +137,7 @@ For the PrEP data, it would be useful to do a deeper dive in the data and aggreg
 
 For future machine learning exploration, the inclusion of more data sources such as demographics and political affiliation may be worth addiing to our model. We also might want to think about other predicted varaibles. For example, predicting if a state has an HIV outbreak in a given year would be worthwhile and of interest to policymakers going forward. 
 
-```{r, include = FALSE}
-require(wesanderson)
-require(ggplot2)
-require(ggiraph)
-require(ggthemes)
 
-pal1 <- wes_palette(name = "GrandBudapest2", 6, type = "continuous")
-grab_varimp <- read_csv(here("R-markdown-Files/ggiraph.csv"))
-```
-```{r, fig.width=5,fig.height=5, fig.align='center'}
-plot_varimp <- 
-  grab_varimp %>% 
-    mutate(keyword = fct_reorder(keyword,importance)) %>% 
-    mutate(sum_report = str_glue('keyword: "{keyword}"\nImportance: {round(importance,2)}%')) %>% 
-    top_n(10, importance) %>% 
-    ggplot(aes(keyword,importance,
-               fill=importance)) +
-    geom_point() +
-    geom_hline(aes(yintercept = max(importance)),color="grey20",size=1,alpha=.25) +
-    geom_bar_interactive(aes(tooltip=sum_report),
-                         stat="identity",color="grey10") + 
-    coord_flip() +
-    scale_fill_gradientn(colors = pal1) +
-    theme_hc() +
-    labs(y="Importance of the Feature in Predicting SEPs\n(higher values == more important)",
-         x="Features")+
-    theme(legend.position = "none",
-          axis.title = element_text(family="serif",size=10),
-          axis.text = element_text(family="serif",size=10)) -> plt_obj
-  interactive_plot <- girafe(ggobj = plt_obj,width = 4,height=4)
-  girafe_options(interactive_plot, opts_toolbar(position = "topleft"))
-
-```
 
 #References
 

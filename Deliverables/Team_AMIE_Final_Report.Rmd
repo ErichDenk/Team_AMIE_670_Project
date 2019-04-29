@@ -18,13 +18,15 @@ require(here)
 
 In 2015, there were an estimated 1.1 million people living with HIV in the United States. In 2016, there were almost 40,000 new cases of HIV. 1 of 10 of new diagnoses in 2016 was attributable to injection drug use.  
 
-So far, there is no known cure to HIV.The main treatment for HIV is a class of drugs called antiretrovirals. These drugs don’t cure HIV, but they can reduce the amount of virus in the body of someone with HIV. However, antiretroviral drugs can cause severe side effects that can make some people stop taking them. 
+So far, there is no known cure to HIV. The main treatment for HIV is a class of drugs called antiretrovirals. These drugs don’t cure HIV, but they can reduce the amount of virus in the body of the person with HIV. 
 
-Historically marginalized populations, such as men who have sex with men (MSM), injection drug users (IDU), sex workers, and African Americans, are disproportionately affected by HIV. There is also a cyclical relationship between stigma and HIV; people who experience stigma and discrimination are marginalized and made more vulnerable to HIV, while those living with HIV are more vulnerable to experiencing stigma and discrimination. Therefore, it is critical to implement HIV prevention interventions to protect these marginalized populations from exposure to HIV. 
+Historically marginalized populations, such as men who have sex with men (MSM), injection drug users (IDU), sex workers, and African Americans, are disproportionately affected by HIV. The cyclical relationship between HIV stigmatization worsens the situation; Marginalized groups who experience discrimination and stigma are at a high risk of exposure to HIV, in the meantime, people with HIV are also more likely to receive unfair treatment from the society due to stigma and discrimination. Therefore, it is critical to implement HIV prevention interventions to protect these marginalized populations from exposure to HIV. 
 
-Currently, the two main HIV prevention strategies in the U.S. are pre-exposure prophylaxis (PrEP) and Syringe service programs (SSPs).PrEP is the use of drugs for people who are HIV negative but who are also at high-risk of contracting HIV. The high-risk populations in include MSM, injection drug users, and sex workers. 
+Currently, the two main HIV prevention strategies in the U.S. are pre-exposure prophylaxis (PrEP) and Syringe service programs (SSPs).PrEP is the use of drugs for people who are HIV negative but at high-risk of being infected with HIV. The at-danger populations include MSM, injection drug users, and sex workers. 
 
-Syringe services programs (SSPs), also referred to as needle exchange programs (NEPs) and syringe exchange programs (SEPs)  provide sterile needles and syringes to drug users and safely dispose of used needles and syringes as a preventative measure for HIV and other infections that are transmissible by blood. Many of these programs integrate other intervention strategies, such as testing, treatment, and counseling services. 
+Syringe services programs (SSPs), also referred to as needle exchange programs (NEPs) and syringe exchange programs (SEPs) provide sterile needles and syringes to drug users and safely dispose of used needles and syringes as a preventative measure for HIV and other infections that are transmissible by blood. Many of these programs integrate other intervention strategies, such as testing, treatment, and counseling services. 
+
+
 
 ```{r, include=FALSE}
 idu_dat <- read_csv("idu_dat.csv")
@@ -66,7 +68,7 @@ plots <- grid.arrange(idu_plot,SEP_plot, ncol = 2)
 ```
 As of 2014, 33 states had explicitly banned SSPs, and the federal funding of SSPs was prohibited.  In 2016, the law was changed to allow jurisdictions to use federal funding to support certain components of SSPs, excluding the purchase of the actual syringe and needles (Weinmeyer 2016). Despite this new legal opportunity, SSPs remain a controversial topic with strong opposition. Opponents to SSPs believe that federal funding of these programs indicates approval of illegal drug use, will lead to an increase in drug use and will lessen the moral and logistical barrier of access for children to become users. Despite the research and evidence that has been presented to oppose these viewpoints, adequate SSPs are still not available. 
 
-While PReP has been proven to be an effective prevention method for those at high risk for contracting HIV, it is not adequately utilized. Barriers to access include stigmatization of users of PReP, through negative sentiment regarding promiscuity through labels such as “Truvada whore” (Truvada being the manufacturer of PReP). Financial access is also a barrier, with a 30-day supply costing $2,000. Many insurance companies cover PReP, but out-of-pocket expenses are still prohibitive to many who would benefit from the drug. Until 2018, no generic forms of Truvada were approved for use in the US, allowing Truvada to continue to charge high costs for the drug. 
+While PReP has been proven to be an effective prevention method for those at high risk for contracting HIV, it is not adequately utilized. Barriers to access include stigmatization of users of PReP, through negative sentiment regarding promiscuity through labels such as “Truvada whore” (Truvada being the manufacturer of PReP) (Calabrese et. al, 2015). Financial access is also a barrier, with a 30-day supply costing $2,000. Many insurance companies cover PReP, but out-of-pocket expenses are still prohibitive to many who would benefit from the drug (Luthra, et al., 2019). Until 2018, no generic forms of Truvada were approved for use in the US, allowing Truvada to continue to charge high costs for the drug.  
 
 There is a need to understand the effectiveness of HIV prevention strategies in limiting transmission of HIV in high-risk areas and understand the potential of uptake of SSPs to decrease transmission among injection drug users (IDU) in areas where need for SSPs have not been met. 
 
@@ -94,7 +96,7 @@ Additionally, one might wonder whether it can be predicted when a state allows S
 
 #Methods and Tools
 ##Mapping and Shiny Apps
-The dashboard is presented via a Shiny application. The Shiny app allows users to interact with the maps, tables, and graphs that we created. Rather than a static representation, Shiny allows users to be more involved in learning about these trends.
+The [dashboard] (https://annmarie.shinyapps.io/Shiny-Apps/) is presented via a Shiny application. The Shiny app allows users to interact with the maps, tables, and graphs that we created. Rather than a static representation, Shiny allows users to be more involved in learning about these trends.
 
 The maps were created with `urbanmappr` and state shapefiles...
 
@@ -112,7 +114,9 @@ The `caret` package was the main driver of the machine learning portion of our p
 
 #Results & Discussion
 ##Sub-Objective 1: Communicating the unmet need of PReP usage
-[IVY ADD HERE]
+Through our analysis, we found that there is an unmet need for PrEP in states such as Texas, Louisiana, Georgia, and Florida. We have seen an decreasing number of PrEP users in states including California, Texas, and Florida while the cases of HIV new diagnosis have increased from 2012 to 2016.  Further, overall the south has more cases of HIV new diagnosis by year than other regions. However, states in the south have lower levels of PrEP participation compared to other states. The severity of HIV prevalence seems have not been addressed enough in southern states. 
+Our results suggest that state governments, especially those in the south, should invest more resources in promoting and supporting PrEP participation to prevent high-risk populations from contracting HIV. 
+
 
 ##Sub-Objective 2: Communicating the unmet need of SEPs
 Through our analysis of HIV prevalence data and SEP locations/state legislation, we were able to identify the following trends regarding unmet need for SEPs. Mapping the county IDU prevalence as a percent of total HIV cases allowed us to identify clusters of the country where IDU transmission is most severe. Clusters of high IDU transmission exist in the southeast (particularly in Southern FL and LA), the Northeast (NY/NJ/PA/CT), and the West (particularly in CA/AZ). By plotting the SEP locations on top of the prevalence map, we found that SEPs visually appear to be lacking in the Southeast and Southwest regions of the country. We were able to quantify the unmet need for SEPs per state by calculating the total number of IDU transmission cases over the total number of SEPs in that state, which we defined as SSP burden. For states with zero SEPs, the total number of cases were plotted as a transparent column to represent the unmet need in a state with zero SEPs. Through this analysis, we found that TX, FL, GA, and PA have the highest unmet need for SEPs. By adding the legal status to this analysis, we identified that none of these states have passed legislation legalizing SEPs. In fact, of the 15 states that we found to have the highest unmet need, only 4 of them have legislation in place legalizing SEPs. We concluded that the data show that states with legislation in place to legalize SEPs are more likely to have adequate SEPs in place to serve the IDU population in the state. While we were unable to attribute an increase in SEPs to a decrease in HIV transmission among IDU due to limited availability of data, it is hopeful that the evidence in literature of the success of SEPs combined with our geographical and legislation based analysis will compel policymakers in states with high IDU HIV transmission to devote resources towards SEPs. 

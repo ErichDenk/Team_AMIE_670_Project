@@ -12,6 +12,7 @@ require(caret)
 require(recipes)
 require(pdp)
 require(here)
+require(knitr)
 ```
 
 #Problem Statement and Background
@@ -130,7 +131,7 @@ More interestingly the most important factors in prediction were related to Hisp
 ##Next Steps
 For the PrEP data, it would be useful to do a deeper dive in the data and aggregate by demographic and socioeconomic indicators and transmission category to further understand the unmet need among specific populationg groups in order to more directly target interventions. For the SEP location and IDU transmission analysis, next steps would include doing a time series analysis to see if states exhibited a downward trend following the passing of legislation legalizing SEPs. 
 
-[ERICH ENTERS ML NEXT STEPS]
+For future machine learning exploration, the inclusion of more data sources such as demographics and political affiliation may be worth addiing to our model. We also might want to think about other predicted varaibles. For example, predicting if a state has an HIV outbreak in a given year would be worthwhile and of interest to policymakers going forward. 
 
 ```{r, include = FALSE}
 require(wesanderson)
@@ -181,3 +182,25 @@ Rinkunas, Susan, and Shefali Luthra and Anna Gorman News Kaiser Health. “The R
 Weinmeyer, Richard. 2016. “Needle Exchange Programs’ Status in US Politics.” AMA Journal of Ethics 18 (3): 252–57. https://doi.org/10.1001/journalofethics.2017.18.3.hlaw1-1603.
 
 #Appendix
+##Shiny App Visualizations
+
+PrEP by State Visualizations
+```{r, out.width="60%"}
+include_graphics(here("Appendix-images/App1.PNG"))
+```
+Mapping SSPs in comparison to HIV due to IDU
+```{r, out.width="60%"}
+include_graphics(here("Appendix-images/App2.PNG"))
+```
+Searchable Table of PrEP Users
+```{r, out.width="60%"}
+include_graphics(here("Appendix-images/App3.PNG"))
+```
+Searchable Table of Percentage of HIV Cases due to IDU
+```{r, out.width="60%"}
+include_graphics(here("Appendix-images/App4.PNG"))
+```
+Plot of "Burden of SSPs" by State
+```{r, out.width="60%"}
+include_graphics(here("Appendix-images/graph2.PNG"))
+```

@@ -16,13 +16,13 @@ require(here)
 
 #Problem Statement and Background
 
-In 2015, there were an estimated 1.1 million people living with HIV in the United States. In 2016, there were almost 40,000 new cases of HIV. 1 of 10 of new diagnoses in 2016 was attributable to injection drug use.  
+In 2015, there were an estimated 1.1 million people living with HIV in the United States (CDC, 2017). In 2016, there were almost 40,000 new cases of HIV with 1 in 10 new diagnoses attributable to injection drug use (CDC, 2017).  
 
 So far, there is no known cure to HIV. The main treatment for HIV is a class of drugs called antiretrovirals. These drugs don’t cure HIV, but they can reduce the amount of virus in the body of the person with HIV. 
 
-Historically marginalized populations, such as men who have sex with men (MSM), injection drug users (IDU), sex workers, and African Americans, are disproportionately affected by HIV. The cyclical relationship between HIV stigmatization worsens the situation; Marginalized groups who experience discrimination and stigma are at a high risk of exposure to HIV, in the meantime, people with HIV are also more likely to receive unfair treatment from the society due to stigma and discrimination. Therefore, it is critical to implement HIV prevention interventions to protect these marginalized populations from exposure to HIV. 
+Historically marginalized populations, such as men who have sex with men (MSM), injection drug users (IDU), sex workers, and African Americans, are disproportionately affected by HIV. The cyclical relationship between HIV stigmatization worsens the situation; marginalized groups who experience discrimination and stigma are at a high risk of exposure to HIV, while people with HIV are also more likely to receive unfair treatment from the society due to stigma and discrimination. Therefore, it is critical to implement HIV prevention interventions to protect these marginalized populations from exposure to HIV. 
 
-Currently, the two main HIV prevention strategies in the U.S. are pre-exposure prophylaxis (PrEP) and Syringe service programs (SSPs).PrEP is the use of drugs for people who are HIV negative but at high-risk of being infected with HIV. The at-danger populations include MSM, injection drug users, and sex workers. 
+Currently, the two main HIV prevention strategies in the U.S. are pre-exposure prophylaxis (PrEP) and Syringe service programs (SSPs). PrEP is the use of drugs for people who are HIV negative but at high risk of being infected with HIV. The at-danger populations include MSM, injection drug users, and sex workers. 
 
 Syringe services programs (SSPs), also referred to as needle exchange programs (NEPs) and syringe exchange programs (SEPs) provide sterile needles and syringes to drug users and safely dispose of used needles and syringes as a preventative measure for HIV and other infections that are transmissible by blood. Many of these programs integrate other intervention strategies, such as testing, treatment, and counseling services. 
 
@@ -68,40 +68,40 @@ plots <- grid.arrange(idu_plot,SEP_plot, ncol = 2)
 ```
 As of 2014, 33 states had explicitly banned SSPs, and the federal funding of SSPs was prohibited.  In 2016, the law was changed to allow jurisdictions to use federal funding to support certain components of SSPs, excluding the purchase of the actual syringe and needles (Weinmeyer 2016). Despite this new legal opportunity, SSPs remain a controversial topic with strong opposition. Opponents to SSPs believe that federal funding of these programs indicates approval of illegal drug use, will lead to an increase in drug use and will lessen the moral and logistical barrier of access for children to become users. Despite the research and evidence that has been presented to oppose these viewpoints, adequate SSPs are still not available. 
 
-While PReP has been proven to be an effective prevention method for those at high risk for contracting HIV, it is not adequately utilized. Barriers to access include stigmatization of users of PReP, through negative sentiment regarding promiscuity through labels such as “Truvada whore” (Truvada being the manufacturer of PReP) (Calabrese et. al, 2015). Financial access is also a barrier, with a 30-day supply costing $2,000. Many insurance companies cover PReP, but out-of-pocket expenses are still prohibitive to many who would benefit from the drug (Luthra, et al., 2019). Until 2018, no generic forms of Truvada were approved for use in the US, allowing Truvada to continue to charge high costs for the drug.  
+While PrEP has been proven to be an effective prevention method for those at high risk for contracting HIV, it is not adequately utilized. Barriers to access include stigmatization of users of PrEP, through negative sentiment regarding promiscuity through labels such as “Truvada whore” (Truvada being the manufacturer of PrEP) (Calabrese et al., 2015). Financial access is also a barrier, with a 30-day supply costing $2,000. Many insurance companies cover PrEP, but out-of-pocket expenses are still prohibitive to many who would benefit from the drug (Luthra et al., 2019). Until 2018, no generic forms of Truvada were approved for use in the US, allowing Truvada to continue to charge high costs for the drug.  
 
-There is a need to understand the effectiveness of HIV prevention strategies in limiting transmission of HIV in high-risk areas and understand the potential of uptake of SSPs to decrease transmission among injection drug users (IDU) in areas where need for SSPs have not been met. 
+There is a need to understand the effectiveness of HIV prevention strategies in limiting transmission of HIV in high-risk areas and understand the potential of uptake of SSPs to decrease transmission among injection drug users (IDU) in areas where the need for SSPs is not met. 
 
 Through analyzing data on new incidence of HIV (particularly the incidences due to IDU), information on legalization of SSPs by states, and locations and numbers of SSPs by states,this study explores the unmet need of the two prevention methods (SSP and PrEP) and predictors of when the state will legalize operations of SSPs.  
 
 #Data 
 
 ##AIDSVu
-Geographic HIV data is available from AIDSVu, an online interactive tool that compiles public health data made available through the Center for Disease Control and Prevention (CDC) HIV surveillance. From the AIDSVu data we used three separate data sets. The first is the statewide new diagnoses set (incidence data). This is a fairly complete from 2008 to 2016, though some states do not report on given statistics and occasional data is suppressed for confidentiality reasons. The incidence data set includes number of new diagnoses, new diagnoses rates, category of transmission, and demographic data at the state level. The second data set used was the 2015 prevalence data, which is aggregated at the county level. Prevalence differs from incidence in that it represents the total number of persons living with HIV, while incidence represents the new diagnoses in a given time period. County-aggregated data is only available in the prevalence data set due to confidentiality. The third data set used was the  PrEP data set, which shows participation rates by state. 
+Geographic HIV data is available from AIDSVu, an online interactive tool that compiles public health data made available through the Center for Disease Control and Prevention (CDC) HIV surveillance. From the AIDSVu data, we used three separate data sets. The first is the statewide new diagnoses set (incidence data). This is fairly complete from 2008 to 2016, though some states do not report on given statistics and occasional data is suppressed for confidentiality reasons. The incidence data set includes the number of new diagnoses, new diagnoses rates, category of transmission, and demographic data at the state level. The second data set used was the 2015 prevalence data, which is aggregated at the county level. Prevalence differs from incidence in that it represents the total number of persons living with HIV, while incidence represents the new diagnoses in a given time period. County-aggregated data is only available in the prevalence data set due to confidentiality. The third data set used was the  PrEP data set, which shows participation rates by state. 
 
 ##NASEN
 Our second main source was NASEN (North American Syringe Exchange Network). NASEN provides the most (though not completely) comprehensive list of SEPs. NASEN is a non-profit whose mission is to connect people to syringe exchange locations near them. This information was scraped to build a data set of all SEP locations by city and state.
 
 ##State SEP Laws
-Finally, we used the CDC's list of state laws that allow or mandate state sponsored syringe exchange programs. Using their citations of state statutes, a longitudinal dataset of State laws (allow or not) from 2008 to 2016 was created. 
+Finally, we used the CDC's list of state laws that allow or mandate state-sponsored syringe exchange programs. Using their citations of state statutes, a longitudinal dataset of State laws (allow or not) from 2008 to 2016 was created. 
 
 ##Data Limitations
-The AIDSVu data is sourced from the CDC reports on HIV surveillance. The CDC compiles public health records from all reporting jurisdictions, and attempts to deduplicate cases across jurisdictions (persons living with HIV may cross state lines and be counted multiple times). This de-duplication process is not perfect, and many duplicate cases exist within the data, which may overestimate the burden of HIV in certain regions. Efforts are underway to improve this deduplication process. The NASEN data on SEPs is not a comprehensive list, and therefore the unmet need may be overestimated.
+The AIDSVu data is sourced from the CDC reports on HIV surveillance. The CDC compiles public health records from all reporting jurisdictions and attempts to deduplicate cases across jurisdictions (persons living with HIV may cross state lines and be counted multiple times). This de-duplication process is not perfect, and many duplicate cases exist within the data, which may overestimate the burden of HIV in certain regions. Efforts are underway to improve this deduplication process. The NASEN data on SEPs is not a comprehensive list, and therefore the unmet need may be overestimated.
 
 #Research Design/Approach
 
-The goal of this project was to create a tool for policymakers and stakeholders to use in order to understand where there is highest unmet need of proven effective prevention methods, in order to make decisions on allocation of funds and policy decision making. Since this is a geographic issue, as laws and stigma in certain areas have prevented the uptake of SEPs and PReP usage, we have created an interactive dashboard to explain the geographical relationship between HIV burden (incidence and prevalence), and intervention uptake (PReP usage, SEP locations, and state laws). A series of interactive maps, tables, and graphs are a great way to allow stakeholders to learn more about trends nationally and in their own communities. 
+The goal of this project was to create a tool for policymakers and stakeholders to use in order to understand where there is the highest unmet need of proven effective prevention methods, in order to make decisions on the allocation of funds and policy decision making. Since this is a geographic issue, as laws and stigma in certain areas have prevented the uptake of SEPs and PrEP usage, we have created an interactive dashboard to explain the geographical relationship between HIV burden (incidence and prevalence), and intervention uptake (PrEP usage, SEP locations, and state laws). A series of interactive maps, tables, and graphs are a great way to allow stakeholders to learn more about trends nationally and in their own communities. 
 
-Additionally, one might wonder whether it can be predicted when a state allows SEPs. In an effort to answer this question, supervised machine learning techniques were used in an attempt to model the decision to have an SEP. If we know what factors are most important in anticipating a law, perhaps new diagnoses of a certain demographic group, then governments can be proactive rather than reactive in their sEP policy. 
+Additionally, one might wonder whether it can be predicted when a state allows SEPs. In an effort to answer this question, supervised machine learning techniques were used in an attempt to model the decision to have a SEP. If we know what factors are most important in anticipating a law, perhaps new diagnoses of a certain demographic group, then governments can be proactive rather than reactive in their SEP policy. 
 
 #Methods and Tools
 ##Mapping and Shiny Apps
 The [dashboard] (https://annmarie.shinyapps.io/Shiny-Apps/) is presented via a Shiny application. The Shiny app allows users to interact with the maps, tables, and graphs that we created. Rather than a static representation, Shiny allows users to be more involved in learning about these trends.
 
-The maps were created with `urbanmappr` and state shapefiles...
+The maps were created with `urbnmapr` and longitude/lattitude coordinates.
 
-###Sub-Objective 1: Communicating the unmet need of PReP usage
-The AIDSVu statewide incidence and PReP participation data sets were used to create a map which compares the need (incidence per state) and the utilization (PReP participation per state) in order to understand the unmet need of PReP usage.
+###Sub-Objective 1: Communicating the unmet need of PrEP usage
+The AIDSVu statewide incidence and PrEP participation data sets were used to create a map which compares the need (incidence per state) and the utilization (PrEP participation per state) in order to understand the unmet need for PrEP usage.
 
 ###Sub-Objective 2: Communicating the unmet need of SEPs
 The AIDSVu countywide prevalence data set was used to map the HIV prevalence due to injection drug use at the county level. The NASEN SEP location data were used to plot all SEP locations over the prevalence map. Finally, the CDC state law data were used to indicate whether or not a state has legislation in place legalizing SEPs. 
@@ -113,19 +113,24 @@ The `caret` package was the main driver of the machine learning portion of our p
 
 
 #Results & Discussion
-##Sub-Objective 1: Communicating the unmet need of PReP usage
-Through our analysis, we found that there is an unmet need for PrEP in states such as Texas, Louisiana, Georgia, and Florida. We have seen an decreasing number of PrEP users in states including California, Texas, and Florida while the cases of HIV new diagnosis have increased from 2012 to 2016.  Further, overall the south has more cases of HIV new diagnosis by year than other regions. However, states in the south have lower levels of PrEP participation compared to other states. The severity of HIV prevalence seems have not been addressed enough in southern states. 
+##Sub-Objective 1: Communicating the unmet need of PrEP usage
+Through our analysis, we found that there is an unmet need for PrEP in states such as Texas, Louisiana, Georgia, and Florida. We have seen a decreasing number of PrEP users in states including California, Texas, and Florida while the cases of HIV new diagnosis have increased from 2012 to 2016.  Further, overall the south has more cases of HIV new diagnosis by year than other regions. However, states in the south have lower levels of PrEP participation compared to other states. The severity of HIV prevalence seems tohave not been addressed enough in southern states. 
 Our results suggest that state governments, especially those in the south, should invest more resources in promoting and supporting PrEP participation to prevent high-risk populations from contracting HIV. 
 
 
 ##Sub-Objective 2: Communicating the unmet need of SEPs
-Through our analysis of HIV prevalence data and SEP locations/state legislation, we were able to identify the following trends regarding unmet need for SEPs. Mapping the county IDU prevalence as a percent of total HIV cases allowed us to identify clusters of the country where IDU transmission is most severe. Clusters of high IDU transmission exist in the southeast (particularly in Southern FL and LA), the Northeast (NY/NJ/PA/CT), and the West (particularly in CA/AZ). By plotting the SEP locations on top of the prevalence map, we found that SEPs visually appear to be lacking in the Southeast and Southwest regions of the country. We were able to quantify the unmet need for SEPs per state by calculating the total number of IDU transmission cases over the total number of SEPs in that state, which we defined as SSP burden. For states with zero SEPs, the total number of cases were plotted as a transparent column to represent the unmet need in a state with zero SEPs. Through this analysis, we found that TX, FL, GA, and PA have the highest unmet need for SEPs. By adding the legal status to this analysis, we identified that none of these states have passed legislation legalizing SEPs. In fact, of the 15 states that we found to have the highest unmet need, only 4 of them have legislation in place legalizing SEPs. We concluded that the data show that states with legislation in place to legalize SEPs are more likely to have adequate SEPs in place to serve the IDU population in the state. While we were unable to attribute an increase in SEPs to a decrease in HIV transmission among IDU due to limited availability of data, it is hopeful that the evidence in literature of the success of SEPs combined with our geographical and legislation based analysis will compel policymakers in states with high IDU HIV transmission to devote resources towards SEPs. 
+Through our analysis of HIV prevalence data and SEP locations/state legislation, we were able to identify the following trends regarding the unmet need for SEPs. Mapping the county IDU prevalence as a percent of total HIV cases allowed us to identify clusters of the country where IDU transmission is most severe. Clusters of high IDU transmission exist in the southeast (particularly in Southern FL and LA), the Northeast (NY/NJ/PA/CT), and the West (particularly in CA/AZ). By plotting the SEP locations on top of the prevalence map, we found that SEPs visually appear to be lacking in the Southeast and Southwest regions of the country. We were able to quantify the unmet need for SEPs per state by calculating the total number of IDU transmission cases over the total number of SEPs in that state, which we defined as SSP burden. For states with zero SEPs, the total number of cases were plotted as a transparent column to represent the unmet need in a state with zero SEPs. Through this analysis, we found that TX, FL, GA, and PA have the highest unmet need for SEPs. By adding the legal status to this analysis, we identified that none of these states have passed legislation legalizing SEPs. In fact, of the 15 states that we found to have the highest unmet need, only 4 of them have legislation in place legalizing SEPs. We concluded that the data show that states with legislation in place to legalize SEPs are more likely to have adequate SEPs in place to serve the IDU population in the state. While we were unable to attribute an increase in SEPs to a decrease in HIV transmission among IDU due to limited availability of data, it is hopeful that the evidence in literature of the success of SEPs combined with our geographical and legislation based analysis will compel policymakers in states with high IDU HIV transmission to devote resources towards SEPs. 
 
 ##Sub-Objective 3: Predicting State SEP Laws with Machine Learning
 
 From the machine learning perspective, the random forest model had the most predictive accuracy of the three models employed. A random forest model with extratrees and mtry = 32 correctly predicts the SEP law status in more than 80% of state-years.
 
-More interestingly the most important factors in prediction were related to Hispanic incidence of HIV from IDU, Hispanic incidence of HIV and MSM/IDU, and incidence in those over 55 years and older. These and other factors are demonstrated in the interactive model (shown in static form) below. The year was given as most important factor, but this makes sense in that it is the last year available in the data set. 
+More interestingly the most important factors in prediction were related to Hispanic incidence of HIV from IDU, Hispanic incidence of HIV and MSM/IDU, and incidence in those over 55 years and older. These and other factors are demonstrated in the interactive model (shown in static form) below. The year was given as the most important factor, but this makes sense in that it is the last year available in the data set. 
+
+##Next Steps
+For the PrEP data, it would be useful to do a deeper dive in the data and aggregate by demographic and socioeconomic indicators and transmission category to further understand the unmet need among specific populationg groups in order to more directly target interventions. For the SEP location and IDU transmission analysis, next steps would include doing a time series analysis to see if states exhibited a downward trend following the passing of legislation legalizing SEPs. 
+
+[ERICH ENTERS ML NEXT STEPS]
 
 ```{r, include = FALSE}
 require(wesanderson)
@@ -160,3 +165,19 @@ plot_varimp <-
   girafe_options(interactive_plot, opts_toolbar(position = "topleft"))
 
 ```
+
+#References
+
+Calabrese, Sarah K., and Kristen Underhill. “How Stigma Surrounding the Use of HIV Preexposure Prophylaxis Undermines Prevention and Pleasure: A Call to Destigmatize ‘Truvada Whores.’” American Journal of Public Health 105, no. 10 (October 2015): 1960–64. https://doi.org/10.2105/AJPH.2015.302816.
+
+Center for Disease Control and Prevention. “More People with HIV Have the Virus under Control | CDC,” November 23, 2018. https://www.cdc.gov/nchhstp/newsroom/2017/2017-HIV-Continuum-Press-Release.html.
+
+AIDSVu, Rates of Persons Living with HIV (2015). https://map.aidsvu.org/map
+
+North American Syringe Exchange Network (NASEN), Locations of SEPs. https://www.nasen.org/map/ 
+
+Rinkunas, Susan, and Shefali Luthra and Anna Gorman News Kaiser Health. “The Rising Cost of the HIV Prevention Drug Means Some People Have Stopped Taking It.” Tonic (blog), July 6, 2018. https://tonic.vice.com/en_us/article/qvmd9x/prep-truvada-prices-cant-use-coupons.
+
+Weinmeyer, Richard. 2016. “Needle Exchange Programs’ Status in US Politics.” AMA Journal of Ethics 18 (3): 252–57. https://doi.org/10.1001/journalofethics.2017.18.3.hlaw1-1603.
+
+#Appendix

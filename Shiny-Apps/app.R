@@ -205,9 +205,9 @@ server <-function(input, output, session) {
   output$map1 <- renderPlot({
     mapdata %>% 
       filter(., year == input$year) %>% 
-      ggplot(mapping = aes(long, lat, group = group, fill = prepusers)) +
+      ggplot(mapping = aes(long, lat, group = group, fill = log(prepusers))) +
       geom_polygon(color = "#ffffff", size = .25) +
-      scale_fill_viridis(option = "magma", direction = -1,
+      scale_fill_viridis(limits = c(0, 10), option = "magma", direction = -1,
                          name = "Number of PrEP Users",
                          guide = guide_colorbar(
                            direction = "horizontal",
@@ -233,7 +233,7 @@ server <-function(input, output, session) {
       filter(., Year == input$year) %>%
       ggplot(mapping = aes(long, lat, group = group, fill = log(NewDiag))) +
       geom_polygon(color = "#ffffff", size = .25) +
-      scale_fill_viridis(option = "magma", direction = -1,
+      scale_fill_viridis(limits = c(0, 10), option = "magma", direction = -1,
                          name = "HIV New Diagnosis",
                          guide = guide_colorbar(
                            direction = "horizontal",

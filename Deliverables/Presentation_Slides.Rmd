@@ -193,7 +193,7 @@ require(ggthemes)
 pal1 <- wes_palette(name = "GrandBudapest2", 6, type = "continuous")
 grab_varimp <- read_csv(here("R-markdown-Files/ggiraph.csv"))
 ```
-```{r, fig.width=5,fig.height=5, fig.align='center'}
+```{r, fig.width=8,fig.height=5, fig.align='center', fig.show='hold'}
 plot_varimp <- 
   grab_varimp %>% 
     mutate(keyword = fct_reorder(keyword,importance)) %>% 
@@ -208,13 +208,14 @@ plot_varimp <-
     coord_flip() +
     scale_fill_gradientn(colors = pal1) +
     theme_hc() +
-    labs(y="Importance of the Feature in Predicting SEPs\n(higher values == more important)",
+    labs(y="Importance of the Feature in Predicting SEPs",
          x="Features")+
     theme(legend.position = "none",
           axis.title = element_text(family="serif",size=10),
           axis.text = element_text(family="serif",size=10)) -> plt_obj
-  interactive_plot <- girafe(ggobj = plt_obj,width = 4,height=4)
-  girafe_options(interactive_plot, opts_toolbar(position = "topleft"))
+  interactive_plot <- girafe(ggobj = plt_obj,width = 7,height=5)
+  girafe_options(interactive_plot, opts_toolbar(position = "topleft"),
+                 opts_sizing(rescale = FALSE))
 
 ```
 

@@ -1,0 +1,12 @@
+name: Shiny-Apps
+title: Shiny-Apps
+username:
+account: annmarie
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 896339
+bundleId: 2045234
+url: https://annmarie.shinyapps.io/Shiny-Apps/
+when: 1556485848.41992
+asMultiple: FALSE
+asStatic: FALSE

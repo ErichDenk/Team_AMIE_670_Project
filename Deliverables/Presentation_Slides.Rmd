@@ -1,12 +1,11 @@
 ---
 title: "PPOL 670 Project Showcase"
-author: "Ivy Deng, Erich Denk, and Ann-Marie Stringer"
+author: "Ivy Deng, Erich Denk, and Ann Marie Stringer"
 date: "4/29/2019"
 output:
-  ioslides_presentation: default
   slidy_presentation: default
 incremental: yes
-footer: '            Team AMIE            '
+footer: 'Team AMIE'
 duration: 12
 ---
 
@@ -17,6 +16,7 @@ require(caret)
 require(recipes)
 require(pdp)
 require(here)
+require(knitr)
 require(ggplot2)
 require(ggthemes)
 require(ggiraph)
@@ -24,16 +24,50 @@ require(ggiraph)
 
 # <span style="color:steelblue">**Problem Statement and Background** </span>
 
+<style>
+.column-left{
+  float: left;
+  width: 50%;
+  text-align: left;
+}
+
+.column-right{
+  float: right;
+  width: 50%;
+  text-align: right;
+}
+</style>
+
+<div class="column-left">
 - HIV still a problem in the US today more than a million americans live with hiv (CDC)
 - No known cure to HIV, only ARV
 - HIV disproportionately affects historically marginalized communities
     - MSM population
-    - Injection Drug Users 
+    - Injection Drug Users
     - Black population
-    - Sex Workers
-- Two prevention policies
+    - Sex workers
+- Two prevention methods - both cotroversial/stigmatized 
   1. Syringe Services Programs (SSPs)/ Syringe Exchange Programs (SEPs)
   2. Pre-exposure prophylaxis (PrEP)
+</div>
+<div class="column-right">
+```{r, out.width="60%"}
+include_graphics(here("Deliverables/Use-Clean-Needles.png"))
+```
+
+<font size="1">Retrieved from: http://www.buffalotracehealth.com/syringe-access-exchange-program/ </font>
+
+
+```{r, out.width="60%"}
+include_graphics(here("Deliverables/prepPill.jpg"))
+```
+
+<font size="1">Retrieved from: http://www.araratpharmacy.com/PrEP-HIV-Prevention.html </font>
+
+</div>
+
+
+  
   
 # <span style="color:steelblue">**Problem Statement and Background** </span>
 ```{r, include=FALSE}
@@ -55,7 +89,7 @@ idu_plot <-
          caption = "Source: AidsVu")
 ```
 
-*Two trends that brought our research question about*
+*Trends that brought our research question about*
 ```{r, include=FALSE}
 SEP_plot <- idu_dat%>%
   mutate(Yes = if_else(Allowed == "Yes", 1, 0))%>%
@@ -70,10 +104,20 @@ SEP_plot <- idu_dat%>%
   labs(title = "States increasingly allowing \nSyringe Exchange Programs",
        subtitle = "SEPs, while controversial, are becoming a common policy tool",
        caption = "Source: Center for Disease Control")
+
 ```
 ```{r, fig.width=9, fig.height=4, fig.align='center'}
 plots <- grid.arrange(idu_plot,SEP_plot, ncol = 2)
 ```
+
+# <span style="color:steelblue">**Problem Statement and Background (cont.)** </span>
+*Trends that brought our research question about*
+
+```{r, fig.align='center', out.width='30%'}
+include_graphics(here("Deliverables/PrEP-BarChart.jpg"))
+```
+<font size="1">Retrieved from: https://www.hiv.gov/blog/prep-prescriptions-rise-more-work-remains </font>
+
 
 # <span style="color:steelblue">**Aim** </span>
 
@@ -85,7 +129,7 @@ plots <- grid.arrange(idu_plot,SEP_plot, ncol = 2)
   2. Center for Disease Control and Prevention State Laws
   3. NASEN SSP locations
   
-# <span style="color:steelblue">**Approach and Design (cont)** </span>
+# <span style="color:steelblue">**Approach and Design (cont.)** </span>
 - Our original goal -- countywide incidence - yearly incidence data not available
 
 - Time series at state level doesn’t really show visual change in mapping  - not really impactful. 
@@ -109,23 +153,27 @@ plots <- grid.arrange(idu_plot,SEP_plot, ncol = 2)
 
 # <span style="color:steelblue">**Results** </span> 
 
-The shiny app dashboard. Combines a number of efforts together
+- The shiny app dashboard. Combines a number of efforts together
 
-<<<<<<< HEAD
-<span style="color:dodgerblue"> Our dashboard: </span> 
-https://ivy-deng.shinyapps.io/Shiny-Apps/
+  - Our [dashboard](https://annmarie.shinyapps.io/Shiny-Apps/)
 
-- Unmet PrEP Demand in states such as Texas, California, Louisiana, Georgia, and Florida. California, Texas, and Florida show a decreasing trend of number of PrEP users overtime. 
+  - [(backup link)](https://ivy-deng.shinyapps.io/Shiny-Apps/)
+ 
 
-- Southern states in general have more cases of HIV new diagnosis than other regions. However, there are fewer users of PrEP in those states compared to other regions. 
+Some findings
 
--(Ann Marie: Results from HIV IDU and SSP map)
-=======
- Our [dashboard](https://ivy-deng.shinyapps.io/Shiny-Apps/)
->>>>>>> f09dd1c093d5c13292ea068eb750521db0a5dee6
+- PReP usage does not match the need for most states - mapping provides clear visualization of which states in particular
+  - Unmet PrEP Demand in states such as Texas, Louisiana, Georgia, and Florida. California, Texas, and Florida show a decreasing trend of number of PrEP users overtime. 
+  - Southern states in general have more cases of HIV new diagnosis than other regions. However, there are fewer users of PrEP in those states compared to other regions. 
+- The states with highest unmet need for SSP do not have legislation in place to legalize SSPs
+  - Especially: TX, FL, GA, PA
+  - West and Northeast regions tend to be more likely to have legislation and lower unmet need, South least likely. 
+
+
+
 
 # <span style="color:steelblue">**Results** </span>
-The second (an less successful) effort: Our supervised machine learning results
+The second (and less successful) effort: Our supervised machine learning results
 
 - Random regression trees
 - knn
@@ -145,7 +193,7 @@ require(ggthemes)
 pal1 <- wes_palette(name = "GrandBudapest2", 6, type = "continuous")
 grab_varimp <- read_csv(here("R-markdown-Files/ggiraph.csv"))
 ```
-```{r, fig.width=5,fig.height=5, fig.align='center'}
+```{r, fig.width=8,fig.height=5, fig.align='center', fig.show='hold'}
 plot_varimp <- 
   grab_varimp %>% 
     mutate(keyword = fct_reorder(keyword,importance)) %>% 
@@ -160,20 +208,17 @@ plot_varimp <-
     coord_flip() +
     scale_fill_gradientn(colors = pal1) +
     theme_hc() +
-    labs(y="Importance of the Feature in Predicting SEPs\n(higher values == more important)",
+    labs(y="Importance of the Feature in Predicting SEPs",
          x="Features")+
     theme(legend.position = "none",
           axis.title = element_text(family="serif",size=10),
           axis.text = element_text(family="serif",size=10)) -> plt_obj
-  interactive_plot <- girafe(ggobj = plt_obj,width = 4,height=4)
-  girafe_options(interactive_plot, opts_toolbar(position = "topleft"))
+  interactive_plot <- girafe(ggobj = plt_obj,width = 7,height=5)
+  girafe_options(interactive_plot, opts_toolbar(position = "topleft"),
+                 opts_sizing(rescale = FALSE))
 
 ```
 
-<<<<<<< HEAD
-
-=======
->>>>>>> f09dd1c093d5c13292ea068eb750521db0a5dee6
 # <span style="color:steelblue">**Lessons Learned** </span>
 
 - Be flexible! Try to let your preconcieved notions go
@@ -187,9 +232,7 @@ plot_varimp <-
 
 # <span style="color:steelblue">**Conclusions** </span>
 
-- States with a high HIV prevalence should invest more resources in supporting and promoting HIV prevention programs (PrEP and SSPs)
-
-- 
+- States with a high HIV prevalence/incidence should invest more resources in supporting and promoting HIV prevention programs (PrEP and SSPs)
 
 # <span style="color:steelblue">**Thanks!** </span>
 

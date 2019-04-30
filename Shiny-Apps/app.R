@@ -19,19 +19,21 @@ require(viridis)
 
 
 #load all datasets
-prep <- read.csv("activedata/prep.csv") %>%
+prep <- read.csv(here("Shiny-Apps/activedata/prep.csv")) %>%
   dplyr::select(Year, State, State.PrEP.Users)
 
-incidenceData <- read.csv("activedata/incidenceDat.csv") %>%
+incidenceData <- read.csv(here("Shiny-Apps/activedata/incidenceDat.csv")) %>%
   select(., state_name = State, Year = Year1, NewDiag = "New.Diagnoses.State.Cases") %>%
-  mutate(state_name = as.character(state_name))
-mapCreateData <- left_join(incidenceData, states, by = "state_name")
+  mutate(state_name = as.character(state_name)) %>%
+  filter(., Year %in% c(2012, 2013, 2014, 2015, 2016))
 
 prep1 <- prep %>%
   rename("state_name" = State)
 
 newincidencedata <- subset(incidenceData, Year >= 2012 )%>%
   mutate(Year = as.numeric(Year))
+
+
 
 table1 <- full_join(newincidencedata,prep1,
                     by=c('state_name','Year')
@@ -52,11 +54,26 @@ mapDataPrev <- left_join(prevalenceData, counties, by = "county_name") %>%
 
 tidydata <- prep %>%
   mutate(state = as.character(State))%>%
-  mutate(year = as.integer(Year)) %>%
+  mutate(Year = as.integer(Year)) %>%
   mutate(prepusers = as.numeric(State.PrEP.Users))%>%
-  dplyr::select(., state_name = state,year,prepusers)
-mapdata <- left_join(tidydata, states, by = "state_name")
+  dplyr::select(., state_name = state,Year,prepusers)
+
+
+popData <- read.csv(here("Shiny-Apps/activedata/popData.csv")) %>%
+  rename("state_name" = State)
+
+
+prepPerc <- left_join(tidydata, popData, by = c("state_name", "Year")) %>%
+  mutate(prepPerc = prepusers/population * 100000)
+
+incPerc <- left_join(newincidencedata, popData, by = c("state_name", "Year")) %>%
+  mutate(incPerc = NewDiag/population *100000)
+
+mapdata <- left_join(prepPerc, states, by = "state_name")
 na.omit(mapdata)
+
+mapCreateData <- left_join(incPerc, states, by = "state_name")
+
 
 prevAve <-  read.csv("activedata/2015-Prevalence-IDU-data.csv") %>%
   select(., State, CountyPrevalence, TotalIDU) %>%
@@ -157,7 +174,7 @@ ui <- navbarPage("TEAM AMIE",
            tabPanel("State PrEP Users and HIV Prevalence",
                     sidebarLayout(
                       sidebarPanel(
-                        selectInput(inputId = "year",choices = unique(tidydata$year),
+                        selectInput(inputId = "year",choices = unique(tidydata$Year),
                                     label = "Select Year",selected = 2012)
                       ),
                       mainPanel(
@@ -204,10 +221,11 @@ ui <- navbarPage("TEAM AMIE",
 server <-function(input, output, session) {
   output$map1 <- renderPlot({
     mapdata %>% 
-      filter(., year == input$year) %>% 
-      ggplot(mapping = aes(long, lat, group = group, fill = prepusers)) +
+      filter(., Year == input$year) %>% 
+      ggplot(mapping = aes(long, lat, group = group, fill = prepPerc)) +
       geom_polygon(color = "#ffffff", size = .25) +
-      scale_fill_viridis(limits = c(0, 13000), option = "magma", direction = -1,
+      scale_fill_viridis(limits = c(0,40),  
+                         option = "magma", direction = -1,
                          name = "Number of PrEP Users",
                          guide = guide_colorbar(
                            direction = "horizontal",
@@ -223,7 +241,7 @@ server <-function(input, output, session) {
       labs(x = NULL, 
            y = NULL, 
            title = "PrEP Users by State", 
-           subtitle = "The number of persons who had at least one day of prescribed oral TDF/FTC for PrEP in a year",
+           subtitle = "The number of persons who had at least one day of prescribed oral TDF/FTC for PrEP in a year per 100,000 persons.",
            caption = "Author: Team AMIE; Geometries: Urban Institute; Data: ACS",
            fill = "State PrEP Users") +
       theme_map() })
@@ -231,9 +249,9 @@ server <-function(input, output, session) {
   output$map2 <- renderPlot({
     mapCreateData %>%
       filter(., Year == input$year) %>%
-      ggplot(mapping = aes(long, lat, group = group, fill = NewDiag)) +
+      ggplot(mapping = aes(long, lat, group = group, fill = incPerc)) +
       geom_polygon(color = "#ffffff", size = .25) +
-      scale_fill_viridis(limits = c(0, 13000), option = "magma", direction = -1,
+      scale_fill_viridis(limits = c(0,40), option = "magma", direction = -1,
                          name = "HIV New Diagnosis",
                          guide = guide_colorbar(
                            direction = "horizontal",
@@ -250,7 +268,7 @@ server <-function(input, output, session) {
            y = NULL, 
            title = "HIV New Diagnosis by State", 
            caption = "Author: Team AMIE; Geometries: Urban Institute; Data: CDC",
-           subtitle = "The number of persons newly diagnosed with HIV infection during a given 1-year time period.",
+           subtitle = "The number of persons newly diagnosed with HIV infection during a given 1-year time period per 100,000 persons.",
            fill = "State New Diagnosis") +
       theme_map() })
   
